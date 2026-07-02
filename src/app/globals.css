@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/*
+  Micro Saving Daily - design tokens
+  Locked palette: premium editorial financial wellness, light theme.
+*/
+@theme {
+  --color-deep-green: #0f3d2e;
+  --color-evergreen: #0b241f;
+  --color-ivory: #f7f3e9;
+  --color-gold: #c9a15b;
+  --color-sage: #a7bfa3;
+  --color-taupe: #d6cdb8;
+}
+
+/* Font tokens reference next/font CSS variables, so they must be inline. */
+@theme inline {
+  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  /*
+    Anchor-target offset is handled per-section via `scroll-mt-*` (Tailwind
+    scroll-margin-top) so the floating header never covers a section top.
+    We intentionally do NOT set scroll-padding-top here — combining both would
+    double the offset and leave a large gap above the anchored form.
+  */
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-evergreen);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* ----------------------------------------------------------------- */
+/* Long-form legal / policy pages (privacy, terms, disclaimers, etc.) */
+/* Tailwind Typography plugin is not installed, so prose rhythm for   */
+/* these text-heavy routes is defined here and applied via            */
+/* `.legal-content` in the LegalPage component.                       */
+/* ----------------------------------------------------------------- */
+.legal-content {
+  color: color-mix(in srgb, var(--color-evergreen) 82%, transparent);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.legal-content > :first-child {
+  margin-top: 0;
+}
+
+.legal-content h2 {
+  font-family: var(--font-serif);
+  color: var(--color-deep-green);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-top: 2.75rem;
+}
+
+.legal-content h3 {
+  font-family: var(--font-serif);
+  color: var(--color-deep-green);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.85rem;
+}
+
+.legal-content p {
+  margin-top: 1rem;
+}
+
+.legal-content ul {
+  margin-top: 1rem;
+  padding-left: 1.35rem;
+  list-style-type: disc;
+}
+
+.legal-content li {
+  margin-top: 0.5rem;
+  padding-left: 0.35rem;
+}
+
+.legal-content li::marker {
+  color: var(--color-gold);
+}
+
+.legal-content a {
+  color: var(--color-deep-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--color-gold) 70%, transparent);
+  transition: color 0.15s ease;
+}
+
+.legal-content a:hover {
+  color: var(--color-gold);
+}
+
+.legal-content strong {
+  color: var(--color-deep-green);
+  font-weight: 600;
+}
+
+.legal-content hr {
+  margin-top: 2.5rem;
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-taupe) 60%, transparent);
+}

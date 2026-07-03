@@ -111,6 +111,8 @@ type CtaButtonProps = HTMLMotionProps<"a"> & {
   children: ReactNode;
   /** Visual variant. */
   tone?: "solid" | "outline";
+  /** Padding/size scale. */
+  size?: "sm" | "md";
 };
 
 /**
@@ -119,13 +121,19 @@ type CtaButtonProps = HTMLMotionProps<"a"> & {
 export function CtaButton({
   children,
   tone = "solid",
+  size = "md",
   className = "",
   ...rest
 }: CtaButtonProps) {
   const reduced = useReducedMotion();
 
   const base =
-    "inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
+    "inline-flex items-center justify-center rounded-full font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
+
+  const sizes = {
+    sm: "px-5 py-2.5 text-sm",
+    md: "px-8 py-4 text-base",
+  } as const;
 
   const tones = {
     solid:
@@ -140,7 +148,7 @@ export function CtaButton({
 
   return (
     <motion.a
-      className={`${base} ${tones[tone]} ${className}`}
+      className={`${base} ${sizes[size]} ${tones[tone]} ${className}`}
       {...interaction}
       {...rest}
     >

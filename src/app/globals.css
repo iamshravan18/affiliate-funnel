@@ -11,6 +11,7 @@
   --color-gold: #c9a15b;
   --color-sage: #a7bfa3;
   --color-taupe: #d6cdb8;
+  --color-warm-sand: #e6d8c3;
 }
 
 /* Font tokens reference next/font CSS variables, so they must be inline. */

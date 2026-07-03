@@ -34,10 +34,11 @@ export function OptInForm() {
         className="rounded-2xl bg-sage/25 px-6 py-6 text-deep-green"
       >
         <p className="font-serif text-xl font-semibold">
-          Your guide is on its way.
+          Thank you — your request is in.
         </p>
         <p className="mt-2 text-evergreen/80">
-          Check your inbox shortly for The Wealth Confidence Guide.
+          We&apos;ll email your copy of The Wealth Confidence Guide to the
+          address you shared.
         </p>
       </div>
     );
@@ -58,7 +59,7 @@ export function OptInForm() {
           type="text"
           autoComplete="given-name"
           required
-          className="rounded-xl border border-taupe bg-ivory px-4 py-3 text-evergreen outline-none transition-colors placeholder:text-evergreen/40 focus:border-gold focus:ring-2 focus:ring-gold/40"
+          className="rounded-xl border border-taupe bg-ivory px-4 py-3 text-evergreen outline-none transition-colors placeholder:text-evergreen/40 focus:border-deep-green focus:ring-2 focus:ring-deep-green/40"
         />
       </div>
 
@@ -72,7 +73,7 @@ export function OptInForm() {
           type="email"
           autoComplete="email"
           required
-          className="rounded-xl border border-taupe bg-ivory px-4 py-3 text-evergreen outline-none transition-colors placeholder:text-evergreen/40 focus:border-gold focus:ring-2 focus:ring-gold/40"
+          className="rounded-xl border border-taupe bg-ivory px-4 py-3 text-evergreen outline-none transition-colors placeholder:text-evergreen/40 focus:border-deep-green focus:ring-2 focus:ring-deep-green/40"
         />
       </div>
 
@@ -83,11 +84,11 @@ export function OptInForm() {
           ? {}
           : { whileHover: { scale: 1.02 }, whileTap: { scale: 0.98 } })}
       >
-        Send Me the Free Guide
+        Send Me the Guide
       </motion.button>
 
       <p className="text-sm text-evergreen/70">
-        We&apos;ll send your guide and simple money-habit emails. No spam.
+        Free guide • No spam • Unsubscribe anytime
       </p>
     </form>
   );

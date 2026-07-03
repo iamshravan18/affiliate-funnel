@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" viewBox="0 0 1000 240" fill="none">
+  <title>Micro Saving Daily Primary Horizontal Logo</title>
+  <g id="growth-circle-icon" stroke="#0F3D2E" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="120" cy="120" r="78" stroke-width="7"/>
+    <rect x="72" y="132" width="16" height="36" rx="4" fill="#0F3D2E" stroke="none"/>
+    <rect x="96" y="116" width="16" height="52" rx="4" fill="#0F3D2E" stroke="none"/>
+    <rect x="120" y="96" width="16" height="72" rx="4" fill="#0F3D2E" stroke="none"/>
+    <circle cx="153" cy="85" r="13" fill="#C9A15B" stroke="none"/>
+  </g>
+  <text x="235" y="147" font-family="Georgia, 'EB Garamond', 'Cormorant Garamond', 'Playfair Display', serif" font-size="82" font-weight="600" fill="#0F3D2E">Micro Saving Daily</text>
+</svg>

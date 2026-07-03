@@ -43,13 +43,13 @@ export function ProblemSection() {
               as="article"
               key={pain.title}
               delay={0.1 + i * 0.08}
-              className="rounded-2xl border border-warm-sand bg-ivory p-7 shadow-sm shadow-deep-green/5"
+              className="rounded-2xl border border-taupe/60 bg-ivory p-7 shadow-md shadow-deep-green/10"
             >
               <span
                 aria-hidden="true"
                 className="block h-2.5 w-2.5 rounded-full bg-gold"
               />
-              <h3 className="mt-5 font-serif text-xl font-semibold text-deep-green">
+              <h3 className="mt-5 font-serif text-[1.35rem] font-semibold tracking-[-0.01em] text-deep-green">
                 {pain.title}
               </h3>
               <p className="mt-3 leading-relaxed text-evergreen/75">

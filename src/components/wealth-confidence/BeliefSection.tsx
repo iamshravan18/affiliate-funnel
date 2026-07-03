@@ -12,7 +12,7 @@ const habit = wealthConfidenceImages.todaysSmallShiftCard;
 export function BeliefSection() {
   return (
     <section className="bg-evergreen text-ivory">
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <GrowthCircleMark className="h-10 w-10 text-ivory/90" />

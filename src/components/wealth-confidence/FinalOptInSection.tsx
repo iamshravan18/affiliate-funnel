@@ -8,7 +8,7 @@ const mockup = wealthConfidenceImages.guide3dMockup;
 export function FinalOptInSection() {
   return (
     <section id="get-the-guide" className="scroll-mt-24 bg-warm-sand/40">
-      <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+      <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
         <Reveal className="overflow-hidden rounded-3xl border border-warm-sand bg-ivory shadow-xl shadow-deep-green/10">
           <div className="grid lg:grid-cols-2">
             {/* Guide visual on a deep panel for perceived value. */}

@@ -89,7 +89,7 @@ export function WhatsInsideSection() {
         </div>
 
         <Reveal className="mt-16">
-          <div className="mx-auto flex max-w-2xl flex-col items-center gap-5 rounded-3xl border border-warm-sand bg-ivory px-8 py-10 text-center shadow-sm shadow-deep-green/5 sm:py-12">
+          <div className="mx-auto flex max-w-[42.5rem] flex-col items-center gap-5 rounded-3xl border border-taupe/60 bg-ivory px-8 py-12 text-center shadow-md shadow-deep-green/10 sm:px-12 sm:py-14">
             <GrowthCircleMark className="h-9 w-9 text-deep-green" />
             <p className="font-serif text-2xl font-semibold leading-snug text-deep-green sm:text-3xl">
               Ready to start with one small money shift?

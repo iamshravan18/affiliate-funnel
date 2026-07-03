@@ -28,7 +28,7 @@ export function Hero() {
             "linear-gradient(180deg, #f7f3e9 0%, #f7f3e9 55%, #f1ead9 100%)",
         }}
       />
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-28">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 sm:py-20 lg:grid-cols-[0.98fr_1.05fr] lg:gap-16 lg:py-28">
         <div className="max-w-xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-deep-green/80">
             <GrowthCircleMark className="h-4 w-4 text-deep-green" />
@@ -39,7 +39,7 @@ export function Hero() {
             Build stronger money confidence one small choice at a time.
           </h1>
 
-          <p className="mt-6 text-lg leading-relaxed text-evergreen/80">
+          <p className="mt-6 text-lg leading-relaxed text-evergreen/90">
             Get a simple guide that helps you notice spending patterns, pause
             before automatic purchases, and make calmer financial decisions
             without complicated budgeting.

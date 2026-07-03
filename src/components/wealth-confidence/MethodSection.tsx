@@ -22,7 +22,7 @@ const STEPS = [
 export function MethodSection() {
   return (
     <section id="method" className="scroll-mt-24 bg-ivory">
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">

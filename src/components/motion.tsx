@@ -128,18 +128,18 @@ export function CtaButton({
   const reduced = useReducedMotion();
 
   const base =
-    "inline-flex items-center justify-center rounded-full font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
+    "inline-flex items-center justify-center rounded-full font-medium transition-[color,background-color,box-shadow,border-color] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
 
   const sizes = {
     sm: "px-5 py-2.5 text-sm",
-    md: "px-8 py-4 text-base",
+    md: "px-9 py-4 text-base",
   } as const;
 
   const tones = {
     solid:
-      "bg-deep-green text-ivory shadow-md shadow-deep-green/15 hover:bg-evergreen",
+      "bg-deep-green text-ivory shadow-md shadow-deep-green/15 hover:bg-evergreen hover:shadow-lg hover:shadow-deep-green/25 hover:ring-1 hover:ring-gold/50",
     outline:
-      "border border-deep-green/30 bg-transparent text-deep-green hover:bg-deep-green/5",
+      "border border-deep-green/30 bg-transparent text-deep-green hover:border-gold/50 hover:bg-deep-green/5",
   } as const;
 
   const interaction = reduced

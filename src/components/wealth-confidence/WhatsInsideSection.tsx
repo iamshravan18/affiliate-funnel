@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Reveal, RevealMedia } from "@/components/motion";
+import { CtaButton, Reveal, RevealMedia } from "@/components/motion";
 import { wealthConfidenceImages } from "@/content/wealth-confidence-assets";
+import { GrowthCircleMark } from "./GrowthCircleMark";
 
 const preview = wealthConfidenceImages.guideWorksheetPreview;
 
@@ -86,6 +87,22 @@ export function WhatsInsideSection() {
             </ul>
           </Reveal>
         </div>
+
+        <Reveal className="mt-16">
+          <div className="mx-auto flex max-w-2xl flex-col items-center gap-5 rounded-3xl border border-warm-sand bg-ivory px-8 py-10 text-center shadow-sm shadow-deep-green/5 sm:py-12">
+            <GrowthCircleMark className="h-9 w-9 text-deep-green" />
+            <p className="font-serif text-2xl font-semibold leading-snug text-deep-green sm:text-3xl">
+              Ready to start with one small money shift?
+            </p>
+            <p className="max-w-lg leading-relaxed text-evergreen/75">
+              Get the free guide and begin with a simple spending-awareness
+              exercise today.
+            </p>
+            <CtaButton href="#get-the-guide" className="mt-1">
+              Download the Free Guide
+            </CtaButton>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -45,8 +45,22 @@ export function Hero() {
             without complicated budgeting.
           </p>
 
-          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <CtaButton href="#get-the-guide">Get the Free Guide</CtaButton>
+          <div className="mt-8 flex flex-col gap-5">
+            <div className="flex flex-col items-start gap-x-7 gap-y-4 sm:flex-row sm:items-center">
+              <CtaButton href="#get-the-guide">Get My Free Guide →</CtaButton>
+              <a
+                href="#inside"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-deep-green decoration-gold decoration-2 underline-offset-4 transition-colors hover:underline focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              >
+                See what&apos;s inside
+                <span
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </a>
+            </div>
             <span className="text-sm font-medium text-evergreen/70">
               Free guide • Practical worksheets • No spam
             </span>

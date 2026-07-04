@@ -43,10 +43,40 @@ bank site, or affiliate bridge page.
 - Gold is never used for small low-contrast body text on ivory (accents only).
 - One `<h1>` only; preserve semantic landmarks and heading order.
 
+## Thank-you page (approved — Phase 5A)
+Route: `/wealth-confidence-guide/thank-you`
+(`src/app/wealth-confidence-guide/thank-you/page.tsx`; components under
+`src/components/wealth-confidence/thank-you/`).
+- The guide is **always delivered / presented before** the affiliate resource.
+  Strategic order: confirmation → guide access → immediate Notice·Pause·Repeat
+  action → soft mindset transition → affiliate card.
+- Balance is approximately **70% Micro Saving Daily / 30% affiliate bridge**.
+- The **only** affiliate offer on this page is **The Billionaire Brain Wave**.
+  Pyramid Wealth Frequency is reserved for later testing — not this page.
+- It must be framed as an **optional third-party audio-based mindset/focus
+  resource**. No financial, wealth, income, manifestation, medical, or
+  neurological claims/guarantees, and never repeat the vendor's sales claims.
+- **Inline affiliate disclosure is mandatory** (directly under the affiliate
+  CTA, readable — never tiny gold text), in addition to the footer disclaimer.
+- The **affiliate CTA must not visually overpower the guide CTA**: guide CTA is
+  the solid brand button; affiliate CTA uses the lighter outline tone. Affiliate
+  card sits below the fold on mobile.
+- Page is **`noindex, nofollow`**; the affiliate product is excluded from the
+  SEO title/description. Outbound affiliate link opens in a new tab with
+  `rel="sponsored noopener noreferrer"`.
+- Tracking is data-attribute-only for now (`data-event="…"`:
+  thank_you_page_view, guide_download_click, day_one_open_click,
+  affiliate_bridge_view, affiliate_offer_click, affiliate_offer_decline) — no
+  analytics platform wired yet.
+
 ## Phase notes
 - Complete: Phase 1 (inspect), Phase 2 (assets organized/optimized + manifest),
   Phase 3 (homepage build), Phase 4 (browser/responsive QA polish),
-  Phase 4.1 (CTA conversion polish).
-- Not yet built (future phases): MailerLite integration, thank-you page,
-  affiliate bridge. `OptInForm` is UI-only (see its `MailerLite` TODO) and must
-  not imply real email delivery until integration exists.
+  Phase 4.1 (CTA conversion polish), Phase 5A (thank-you page + affiliate
+  bridge, honest placeholders).
+- Not yet built (future phases): MailerLite integration (`OptInForm` is UI-only,
+  see its `MailerLite` TODO — must not imply real email delivery, and should
+  redirect to the thank-you page on success once wired). Real guide **PDF does
+  not exist yet** — the thank-you "Download the Guide" button is accessibly
+  disabled with a documented TODO until the asset ships. Affiliate link tracking
+  param is not applied (custom vendor-domain hoplink; confirm syntax first).

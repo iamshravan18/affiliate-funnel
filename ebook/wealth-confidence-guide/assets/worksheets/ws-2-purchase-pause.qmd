@@ -1,0 +1,36 @@
+```{=typst}
+#pagebreak()
+#wcg-ws-open(
+  day: "Day 2", num: 2, title: "The purchase pause",
+  purpose: "To give yourself ten quiet seconds before one automatic purchase.",
+  how: [Choose one moment where buying tends to happen quickly. Before that
+  purchase today, take about ten seconds. Breathe. Then fill this in — whether
+  you bought the item or not.],
+)
+
+#wcg-panel(title: "Worked example")[
+  *The moment:* Adding items to an online cart at night. \
+  *During the pause I noticed:* I was tired and a little bored. \
+  *What I chose:* Saved it to a list to look at tomorrow.
+]
+
+#wcg-field("The moment I chose to pause", lines: 1)
+#wcg-field("What I noticed during the pause", lines: 1)
+
+#wcg-group("Did I still want it after ten seconds?")
+#grid(columns: (auto, auto, auto), column-gutter: 34pt,
+  wcg-check("Yes"), wcg-check("Not sure"), wcg-check("No"))
+
+#wcg-field("What I chose to do", lines: 1)
+#wcg-field("Reflection — what happened when I paused?", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> A pause is not a "no." Sometimes you will still buy the thing, and that is
+> perfectly fine. The pause just gives the choice back to you.
+
+```{=typst}
+#wcg-ws-footer()
+```

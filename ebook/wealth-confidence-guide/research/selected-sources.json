@@ -1,0 +1,339 @@
+{
+  "note": "Sanitized public metadata only. No API key stored. Discovery via OpenAlex; metadata verified via Crossref / official domains.",
+  "count": 18,
+  "sources": [
+    {
+      "key": "lally2010",
+      "type": "article",
+      "authors": [
+        "Phillippa Lally",
+        "Cornelia H. M. van Jaarsveld",
+        "Henry W. W. Potts",
+        "Jane Wardle"
+      ],
+      "year": 2010,
+      "title": "How are habits formed: Modelling habit formation in the real world",
+      "venue": "European Journal of Social Psychology",
+      "vol": "40",
+      "issue": "6",
+      "pages": "998--1009",
+      "doi": "10.1002/ejsp.674",
+      "url": "https://doi.org/10.1002/ejsp.674",
+      "oa": "https://openalex.org/W2156179539",
+      "stype": "Peer-reviewed (empirical, longitudinal field study)"
+    },
+    {
+      "key": "neal2006",
+      "type": "article",
+      "authors": [
+        "David T. Neal",
+        "Wendy Wood",
+        "Jeffrey M. Quinn"
+      ],
+      "year": 2006,
+      "title": "Habits---A Repeat Performance",
+      "venue": "Current Directions in Psychological Science",
+      "vol": "15",
+      "issue": "4",
+      "pages": "198--202",
+      "doi": "10.1111/j.1467-8721.2006.00435.x",
+      "url": "https://doi.org/10.1111/j.1467-8721.2006.00435.x",
+      "oa": "https://openalex.org/W1976007338",
+      "stype": "Peer-reviewed (review)"
+    },
+    {
+      "key": "wood2002",
+      "type": "article",
+      "authors": [
+        "Wendy Wood",
+        "Jeffrey M. Quinn",
+        "Deborah A. Kashy"
+      ],
+      "year": 2002,
+      "title": "Habits in everyday life: Thought, emotion, and action",
+      "venue": "Journal of Personality and Social Psychology",
+      "vol": "83",
+      "issue": "6",
+      "pages": "1281--1297",
+      "doi": "10.1037/0022-3514.83.6.1281",
+      "url": "https://doi.org/10.1037/0022-3514.83.6.1281",
+      "oa": "https://openalex.org/W2099800158",
+      "stype": "Peer-reviewed (empirical, diary studies)"
+    },
+    {
+      "key": "harkin2016",
+      "type": "article",
+      "authors": [
+        "Benjamin Harkin",
+        "Thomas L. Webb",
+        "Betty P. I. Chang",
+        "Andrew Prestwich",
+        "Mark Conner",
+        "Ian Kellar",
+        "Yael Benn",
+        "Paschal Sheeran"
+      ],
+      "year": 2016,
+      "title": "Does monitoring goal progress promote goal attainment? A meta-analysis of the experimental evidence",
+      "venue": "Psychological Bulletin",
+      "vol": "142",
+      "issue": "2",
+      "pages": "198--229",
+      "doi": "10.1037/bul0000025",
+      "url": "https://doi.org/10.1037/bul0000025",
+      "oa": "https://openalex.org/W1827465321",
+      "stype": "Peer-reviewed (meta-analysis)"
+    },
+    {
+      "key": "gollwitzer1999",
+      "type": "article",
+      "authors": [
+        "Peter M. Gollwitzer"
+      ],
+      "year": 1999,
+      "title": "Implementation intentions: Strong effects of simple plans",
+      "venue": "American Psychologist",
+      "vol": "54",
+      "issue": "7",
+      "pages": "493--503",
+      "doi": "10.1037/0003-066X.54.7.493",
+      "url": "https://doi.org/10.1037/0003-066X.54.7.493",
+      "oa": "https://openalex.org/W2133044046",
+      "stype": "Peer-reviewed (review)"
+    },
+    {
+      "key": "gollwitzer2006",
+      "type": "incollection",
+      "authors": [
+        "Peter M. Gollwitzer",
+        "Paschal Sheeran"
+      ],
+      "year": 2006,
+      "title": "Implementation Intentions and Goal Achievement: A Meta-analysis of Effects and Processes",
+      "venue": "Advances in Experimental Social Psychology",
+      "vol": "38",
+      "issue": "",
+      "pages": "69--119",
+      "doi": "10.1016/S0065-2601(06)38002-1",
+      "url": "https://doi.org/10.1016/S0065-2601(06)38002-1",
+      "oa": "https://openalex.org/W1818536883",
+      "stype": "Peer-reviewed (meta-analysis, book chapter)"
+    },
+    {
+      "key": "dellavigna2006",
+      "type": "article",
+      "authors": [
+        "Stefano DellaVigna",
+        "Ulrike Malmendier"
+      ],
+      "year": 2006,
+      "title": "Paying Not to Go to the Gym",
+      "venue": "American Economic Review",
+      "vol": "96",
+      "issue": "3",
+      "pages": "694--719",
+      "doi": "10.1257/aer.96.3.694",
+      "url": "https://doi.org/10.1257/aer.96.3.694",
+      "oa": "https://openalex.org/W2026559010",
+      "stype": "Peer-reviewed (empirical field study)"
+    },
+    {
+      "key": "johnson2003",
+      "type": "article",
+      "authors": [
+        "Eric J. Johnson",
+        "Daniel G. Goldstein"
+      ],
+      "year": 2003,
+      "title": "Do Defaults Save Lives?",
+      "venue": "Science",
+      "vol": "302",
+      "issue": "5649",
+      "pages": "1338--1339",
+      "doi": "10.1126/science.1091721",
+      "url": "https://doi.org/10.1126/science.1091721",
+      "oa": "https://openalex.org/W3121878117",
+      "stype": "Peer-reviewed (policy forum / empirical)"
+    },
+    {
+      "key": "mani2013",
+      "type": "article",
+      "authors": [
+        "Anandi Mani",
+        "Sendhil Mullainathan",
+        "Eldar Shafir",
+        "Jiaying Zhao"
+      ],
+      "year": 2013,
+      "title": "Poverty Impedes Cognitive Function",
+      "venue": "Science",
+      "vol": "341",
+      "issue": "6149",
+      "pages": "976--980",
+      "doi": "10.1126/science.1238041",
+      "url": "https://doi.org/10.1126/science.1238041",
+      "oa": "https://openalex.org/W1968966047",
+      "stype": "Peer-reviewed (empirical)"
+    },
+    {
+      "key": "shah2012",
+      "type": "article",
+      "authors": [
+        "Anuj K. Shah",
+        "Sendhil Mullainathan",
+        "Eldar Shafir"
+      ],
+      "year": 2012,
+      "title": "Some Consequences of Having Too Little",
+      "venue": "Science",
+      "vol": "338",
+      "issue": "6107",
+      "pages": "682--685",
+      "doi": "10.1126/science.1222426",
+      "url": "https://doi.org/10.1126/science.1222426",
+      "oa": "https://openalex.org/W2088027515",
+      "stype": "Peer-reviewed (empirical)"
+    },
+    {
+      "key": "rick2008",
+      "type": "article",
+      "authors": [
+        "Scott I. Rick",
+        "Cynthia E. Cryder",
+        "George Loewenstein"
+      ],
+      "year": 2008,
+      "title": "Tightwads and Spendthrifts",
+      "venue": "Journal of Consumer Research",
+      "vol": "34",
+      "issue": "6",
+      "pages": "767--782",
+      "doi": "10.1086/523285",
+      "url": "https://doi.org/10.1086/523285",
+      "oa": "https://openalex.org/W3125807303",
+      "stype": "Peer-reviewed (empirical)"
+    },
+    {
+      "key": "breines2012",
+      "type": "article",
+      "authors": [
+        "Juliana G. Breines",
+        "Serena Chen"
+      ],
+      "year": 2012,
+      "title": "Self-Compassion Increases Self-Improvement Motivation",
+      "venue": "Personality and Social Psychology Bulletin",
+      "vol": "38",
+      "issue": "9",
+      "pages": "1133--1143",
+      "doi": "10.1177/0146167212445599",
+      "url": "https://doi.org/10.1177/0146167212445599",
+      "oa": "https://openalex.org/W2146784806",
+      "stype": "Peer-reviewed (experimental)"
+    },
+    {
+      "key": "sirois2014",
+      "type": "article",
+      "authors": [
+        "Fuschia M. Sirois"
+      ],
+      "year": 2014,
+      "title": "Procrastination and Stress: Exploring the Role of Self-compassion",
+      "venue": "Self and Identity",
+      "vol": "13",
+      "issue": "2",
+      "pages": "128--145",
+      "doi": "10.1080/15298868.2013.763404",
+      "url": "https://doi.org/10.1080/15298868.2013.763404",
+      "oa": "https://openalex.org/W2110513608",
+      "stype": "Peer-reviewed (correlational)"
+    },
+    {
+      "key": "verhagen2011",
+      "type": "article",
+      "authors": [
+        "Tibert Verhagen",
+        "Willemijn van Dolen"
+      ],
+      "year": 2011,
+      "title": "The influence of online store beliefs on consumer online impulse buying: A model and empirical application",
+      "venue": "Information & Management",
+      "vol": "48",
+      "issue": "8",
+      "pages": "320--327",
+      "doi": "10.1016/j.im.2011.08.001",
+      "url": "https://doi.org/10.1016/j.im.2011.08.001",
+      "oa": "https://openalex.org/W2102497998",
+      "stype": "Peer-reviewed (empirical, SEM)"
+    },
+    {
+      "key": "beatty1998",
+      "type": "article",
+      "authors": [
+        "Sharon E. Beatty",
+        "M. Elizabeth Ferrell"
+      ],
+      "year": 1998,
+      "title": "Impulse buying: Modeling its precursors",
+      "venue": "Journal of Retailing",
+      "vol": "74",
+      "issue": "2",
+      "pages": "169--191",
+      "doi": "10.1016/S0022-4359(99)80092-X",
+      "url": "https://doi.org/10.1016/S0022-4359(99)80092-X",
+      "oa": "https://openalex.org/W4242320139",
+      "stype": "Peer-reviewed (empirical)"
+    },
+    {
+      "key": "bandura1977",
+      "type": "article",
+      "authors": [
+        "Albert Bandura"
+      ],
+      "year": 1977,
+      "title": "Self-efficacy: Toward a unifying theory of behavioral change",
+      "venue": "Psychological Review",
+      "vol": "84",
+      "issue": "2",
+      "pages": "191--215",
+      "doi": "10.1037/0033-295X.84.2.191",
+      "url": "https://doi.org/10.1037/0033-295X.84.2.191",
+      "oa": "https://openalex.org/W2134049139",
+      "stype": "Peer-reviewed (foundational theory)"
+    },
+    {
+      "key": "cfpb2015",
+      "type": "techreport",
+      "authors": [
+        "Consumer Financial Protection Bureau"
+      ],
+      "year": 2015,
+      "title": "Financial well-being: The goal of financial education",
+      "venue": "Consumer Financial Protection Bureau",
+      "vol": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "url": "https://www.consumerfinance.gov/data-research/research-reports/financial-well-being/",
+      "oa": "",
+      "stype": "US government report"
+    },
+    {
+      "key": "ftc2024",
+      "type": "misc",
+      "authors": [
+        "Federal Trade Commission"
+      ],
+      "year": 2024,
+      "title": "Getting In and Out of Free Trials, Auto-Renewals, and Negative Option Subscriptions",
+      "venue": "Federal Trade Commission (Consumer Advice)",
+      "vol": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "url": "https://consumer.ftc.gov/articles/getting-and-out-free-trials-auto-renewals-and-negative-option-subscriptions",
+      "oa": "",
+      "stype": "US government consumer guidance"
+    }
+  ]
+}

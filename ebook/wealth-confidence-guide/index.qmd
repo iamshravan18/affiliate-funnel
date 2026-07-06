@@ -1,0 +1,29 @@
+{{< include chapters/00-titlepage.qmd >}}
+
+{{< include chapters/01-front.qmd >}}
+
+{{< include chapters/02-day1.qmd >}}
+
+{{< include chapters/03-day2.qmd >}}
+
+{{< include chapters/04-day3.qmd >}}
+
+{{< include chapters/05-day4.qmd >}}
+
+{{< include chapters/06-day5.qmd >}}
+
+{{< include chapters/07-day6.qmd >}}
+
+{{< include chapters/08-day7.qmd >}}
+
+{{< include chapters/09-reflection.qmd >}}
+
+{{< include chapters/10-situations.qmd >}}
+
+{{< include chapters/11-restart.qmd >}}
+
+{{< include chapters/12-resources.qmd >}}
+
+{{< include chapters/13-references.qmd >}}
+
+{{< include chapters/14-close.qmd >}}

@@ -1,0 +1,49 @@
+```{=typst}
+#pagebreak()
+// Back-cover-style closing — no page number.
+#wcg-nums.update(false)
+#set page(numbering: none)
+#wcg-fullbleed(c-deep)
+#place(top + left, dx: -(mg-x - 0.55in), dy: -(mg-y - 0.5in),
+  rect(width: 7.4in, height: 10in, stroke: 0.75pt + c-gold, radius: 3pt))
+#v(1.15in)
+#align(center)[
+  #wcg-logo(size: 0.95in, ink: c-ivory, dot: c-gold)
+  #v(0.34in)
+  #text(font: ("Cormorant Garamond",), size: 30pt, weight: 700, fill: c-ivory)[One last thing]
+  #v(0.28in)
+  #block(width: 4.9in)[
+    #set par(leading: 0.95em, justify: false)
+    #text(font: ("Manrope",), size: 12.5pt, fill: c-sand)[
+      You gave a week of gentle attention to something most people rush past. That
+      is not a small thing. This was never really about a coffee or a cart — it was
+      about confidence: the quiet sense that you can understand your own choices and
+      adjust them when you want to.
+    ]
+  ]
+  #v(0.3in)
+  #grid(columns: (auto, auto, auto, auto, auto), column-gutter: 0.22in, align: horizon,
+    text(font: ("Manrope",), size: 12pt, weight: 600, tracking: 2pt, fill: c-gold)[NOTICE],
+    text(size: 10pt, fill: c-sage)[•],
+    text(font: ("Manrope",), size: 12pt, weight: 600, tracking: 2pt, fill: c-gold)[PAUSE],
+    text(size: 10pt, fill: c-sage)[•],
+    text(font: ("Manrope",), size: 12pt, weight: 600, tracking: 2pt, fill: c-gold)[REPEAT],
+  )
+  #v(0.22in)
+  #block(width: 4.6in, text(font: ("Cormorant Garamond",), style: "italic", size: 15pt, fill: c-ivory)[
+    Notice one thing at a time. Pause when you can. Repeat what helps — and begin
+    again whenever you drift.
+  ])
+]
+#v(1fr)
+#align(center)[
+  #line(length: 20%, stroke: 0.75pt + c-gold)
+  #v(0.24in)
+  #text(font: ("Cormorant Garamond",), size: 24pt, weight: 700, fill: c-ivory)[Micro Saving Daily]
+  #v(0.06in)
+  #text(font: ("Cormorant Garamond",), style: "italic", size: 14pt, fill: c-sand)[Small habits. Stronger money confidence.]
+  #v(0.14in)
+  #link("https://microsavingdaily.com")[#wcg-domain(dark: true, size: 11pt)]
+]
+#v(0.5in)
+```

@@ -1,0 +1,92 @@
+```{=typst}
+// ---- Page 3: Before you begin + How to use this guide ----
+#set page(numbering: none)
+#v(0.1in)
+#align(center)[#wcg-logo(size: 0.6in, ink: c-deep, dot: c-gold)]
+#v(0.08in)
+```
+
+# Before you begin {#disclaimer .unnumbered}
+
+> **Important.**
+>
+> This guide is for educational and informational purposes only. It does not
+> provide financial, investment, tax, legal, medical, or psychological advice.
+> The exercises support personal awareness and reflection. Individual
+> circumstances and results vary, and **no specific financial result is promised
+> or guaranteed**. For guidance specific to your situation, consider speaking with
+> an appropriately qualified professional.
+
+```{=typst}
+#v(4pt)
+#wcg-principles((
+  ("Awareness, not advice", "It helps you notice your own everyday choices — never what to buy or how to invest."),
+  ("Progress, not perfection", "Missing a day is part of the process. You can begin again whenever you are ready."),
+  ("Personal circumstances vary", "Every situation is different. Take what fits your life and leave the rest."),
+))
+#v(6pt)
+#line(length: 100%, stroke: 0.6pt + c-taupe)
+```
+
+## How to use this guide
+
+- **One lesson and one worksheet each day** — read it, then write by hand.
+- **Seven short days**, each building gently on the last.
+- **Use a pen** if writing helps you slow down.
+- **Missed days are normal** — simply pick up where you left off.
+- **No apps or spreadsheets required** — just this guide and a little curiosity.
+- **Go at your own pace.** There is no prize for finishing quickly.
+
+```{=typst}
+// ---- Page 4: Notice · Pause · Repeat framework + evidence ----
+#pagebreak()
+#set page(numbering: none)
+#wcg-fullbleed(c-sage.lighten(45%))
+#v(0.55in)
+#align(center)[
+  #text(font: ("Cormorant Garamond",), size: 34pt, weight: 700, fill: c-deep)[Notice. Pause. Repeat.]
+  #v(0.14in)
+  #line(length: 14%, stroke: 1pt + c-gold)
+  #v(0.18in)
+  #block(width: 4.7in, text(font: ("Manrope",), size: 12.5pt, fill: c-ever)[
+    Three small words turn a passing observation into a calmer, repeatable habit.
+  ])
+]
+#v(0.34in)
+#let fstep(motif, name, body) = align(center + top, {
+  wcg-framework-motif(motif)
+  v(0.1in)
+  text(font: ("Cormorant Garamond",), size: 20pt, weight: 700, fill: c-deep)[#name]
+  v(0.05in)
+  block(width: 1.85in, text(font: ("Manrope",), size: 11pt, fill: c-ever)[#body])
+})
+#grid(columns: (1fr, 1fr, 1fr), column-gutter: 0.3in,
+  fstep("notice", "Notice", [See one everyday money choice clearly, without judging it.]),
+  fstep("pause", "Pause", [Give yourself a short, quiet moment before one automatic choice.]),
+  fstep("repeat", "Repeat", [Carry one small, useful habit into tomorrow.]),
+)
+#v(0.4in)
+#block(width: 5.0in)[
+  #set par(leading: 0.9em, justify: false)
+  #align(center, text(font: ("Manrope",), size: 12pt, fill: c-ever)[
+    A large share of what we do each day repeats in familiar settings, often
+    without a fresh decision.#super[2] Many everyday actions are set off
+    automatically by the cues around us — the time of day, the place, the phone in
+    our hand.#super[3] That is not a flaw; it is how the mind saves energy.
+  ])
+]
+#v(0.28in)
+#block(width: 5.0in, fill: c-aside, stroke: (left: 3pt + c-gold), radius: (right: 4pt), inset: (x: 16pt, y: 13pt))[
+  #text(font: ("Manrope",), size: 10pt, weight: 700, tracking: 2pt, fill: c-gold)[WHY NOTICING WORKS]
+  #v(5pt)
+  #text(font: ("Manrope",), size: 11.5pt, fill: c-body)[
+    A review of many experiments found that keeping track of your progress toward a
+    goal is linked with a better chance of reaching it.#super[4] Noticing is the
+    quiet engine of the whole method.
+  ]
+]
+#v(0.24in)
+#align(center, text(font: ("Cormorant Garamond",), style: "italic", size: 15pt, fill: c-deep)[
+  That is the whole method. Three words, one week, no pressure.
+])
+```

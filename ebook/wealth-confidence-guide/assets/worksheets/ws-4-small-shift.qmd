@@ -1,0 +1,29 @@
+```{=typst}
+#pagebreak()
+#wcg-ws-open(
+  day: "Day 4", num: 4, title: "One small shift",
+  purpose: "To turn one observation into a specific \"when-then\" plan.",
+  how: [A plan works better when it is specific enough to picture. Fill in the
+  blanks to make one small, realistic shift.],
+)
+
+#wcg-panel(title: "Worked example")[
+  *When* I open the shopping app after dinner, *then* I will add items to a list
+  and check them tomorrow.
+]
+
+#wcg-field("When (the situation or cue)", lines: 1)
+#wcg-field("Then (the small thing I will do)", lines: 2)
+#wcg-field("Why this feels doable", lines: 1)
+#wcg-field("How I will know I did it", lines: 1)
+#wcg-field("Reflection — is my plan specific enough to picture?", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> Small and doable beats big and abandoned. You can always adjust it later.
+
+```{=typst}
+#wcg-ws-footer()
+```

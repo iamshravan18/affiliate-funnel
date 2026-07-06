@@ -1,0 +1,53 @@
+```{=typst}
+#pagebreak()
+#set page(numbering: none)
+#v(0.12in)
+#align(center)[
+  #wcg-logo(size: 0.42in, ink: c-deep, dot: c-gold)
+]
+#v(0.1in)
+#block(spacing: 7pt, line(length: 8%, stroke: 1.4pt + c-gold))
+#text(font: ("Cormorant Garamond",), size: 24pt, weight: 700, fill: c-deep)[Sources & references]
+#v(7pt)
+#text(font: ("Manrope",), size: 10.5pt, fill: c-body)[
+  Numbered by first appearance; the superscript numbers in the text point here.
+  These describe general patterns and tendencies, not a promise of any result.
+]
+#v(9pt)
+
+#let ref-entry(num, body, public: false) = block(width: 100%, above: 0pt, below: 7.5pt, breakable: false,
+  grid(columns: (0.24in, 1fr), column-gutter: 7pt, align: (right + top, left + top),
+    text(font: ("Manrope",), size: 11pt, weight: 700, fill: c-gold)[#num.],
+    {
+      set par(leading: 0.72em, justify: false)
+      if public {
+        box(fill: c-deep, inset: (x: 5pt, y: 1pt), radius: 2pt,
+          text(font: ("Manrope",), size: 7pt, weight: 700, tracking: 1pt, fill: c-gold)[PUBLIC REPORT])
+        h(5pt)
+      }
+      text(font: ("Manrope",), size: 11pt, fill: c-body, body)
+    }))
+
+#grid(columns: (1fr, 1fr), column-gutter: 22pt, align: (top, top),
+[
+  #ref-entry(1, [Consumer Financial Protection Bureau. _Financial Well-Being._ 2015. #link("https://www.consumerfinance.gov/data-research/research-reports/financial-well-being/")[View source]], public: true)
+  #ref-entry(2, [Wood, Quinn & Kashy. Habits in everyday life. _J. Personality & Social Psych._, 2002. #link("https://doi.org/10.1037/0022-3514.83.6.1281")[View source]])
+  #ref-entry(3, [Neal, Wood & Quinn. Habits — a repeat performance. _Current Directions in Psych. Science_, 2006. #link("https://doi.org/10.1111/j.1467-8721.2006.00435.x")[View source]])
+  #ref-entry(4, [Harkin et al. Does monitoring goal progress promote goal attainment? _Psychological Bulletin_, 2016. #link("https://doi.org/10.1037/bul0000025")[View source]])
+  #ref-entry(5, [Beatty & Ferrell. Impulse buying: modeling its precursors. _J. Retailing_, 1998. #link("https://doi.org/10.1016/S0022-4359(99)80092-X")[View source]])
+  #ref-entry(6, [Rick, Cryder & Loewenstein. Tightwads and spendthrifts. _J. Consumer Research_, 2008. #link("https://doi.org/10.1086/523285")[View source]])
+  #ref-entry(7, [Shah, Mullainathan & Shafir. Some consequences of having too little. _Science_, 2012. #link("https://doi.org/10.1126/science.1222426")[View source]])
+  #ref-entry(8, [Gollwitzer. Implementation intentions: strong effects of simple plans. _American Psychologist_, 1999. #link("https://doi.org/10.1037/0003-066X.54.7.493")[View source]])
+  #ref-entry(9, [Gollwitzer & Sheeran. Implementation intentions and goal achievement. _Adv. in Experimental Social Psych._, 2006. #link("https://doi.org/10.1016/S0065-2601(06)38002-1")[View source]])
+],
+[
+  #ref-entry(10, [Johnson & Goldstein. Do defaults save lives? _Science_, 2003. #link("https://doi.org/10.1126/science.1091721")[View source]])
+  #ref-entry(11, [Lally et al. How are habits formed. _European J. Social Psych._, 2010. #link("https://doi.org/10.1002/ejsp.674")[View source]])
+  #ref-entry(12, [Breines & Chen. Self-compassion increases self-improvement motivation. _Pers. & Social Psych. Bulletin_, 2012. #link("https://doi.org/10.1177/0146167212445599")[View source]])
+  #ref-entry(13, [Bandura. Self-efficacy: toward a unifying theory of behavioral change. _Psychological Review_, 1977. #link("https://doi.org/10.1037/0033-295X.84.2.191")[View source]])
+  #ref-entry(14, [Federal Trade Commission. _Free Trials, Auto-Renewals & Subscriptions._ 2024. #link("https://consumer.ftc.gov/articles/getting-and-out-free-trials-auto-renewals-and-negative-option-subscriptions")[View source]], public: true)
+  #ref-entry(15, [DellaVigna & Malmendier. Paying not to go to the gym. _American Economic Review_, 2006. #link("https://doi.org/10.1257/aer.96.3.694")[View source]])
+  #ref-entry(16, [Verhagen & van Dolen. Online store beliefs and online impulse buying. _Information & Management_, 2011. #link("https://doi.org/10.1016/j.im.2011.08.001")[View source]])
+  #ref-entry(17, [Sirois. Procrastination and stress: the role of self-compassion. _Self and Identity_, 2014. #link("https://doi.org/10.1080/15298868.2013.763404")[View source]])
+])
+```

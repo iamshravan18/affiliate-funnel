@@ -1,0 +1,26 @@
+```{=typst}
+#pagebreak()
+#wcg-ws-open(
+  day: "Day 7", num: 7, title: "My personal awareness plan",
+  purpose: "To combine the week into one simple, repeatable plan that is yours.",
+  how: [Look back at your notes from the week. Pull the most useful pieces into
+  one page you can return to.],
+)
+
+#wcg-field("One pattern I want to keep noticing", lines: 1)
+#wcg-field("One moment where I will pause", lines: 1)
+#wcg-field("My one small \"when-then\" shift", lines: 2)
+#wcg-field("One change I made to my surroundings", lines: 1)
+#wcg-field("What I will do on a hard day", lines: 1)
+#wcg-field("One reason this matters to me", lines: 1)
+#wcg-field("Reflection — which one habit is most worth keeping?", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> This is your plan, not a test. Adjust it freely as life changes.
+
+```{=typst}
+#wcg-ws-footer()
+```

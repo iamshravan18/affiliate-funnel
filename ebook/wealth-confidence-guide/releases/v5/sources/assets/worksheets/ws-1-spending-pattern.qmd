@@ -1,0 +1,31 @@
+```{=typst}
+#pagebreak()
+#wcg-ws-open(
+  day: "Day 1", num: 1, title: "Notice one spending pattern",
+  purpose: "To see one repeated purchase clearly, without judging it.",
+  how: [Pick one purchase you tend to make without much thought. Watch for it
+  today. When it happens — or when you notice the urge — jot down a few words.
+  There are no wrong answers.],
+)
+
+#wcg-panel(title: "Worked example")[
+  *The purchase:* Afternoon coffee and a snack. \
+  *Where / when:* The shop near work, around 3 p.m. \
+  *What was going on:* Tired, needed a break, everyone else was going.
+]
+
+#wcg-field("The purchase I watched", lines: 1)
+#wcg-field("Where and when it usually happens", lines: 1)
+#wcg-field("What was going on around me", lines: 2)
+#wcg-field("How I felt just before (one or two words)", lines: 1)
+#wcg-field("Reflection — where and when does this usually happen?", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> Noticing is not judging. You are gathering information, not grading yourself.
+
+```{=typst}
+#wcg-ws-footer()
+```

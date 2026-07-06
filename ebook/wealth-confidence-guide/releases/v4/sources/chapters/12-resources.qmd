@@ -1,0 +1,32 @@
+{{< pagebreak >}}
+
+# Your next 30 days {#next-30-days}
+
+You do not need another program — only a calm, realistic pace for carrying one
+small habit forward. Habits form over time, at a pace that varies from person to
+person,^11^ and a simple when-then plan helps you keep going.^9^
+
+```{=typst}
+#wcg-group("Weeks 1–2 · settle one habit into ordinary days")
+#wcg-field("The one habit I will keep practicing", lines: 1)
+
+#wcg-group("Weeks 3–4 · keep what works; add only if it feels easy")
+#wcg-field("What I will keep the same, or gently add", lines: 1)
+#wcg-field("How I will handle a hard day", lines: 1)
+
+#v(4pt)
+#line(length: 100%, stroke: 0.6pt + c-taupe)
+#v(4pt)
+
+#wcg-group("Personal notes")
+#wcg-field("One thing I want to remember", lines: 1)
+#wcg-field("One small win from this week", lines: 1)
+#wcg-notes(label: [Anything else worth keeping close], count: 4)
+
+#v(1fr)
+#line(length: 100%, stroke: 0.6pt + c-taupe)
+#v(6pt)
+#align(center, text(font: ("Manrope",), size: 9pt, weight: 600, tracking: 1pt, fill: c-num)[
+  Keep going at #link("https://microsavingdaily.com")[microsavingdaily.com]
+])
+```

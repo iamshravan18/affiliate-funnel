@@ -1,0 +1,58 @@
+project:
+  type: default
+  output-dir: output
+  render:
+    - index.qmd
+
+# Shared metadata (used by HTML/EPUB; the Typst cover is set in the show partial)
+title: "The Wealth Confidence Guide"
+subtitle: "Simple daily money-awareness shifts for calmer financial decisions."
+author: "Micro Saving Daily"
+date: "2026"
+lang: en-US
+
+# V5 (Phase 3 — Final Production Polish): built from the approved V4 foundation.
+# Citations remain hand-numbered superscript source markers rendered in the body
+# + a custom native "Sources & references" page, so pandoc citeproc is disabled.
+# references.bib is retained as the source of record for the URLs.
+citeproc: false
+
+format:
+  typst:
+    output-file: the-wealth-confidence-guide-v5.pdf
+    papersize: us-letter
+    margin:
+      x: 1.1in
+      y: 1in
+    mainfont: Manrope
+    fontsize: 12pt
+    section-numbering: none
+    number-sections: false
+    fig-align: center
+    keep-typ: true
+    font-paths:
+      - assets/fonts
+    template-partials:
+      - styles/typst-show.typ
+    include-in-header:
+      - styles/ebook-template.typ
+
+  html:
+    output-file: the-wealth-confidence-guide-v5.html
+    theme:
+      - cosmo
+      - styles/brand.scss
+    toc: true
+    toc-location: left
+    toc-title: "In this guide"
+    number-sections: false
+    embed-resources: true
+    fig-align: center
+    link-external-icon: false
+
+  epub:
+    output-file: the-wealth-confidence-guide-v5.epub
+    toc: true
+    number-sections: false
+    css: styles/print.css
+    epub-cover-image: assets/images/IMG-01-cover.png

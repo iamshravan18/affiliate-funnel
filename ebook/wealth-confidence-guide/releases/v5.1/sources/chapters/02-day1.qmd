@@ -1,0 +1,46 @@
+```{=typst}
+#pagebreak(weak: true)
+#wcg-nums.update(true)
+#counter(page).update(1)
+```
+
+# Day 1 — Notice one spending pattern {#day1}
+
+```{=typst}
+#wcg-lead[Today has one gentle job: notice a single spending pattern — just one.]
+#wcg-lesson-art("notice", caption: [Noticing one repeated choice, clearly and kindly])
+```
+
+## Why this matters
+
+Much of what we do each day repeats in the same setting, often without a fresh
+decision.^2^ These actions are triggered automatically by the cues around us — the
+time of day, a familiar place, the phone in our hand.^3^ This is not a weakness; it
+is how the mind saves effort.
+
+The catch is that automatic choices are easy to overlook, so the first step is
+simply to see one. Keeping track of progress toward a goal is linked with a better
+chance of reaching it.^4^
+
+## An everyday example
+
+Think of the afternoon coffee and snack — same shop, same time, most days.
+Nothing is wrong with it. But because it happens on autopilot, it is easy to never
+really *look* at it. Today, you look.
+
+```{=typst}
+#wcg-action[
+  Pick one purchase you tend to make without much thought — a daily drink, a
+  quick add-on, a checkout snack, an app you tap by habit. When it happens,
+  notice it kindly and write a few words.
+]
+```
+
+> **Notice.**
+>
+> What did I buy today without really deciding to?
+
+You do not need to change anything today. This is only about seeing one pattern
+clearly.
+
+{{< include assets/worksheets/ws-1-spending-pattern.qmd >}}

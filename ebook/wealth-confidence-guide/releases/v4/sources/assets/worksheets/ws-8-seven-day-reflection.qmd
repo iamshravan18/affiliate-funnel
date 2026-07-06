@@ -1,0 +1,27 @@
+```{=typst}
+#wcg-ws-open(
+  day: "Reflection", num: 8, title: "Seven-day reflection",
+  purpose: "To look back gently and notice what you learned.",
+  how: [There are no grades here. Write a few honest words for each line.],
+)
+```
+
+Looking back is part of the practice. There are no grades here — just a few honest
+words for each line.
+
+```{=typst}
+#wcg-field("The most useful thing I noticed", lines: 1)
+#wcg-field("A moment I felt calmer about a choice", lines: 1)
+#wcg-field("Something that surprised me", lines: 1)
+#wcg-field("One thing I want to keep doing", lines: 1)
+#wcg-field("One thing I want to let go of", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> Progress is not a straight line. A week of gentle noticing is real progress.
+
+```{=typst}
+#wcg-ws-footer()
+```

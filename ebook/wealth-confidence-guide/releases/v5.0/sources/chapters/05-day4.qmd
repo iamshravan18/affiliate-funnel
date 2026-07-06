@@ -1,0 +1,40 @@
+{{< pagebreak >}}
+
+# Day 4 — Choose one small shift {#day4}
+
+```{=typst}
+#wcg-lead[Today you turn one observation into a small, specific plan.]
+#wcg-visual(height: 1.3in, label: [A path making one small, calm turn])
+```
+
+## Why this matters
+
+Big resolutions often collapse, and vague intentions fade. Research suggests a
+simple fix: a specific "when-then" plan — deciding in advance what you will do in a
+certain situation — is linked with better follow-through than a general
+intention,^8^ with a medium-to-large average effect across many studies.^9^
+
+The key word is *specific*. "Spend less" is a wish. "When I open the shopping app
+after dinner, then I'll add items to a list" is a plan you can picture.
+
+## An everyday example
+
+A when-then plan might be: "When I feel the urge to buy something at night, then
+I'll add it to a list and look again tomorrow." Small, clear, and easy to follow —
+which is exactly what makes it work.
+
+```{=typst}
+#wcg-action[
+  Write one when-then shift based on something you noticed this week. Keep it
+  small enough that it feels almost too easy. Small is the point.
+]
+```
+
+> **Notice.**
+>
+> What is one small, realistic change I could try?
+
+You are choosing one shift, worded so clearly that your future self knows exactly
+what to do.
+
+{{< include assets/worksheets/ws-4-small-shift.qmd >}}

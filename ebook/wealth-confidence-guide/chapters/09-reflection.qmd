@@ -1,0 +1,10 @@
+{{< pagebreak >}}
+
+# Seven-day reflection {#reflection}
+
+You reached the end of the week — that is worth pausing on. You did not overhaul
+your finances; you practiced something quieter and more lasting. Looking back is
+part of the practice, and keeping track of progress is linked with a better chance
+of reaching a goal.^4^
+
+{{< include assets/worksheets/ws-8-seven-day-reflection.qmd >}}

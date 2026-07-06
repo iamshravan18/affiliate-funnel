@@ -1,0 +1,46 @@
+/* Print + EPUB styling for The Wealth Confidence Guide.
+   Mature-reader friendly: strong contrast, generous spacing, no tiny type. */
+
+@page {
+  size: letter portrait;
+  margin: 1in 1.1in;
+}
+
+html { font-size: 12.5pt; }
+
+body {
+  font-family: "Manrope", system-ui, sans-serif;
+  color: #0B241F;
+  background: #F7F3E9;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: #0F3D2E;
+  page-break-after: avoid;
+}
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.12rem; }
+
+p, li { orphans: 3; widows: 3; }
+
+blockquote {
+  background: #EFEAD9;
+  border-left: 4px solid #0F3D2E;
+  padding: 0.8rem 1rem;
+  margin: 1.2rem 0;
+  page-break-inside: avoid;
+}
+
+table { width: 100%; border-collapse: collapse; page-break-inside: avoid; }
+th, td { border-bottom: 1px solid #D6CDB8; padding: 0.7rem 0.55rem; vertical-align: top; }
+thead th { color: #0F3D2E; border-bottom: 2px solid #D6CDB8; }
+/* Give empty worksheet cells room to write */
+td:empty { height: 1.8rem; }
+
+a { color: #0F3D2E; }
+
+.closing-brand { text-align: center; border-top: 1px solid #D6CDB8; padding-top: 1rem; }
+.closing-brand strong { font-family: "Cormorant Garamond", serif; font-size: 1.5rem; color: #0F3D2E; }

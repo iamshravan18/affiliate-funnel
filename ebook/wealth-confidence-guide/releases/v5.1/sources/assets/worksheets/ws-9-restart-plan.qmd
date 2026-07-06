@@ -1,0 +1,27 @@
+```{=typst}
+#wcg-ws-open(
+  day: "Restart", num: 9, title: "A compassionate restart plan",
+  purpose: "To make coming back easy after a break, without self-criticism.",
+  how: [Fill this in now, while things are calm. Then it is ready for the day you need it.],
+)
+
+#wcg-panel(title: "Worked example")[
+  *My kind first step:* Reread my one "when-then" plan and try it once. \
+  *What I will tell myself:* "One missed week is just one week. I can begin again today."
+]
+
+#wcg-field("The smallest first step I can take", lines: 1)
+#wcg-field("A kind sentence to say to myself", lines: 2)
+#wcg-field("When I will begin again", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> Responding to a slip with self-kindness, rather than harsh criticism, is linked
+> with more motivation to try again [@breines2012] and with lower stress
+> [@sirois2014]. Being kind to yourself is practical, not soft.
+
+```{=typst}
+#wcg-ws-footer()
+```

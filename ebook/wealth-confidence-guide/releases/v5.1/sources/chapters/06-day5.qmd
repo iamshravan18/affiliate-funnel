@@ -1,0 +1,41 @@
+{{< pagebreak >}}
+
+# Day 5 — Make the easier choice more visible {#day5}
+
+```{=typst}
+#wcg-lead[Today takes pressure off your willpower and puts it on your surroundings.]
+#wcg-lesson-art("environment", caption: [A phone set aside; a short list made easier to reach])
+```
+
+## Why this matters
+
+The choice that happens automatically — the "default" — can strongly shape what
+people end up doing.^10^ And because habits are triggered by cues,^3^ changing the
+cues and the ease of a choice can quietly change the choice itself.
+
+So you do not have to be more disciplined. You can work in both directions: add a
+little friction to an automatic purchase, and remove a little friction from the
+choice you would rather make.
+
+## An everyday example
+
+Logging out of stored payment details adds a few seconds to a purchase — just
+enough to invite a pause. Moving a shopping app off your home screen means you no
+longer tap it by reflex. Small changes to your surroundings do the work that
+willpower used to.
+
+```{=typst}
+#wcg-action[
+  Pick one automatic purchase and make it a little harder. Then pick one calmer
+  choice and make it a little easier. Use the checklist for ideas.
+]
+```
+
+> **Notice.**
+>
+> What makes this purchase so easy for me right now?
+
+You are arranging your surroundings so the calmer choice needs less effort. That
+is smart design, not self-control.
+
+{{< include assets/worksheets/ws-5-environment-friction.qmd >}}

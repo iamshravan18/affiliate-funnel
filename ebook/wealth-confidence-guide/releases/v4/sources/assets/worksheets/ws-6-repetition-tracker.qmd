@@ -1,0 +1,44 @@
+```{=typst}
+#pagebreak()
+#wcg-ws-open(
+  day: "Day 6", num: 6, title: "Repetition tracker",
+  purpose: "To keep the practice going lightly, without expecting perfection.",
+  how: [Each day, simply mark whether you practiced. "Not yet" is a fine answer.
+  There is no streak to protect and nothing to lose by missing a day.],
+)
+
+#let track(day) = block(above: 9pt, below: 0pt,
+  grid(columns: (0.95in, auto, auto, 1fr), column-gutter: 20pt, align: horizon,
+    text(font: ("Manrope",), size: 12pt, weight: 600, fill: c-deep)[#day],
+    wcg-check("Yes"), wcg-check("Not yet"),
+    box(width: 100%, inset: (bottom: 3pt), line(length: 100%, stroke: 0.6pt + c-taupe))))
+
+#block(inset: (top: 6pt))[
+  #grid(columns: (0.95in, auto, auto, 1fr), column-gutter: 20pt,
+    text(font: ("Manrope",), size: 9.5pt, weight: 700, tracking: 1pt, fill: c-num)[DAY],
+    text(font: ("Manrope",), size: 9.5pt, weight: 700, tracking: 1pt, fill: c-num)[PRACTICED?],
+    [], text(font: ("Manrope",), size: 9.5pt, weight: 700, tracking: 1pt, fill: c-num)[ONE WORD ABOUT TODAY])
+]
+#v(4pt)
+#track("Day 1")
+#track("Day 2")
+#track("Day 3")
+#track("Day 4")
+#track("Day 5")
+#track("Day 6")
+#track("Day 7")
+
+#wcg-group("My plan for a likely miss")
+#wcg-field("A day that might be hard this week", lines: 1)
+#wcg-field("What I will do to come back", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> In one real-world study, missing a single day did not stop a habit from forming.^11^
+> One miss is just one day.
+
+```{=typst}
+#wcg-ws-footer()
+```

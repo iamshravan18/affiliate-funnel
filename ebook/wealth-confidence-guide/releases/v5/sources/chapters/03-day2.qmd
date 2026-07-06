@@ -1,0 +1,40 @@
+{{< pagebreak >}}
+
+# Day 2 — Pause before one automatic purchase {#day2}
+
+```{=typst}
+#wcg-lead[Yesterday you noticed a pattern. Today you add one small thing: a pause.]
+#wcg-visual(height: 1.3in, label: [A short, quiet moment before one automatic choice])
+```
+
+## Why this matters
+
+Many purchases feel finished before we notice deciding. Research on unplanned
+buying suggests that situational factors — time to browse, and how we feel in the
+moment — often come *before* the purchase itself.^5^
+
+People also differ in how much discomfort they feel when spending, sometimes
+called the "pain of paying."^6^ A short pause simply gives that natural signal a
+moment to be heard.
+
+## An everyday example
+
+Picture yourself at night, tired, thumb hovering over "Buy now." A ten-second
+pause does not cancel the purchase. It just opens a small window where a real
+choice can happen.
+
+```{=typst}
+#wcg-action[
+  Choose one moment where buying tends to happen fast. Before that purchase
+  today, take about ten quiet seconds. Notice how you feel. Then decide — buy it
+  or not. Either answer is fine.
+]
+```
+
+> **Notice.**
+>
+> What am I feeling right now — and do I still want this in a minute?
+
+A pause is a small act of respect for yourself. It is not a rule to obey.
+
+{{< include assets/worksheets/ws-2-purchase-pause.qmd >}}

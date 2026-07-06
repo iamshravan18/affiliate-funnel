@@ -1,0 +1,51 @@
+```{=typst}
+// ---- FAMILY A: Cover (page 1) ----
+#wcg-cover()
+
+// ---- Page 2: Welcome + brand manifesto + compact footer ----
+#set page(numbering: none)
+#wcg-fullbleed(c-sand)
+#v(0.85in)
+#align(center)[
+  #wcg-logo(size: 0.9in, ink: c-deep, dot: c-gold)
+  #v(0.32in)
+  #text(font: ("Cormorant Garamond",), size: 30pt, weight: 700, fill: c-deep)[
+    Small habits.\ Stronger money confidence.
+  ]
+  #v(0.2in)
+  #text(font: ("Manrope",), size: 12pt, weight: 600, tracking: 5pt, fill: c-gold)[NOTICE.  PAUSE.  REPEAT.]
+  #v(0.28in)
+  #line(length: 15%, stroke: 0.75pt + c-gold)
+  #v(0.28in)
+  #block(width: 4.8in)[
+    #set par(leading: 0.9em, justify: false)
+    #text(font: ("Manrope",), size: 12.5pt, fill: c-ever)[
+      Over seven short days, you will practice one simple skill: paying gentle
+      attention to a few everyday money choices. No budget, no tracking every
+      dollar, and nothing you have to give up.
+
+      Financial well-being is not a single number — it is being able to meet your
+      obligations, feel secure, and have the freedom to make choices, and it looks
+      different for everyone.#super[1] This guide is simply a calmer way to see the
+      small decisions you already make.
+    ]
+  ]
+  #v(0.3in)
+  #block(width: 4.9in, inset: (x: 22pt))[
+    #text(font: ("Cormorant Garamond",), style: "italic", size: 21pt, fill: c-deep)[
+      “There is nothing to fix here. \ There is only something to notice.”
+    ]
+  ]
+]
+#v(1fr)
+#line(length: 100%, stroke: 0.6pt + c-taupe)
+#v(7pt)
+#align(center)[
+  #text(font: ("Manrope",), size: 9.5pt, weight: 600, fill: c-deep)[The Wealth Confidence Guide · Version 5.0 · Published 2026]
+  #v(5pt)
+  #link("https://microsavingdaily.com")[#wcg-domain(size: 10pt)]
+  #v(4pt)
+  #text(font: ("Manrope",), size: 9pt, fill: c-body)[Copyright © 2026 Micro Saving Daily · Free to print for your personal use.]
+]
+#pagebreak()
+```

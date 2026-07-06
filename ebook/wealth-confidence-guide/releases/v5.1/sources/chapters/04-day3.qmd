@@ -1,0 +1,42 @@
+{{< pagebreak >}}
+
+# Day 3 — Understand the moment around the purchase {#day3}
+
+```{=typst}
+#wcg-lead[Today you become a gentle detective — describing the moment, not blaming yourself.]
+#wcg-lesson-art("context", caption: [The moment around a purchase: place, time, feeling, cue])
+```
+
+## Why this matters
+
+We often blame willpower for our choices. But habits are set off by the cues in a
+situation,^3^ and unplanned purchases tend to follow certain conditions — time to
+browse, and the mood of the moment.^5^ The situation is frequently the real
+driver, not a lack of discipline.
+
+One more thing, named kindly: when money feels tight, that worry can take up
+mental attention and make it harder to focus on other things.^7^ That is a general
+finding about stress, not a statement about you.
+
+## An everyday example
+
+Boredom, a free evening, and a phone within reach can quietly lead to scrolling a
+shopping app. No single part is a problem. Together, they form a moment that makes
+buying easy — and seeing the parts is what gives you options.
+
+```{=typst}
+#wcg-action[
+  Pick one recent purchase. Map the moment around it: where you were, the time,
+  who you were with, how you felt, and the cue that set it off. Then notice which
+  part would be easiest to change.
+]
+```
+
+> **Notice.**
+>
+> What was happening around me just before this purchase?
+
+You are not looking for a flaw in yourself. You are looking at a situation you can
+adjust.
+
+{{< include assets/worksheets/ws-3-trigger-map.qmd >}}

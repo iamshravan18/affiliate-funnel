@@ -1,0 +1,10 @@
+# Local QA/tooling artifacts (not part of the deliverable source)
+.qa-venv/
+.vale-styles/
+research/_candidates/
+qa/page-renders/
+.quarto/
+index.typ
+
+/.quarto/
+**/*.quarto_ipynb

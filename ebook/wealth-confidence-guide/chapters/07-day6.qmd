@@ -1,0 +1,38 @@
+{{< pagebreak >}}
+
+# Day 6 — Repeat without expecting perfection {#day6}
+
+```{=typst}
+#wcg-lead[Today is about keeping your tools going through normal, imperfect days.]
+#wcg-lesson-art("repeat", caption: [Steady, imperfect practice — one gap, and it continues])
+```
+
+## Why this matters
+
+In a real-world study of habit formation, a new habit took about two months on
+average to feel automatic — with a wide range from a few weeks to many months — and
+missing a single day did not stop the habit from forming.^11^ There is no magic
+number, and one skipped day is not a broken streak; it is just a day.
+
+When a slip happens, how you respond matters. Kindness rather than harsh
+self-criticism is linked with more motivation to try again.^12^ Being gentle with
+yourself is not soft — it is practical.
+
+## An everyday example
+
+Say a busy week costs you a day or two. The old story says, "I failed, so why
+bother." The kinder, truer story says, "That was a full week — I'll pick it up
+tomorrow." The second story is the one that keeps habits alive.
+
+```{=typst}
+#wcg-action[
+  Track your practice lightly — just "yes" or "not yet." Then plan for a day that
+  might be hard, so a likely miss does not surprise you.
+]
+```
+
+> **Notice.**
+>
+> Did I practice today — yes, or not yet?
+
+{{< include assets/worksheets/ws-6-repetition-tracker.qmd >}}

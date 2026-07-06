@@ -1,0 +1,69 @@
+/*-- scss:defaults --*/
+// The Wealth Confidence Guide — HTML/EPUB brand theme (Manrope + Cormorant).
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap');
+
+$deep-green: #0F3D2E;
+$evergreen:  #0B241F;
+$ivory:      #F7F3E9;
+$gold:       #C9A15B;
+$sage:       #A7BFA3;
+$warm-sand:  #E6D8C3;
+$taupe:      #D6CDB8;
+
+$body-bg:        $ivory;
+$body-color:     $evergreen;
+$link-color:     $deep-green;
+$font-family-sans-serif: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$headings-font-family:   "Cormorant Garamond", Georgia, serif;
+$font-size-root:  18px;   // comfortable for mature readers
+$line-height-base: 1.7;
+$headings-color:  $deep-green;
+$toc-color:       $deep-green;
+
+/*-- scss:rules --*/
+body { background-color: $ivory; color: $evergreen; }
+
+h1, h2, h3, h4 { color: $deep-green; font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-weight: 700; }
+
+a { text-underline-offset: 3px; }
+
+// Aside boxes (from Markdown blockquotes)
+blockquote {
+  background: #EFEAD9;
+  border-left: 4px solid $deep-green;
+  border-radius: 3px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+  color: $evergreen;
+  font-style: normal;
+  strong:first-child { color: $deep-green; }
+}
+
+// Worksheet tables: roomy, lined, grayscale-safe
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+}
+th, td {
+  border-bottom: 1px solid $taupe;
+  padding: 0.75rem 0.6rem;
+  vertical-align: top;
+  min-height: 2.2rem;
+}
+thead th { color: $deep-green; font-weight: 600; border-bottom: 2px solid $taupe; }
+tbody tr td:empty::after { content: ""; display: block; min-height: 1.6rem; }
+
+// Closing brand block
+.closing-brand {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid $taupe;
+  p { margin: 0.2rem 0; }
+  strong { font-family: "Cormorant Garamond", serif; font-size: 1.6rem; color: $deep-green; }
+}
+
+// Gold used only as a sparing accent (never body text)
+.references, #refs { font-size: 0.95rem; }

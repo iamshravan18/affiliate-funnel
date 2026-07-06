@@ -1,0 +1,34 @@
+```{=typst}
+#pagebreak()
+#wcg-ws-open(
+  day: "Day 5", num: 5, title: "Environment and friction checklist",
+  purpose: "To make the calmer choice a little easier and the automatic one a little harder.",
+  how: [Check any small changes you are willing to try. You do not need to do all
+  of them — one or two is plenty.],
+)
+
+#wcg-group("Make the automatic purchase a little harder")
+#wcg-check("Log out of stored payment details on one site or app.")
+#wcg-check("Remove a saved card from one shopping account.")
+#wcg-check("Move a shopping app off my phone's home screen.")
+#wcg-check("Turn off sale and \"back in stock\" notifications for one store.")
+#wcg-check("Add one item to a list instead of buying, and check it tomorrow.")
+
+#wcg-group("Make the calmer choice a little easier")
+#wcg-check("Keep a simple list where I can see it.")
+#wcg-check("Put a glass of water or a snack within reach for tired moments.")
+#wcg-check("Keep the phone in another room during one part of the day.")
+#wcg-check("Decide one \"default\" ahead of time (for example, coffee at home first).")
+
+#wcg-field("One change I want to try", lines: 1)
+#wcg-field("Where I will set it up", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> You are designing your surroundings, not testing your willpower.
+
+```{=typst}
+#wcg-ws-footer()
+```

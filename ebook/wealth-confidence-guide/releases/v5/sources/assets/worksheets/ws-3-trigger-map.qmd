@@ -1,0 +1,31 @@
+```{=typst}
+#pagebreak()
+#wcg-ws-open(
+  day: "Day 3", num: 3, title: "Trigger map",
+  purpose: "To map the situation around one purchase, so you can see what shapes it.",
+  how: [Think of one recent purchase. Instead of asking "why did I do that,"
+  describe what was happening around you. The situation is often the real driver.],
+)
+
+#wcg-panel(title: "Worked example")[
+  *Place:* On the sofa. *Time:* Evening. *With whom:* Alone. \
+  *Feeling:* Bored. *Cue:* Phone notification for a sale. \
+  *Easiest thing to change:* Keep the phone in another room after dinner.
+]
+
+#wcg-field("Where I was (place)", lines: 1)
+#wcg-field("Time of day", lines: 1)
+#wcg-field("Who I was with", lines: 1)
+#wcg-field("How I was feeling", lines: 1)
+#wcg-field("The cue or trigger (what set it off)", lines: 1)
+#wcg-field("The part that would be easiest to change", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> Triggers are information, not faults. Everyone has them.
+
+```{=typst}
+#wcg-ws-footer()
+```

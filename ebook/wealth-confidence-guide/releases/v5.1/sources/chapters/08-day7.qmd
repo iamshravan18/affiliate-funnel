@@ -1,0 +1,40 @@
+{{< pagebreak >}}
+
+# Day 7 — Build your personal awareness plan {#day7}
+
+```{=typst}
+#wcg-lead[Today you gather the week into one simple plan that belongs to you.]
+#wcg-lesson-art("plan", caption: [Seven small habits combining into one steady plan])
+```
+
+## Why this matters
+
+Insights fade without a little structure. A when-then plan helps carry an
+intention into action,^9^ and pulling your best ideas onto one page makes them
+easy to return to.
+
+There is also a deeper reason. As your confidence grows, you are building what
+psychologists call self-efficacy — linked with how much effort people invest and
+how long they persist.^13^ This week was never really about one coffee or one
+cart. It was about that quiet, steady confidence.
+
+## An everyday example
+
+A finished plan might read: "I'm watching my evening phone-shopping. When the urge
+shows up, I pause and add items to a list. I moved the app off my home screen. On
+hard days, I'll reread this page." Simple, personal, repeatable.
+
+```{=typst}
+#wcg-action[
+  Complete your one-page awareness plan. Keep it somewhere you will see it.
+]
+```
+
+> **Notice.**
+>
+> Which one habit from this week is most worth keeping?
+
+This plan is a living thing. Change it whenever your life changes — that is using
+it well, not failing to follow it.
+
+{{< include assets/worksheets/ws-7-awareness-plan.qmd >}}

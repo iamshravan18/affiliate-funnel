@@ -80,3 +80,76 @@ Route: `/wealth-confidence-guide/thank-you`
   not exist yet** — the thank-you "Download the Guide" button is accessibly
   disabled with a documented TODO until the asset ships. Affiliate link tracking
   param is not applied (custom vendor-domain hoplink; confirm syntax first).
+
+
+## Ebook: The Wealth Confidence Guide (Phase 5A research/authoring)
+Evidence-informed lead-magnet workbook. Project lives **only** under
+`ebook/wealth-confidence-guide/` (do not scatter ebook files into the website).
+
+- **Title / subtitle:** "The Wealth Confidence Guide" — "Simple daily
+  money-awareness shifts for calmer financial decisions." Framework: Notice.
+  Pause. Repeat. 28–34 pages (built: **34**).
+- **Audience:** publicly age-inclusive; **never** labelled by age. Internal
+  reader profile is a US adult ~45–70. **Mature-reader-first accessibility**:
+  Manrope 12pt body, Cormorant Garamond headings, generous spacing, strong
+  contrast, no gold body text, grayscale-usable worksheets, one H1 per chapter.
+- **Research hierarchy:** US gov/regulatory → systematic reviews/meta-analyses →
+  peer-reviewed behavioural/consumer-psych → universities → recognised
+  nonprofits. Discovery via **OpenAlex** (`OPENALEX_API_KEY` read from env only,
+  never printed/committed); metadata **verified via Crossref/official domains**.
+- **Evidence matrix is mandatory:** every research claim must appear (verified)
+  in `research/evidence-matrix.csv` before it enters the manuscript. 18 sources
+  (16 peer-reviewed, 2 government). **No invented citations, authors, DOIs, IDs,
+  or numbers.** Every numerical claim is cited.
+- **No unsupported/overstated claims.** Hedged language only ("research
+  suggests", "is associated with"). **No financial promises**, **no medical/
+  neurological claims**, no manifestation language.
+- **No affiliate offer in the core ebook** (RULE 8): no Billionaire Brain Wave,
+  Pyramid Wealth Frequency, or ClickBank anywhere in the guide. The closing page
+  may only invite readers to continue the guide / return to microsavingdaily.com
+  / watch email for future educational resources.
+- **Publishing:** Quarto (bundles Pandoc + Typst) → PDF (Typst), EPUB, HTML.
+  Tools install to `~/.local` (`quarto`, `vale`, `lychee`); fonts in
+  `assets/fonts`. Rebuild via `scripts/build_ebook.sh`.
+- **Final images are generated separately** (RULE 9): the repo ships
+  dimensionally-correct **branded placeholders** + a complete
+  `assets/image-manifest.md` (18 assets, briefs, alt text). Do not invent stock
+  art or fake product mockups.
+- **QA:** `scripts/verify_citations.py`, `audit_claims.py`, `check_readability.py`,
+  `render_pdf_pages.py`; reports in `qa/`. Citation audit clean; Vale 0 errors;
+  Lychee links reachable; PDF pages visually inspected via PyMuPDF renders.
+- **No website integration before manual approval:** do NOT copy the PDF into the
+  site's public download directory or enable a download button until approved.
+
+
+## Ebook V5.1 (final release candidate)
+- **V5.1 is the final release candidate**, built from the approved **V5** source
+  of truth. **V5 and V5.0 remain archived** (`ebook/wealth-confidence-guide/releases/v5/`,
+  `.../releases/v5.0/`). **Old releases must never be deleted or overwritten.**
+- **25-page structure retained** (affiliate-free; 17 numbered superscript
+  citations; 17 references; seven lessons; seven worksheets; no author-year
+  citations; no font shrinking; no reduced writing space).
+- **Numbered superscript citations retained.** The citation helper in
+  `styles/ebook-template.typ` uses a word joiner
+  (`#let super(body) = { sym.wj; __wcg-super-orig(body) }`) so markers stay glued
+  to the preceding word and never wrap to their own line.
+- **Seven native Typst lesson illustrations** were added (prior phase); **page-20
+  native card icons** (moon/clock/bolt/star/loop) added via `wcg-moment-icon`.
+- **No affiliate content in the ebook** (no Billionaire Brain Wave / Pyramid
+  Wealth Frequency / ClickBank).
+- **PDF metadata requirements** (set by `scripts/finalize_pdf.py`, PyMuPDF):
+  Title "The Wealth Confidence Guide", Author "Micro Saving Daily", a Subject and
+  Keywords, `/Lang = en-US`, and a left-to-right reading-direction hint.
+- **Bookmark requirements:** clean two-level outline — L1 "The Wealth Confidence
+  Guide" → p1; L2: Before You Begin→3, Notice. Pause. Repeat.→4, Day 1→5, Day 2→7,
+  Day 3→9, Day 4→11, Day 5→13, Day 6→15, Day 7→17, Seven-Day Reflection→19, Common
+  Spending Moments→20, Automatic Spending Audit→21, Compassionate Restart→22, Your
+  Next 30 Days→23, Sources & References→24, One Last Thing→25.
+- **The PDF is authoritative.** EPUB and HTML do not reproduce all native Typst
+  worksheet/card/reference layouts.
+- **Outputs:** `output/the-wealth-confidence-guide-v5.1.{pdf,epub,html}`,
+  `output/html/index.html`; release bundle at `releases/v5.1/` (PDF/EPUB/HTML +
+  QA reports + 25 page renders + source snapshot + build notes).
+- **Website integration happens only after approval:** do NOT copy the PDF into
+  the site's public download directory or enable the download button until
+  explicitly approved.

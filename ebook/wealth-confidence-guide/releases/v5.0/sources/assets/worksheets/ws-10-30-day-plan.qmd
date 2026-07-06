@@ -1,0 +1,26 @@
+```{=typst}
+#wcg-ws-open(
+  day: "Next 30 days", num: 10, title: "Your next 30 days",
+  purpose: "To carry one small habit forward at a calm, realistic pace.",
+  how: [This is not a countdown. It is a gentle map for the next few weeks.
+  Choose one habit to keep practicing.],
+)
+
+#wcg-group("Weeks 1–2 · settle the habit into ordinary days")
+#wcg-field("The one habit I will practice", lines: 1)
+#wcg-field("When and where it fits my day", lines: 1)
+
+#wcg-group("Weeks 3–4 · keep what works; add only if it feels easy")
+#wcg-field("What I will keep the same", lines: 1)
+#wcg-field("How I will handle a hard day", lines: 1)
+
+```
+
+> **A gentle reminder.**
+>
+> There is no finish line and no perfect score. If you miss days, you simply
+> begin again.
+
+```{=typst}
+#wcg-ws-footer()
+```

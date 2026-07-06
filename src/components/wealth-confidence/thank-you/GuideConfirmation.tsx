@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Reveal, RevealMedia } from "@/components/motion";
+import { CtaButton, Reveal, RevealMedia } from "@/components/motion";
 import { wealthConfidenceImages } from "@/content/wealth-confidence-assets";
 
 const guideVisual = wealthConfidenceImages.guide3dMockup;
@@ -15,14 +15,12 @@ const day1 = wealthConfidenceImages.worksheetDay1;
  *   placeholder-ready "access is being prepared" wording.
  *
  * Download button:
- *   No real PDF asset exists yet (nothing under public/*.pdf). We therefore
- *   render the primary CTA as an accessibly DISABLED button (aria-disabled +
- *   real `disabled`) with explanatory microcopy, rather than inventing a fake
- *   URL or shipping an empty file.
- *   TODO(guide-pdf): When the real Wealth Confidence Guide PDF is produced,
- *   drop it in /public (e.g. /guides/wealth-confidence-guide.pdf), swap this
- *   <button> for an <a href download> (or the post-subscription delivery URL),
- *   remove the disabled state, and remove the "being prepared" note.
+ *   The approved final PDF ships at
+ *   public/downloads/the-wealth-confidence-guide.pdf and is served at
+ *   /downloads/the-wealth-confidence-guide.pdf. The primary CTA is a real
+ *   anchor (CtaButton renders motion.a) with the native `download` attribute,
+ *   so the browser downloads (or opens) the file directly — no fake URL, no
+ *   Next.js Link, and no client-side blob.
  *
  * Day 1 link:
  *   The only real Day-1 asset is an IMAGE (printable worksheet), not an
@@ -62,19 +60,20 @@ export function GuideConfirmation() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               {/*
-                Accessibly-disabled primary CTA (no PDF asset yet).
-                Styled to match CtaButton solid, dimmed to read as unavailable.
+                Primary CTA — direct download of the approved public PDF at
+                /downloads/the-wealth-confidence-guide.pdf. CtaButton renders a
+                real anchor (motion.a) with the native `download` attribute; no
+                Next.js Link and no client-side blob, so the user stays on the
+                thank-you page while the browser downloads (or opens) the file.
               */}
-              <button
-                type="button"
-                disabled
-                aria-disabled="true"
+              <CtaButton
+                href="/downloads/the-wealth-confidence-guide.pdf"
+                download
                 data-event="guide_download_click"
                 aria-describedby="download-status"
-                className="inline-flex cursor-not-allowed items-center justify-center rounded-full bg-deep-green/45 px-9 py-4 text-base font-medium text-ivory/90 shadow-md shadow-deep-green/10"
               >
-                Download the Guide
-              </button>
+                Download The Wealth Confidence Guide
+              </CtaButton>
 
               <a
                 href={day1.webp}
@@ -88,9 +87,9 @@ export function GuideConfirmation() {
               </a>
             </div>
 
-            {/* Not-color-alone status for the disabled download. */}
+            {/* Not-color-alone status tied to the download CTA. */}
             <p id="download-status" className="mt-3 text-sm text-evergreen/60">
-              The downloadable PDF is being finalised — Day 1 opens a printable
+              Your 25-page guide (PDF) is ready. Day 1 opens a printable
               worksheet you can start with right now.
             </p>
 

@@ -153,3 +153,27 @@ Evidence-informed lead-magnet workbook. Project lives **only** under
 - **Website integration happens only after approval:** do NOT copy the PDF into
   the site's public download directory or enable the download button until
   explicitly approved.
+
+
+## Second Funnel — Billionaire Brain Wave
+
+The full strategy and planning memory for the second funnel is stored at:
+
+docs/second-funnel-billionaire-brain-wave-plan.md
+
+Read that file before researching, planning, designing, or building any part of the second funnel.
+
+This funnel is separate from Micro Saving Daily.
+
+Do not add Billionaire Brain Wave content, affiliate links, or vendor imagery to The Wealth Confidence Guide or the existing Micro Saving Daily funnel.
+
+Do not begin implementation without first verifying the current ClickBank marketplace data, affiliate terms, allowed traffic sources, and vendor compliance requirements.
+
+Verified constraints (July 2026 research update — full detail in the memory file):
+
+- Vendor-provided email swipes are research-only and must not be copied into ads, emails, advertorials, landing pages, review pages, or social content.
+- Any product-focused page must be a clearly disclosed independent REVIEW page (REVIEW in title, URL, and cover graphics).
+- Paid ads must not use the product name, and product-name/PPC bidding is prohibited.
+- Do not use vendor imagery (including background-swapped versions) without written affiliate-manager permission.
+- Do not use testimonials, health/brain-growth claims, wealth guarantees, fake urgency, or conspiracy/institutional claims. State vendor claims only as attributed, never as fact.
+- Read the full memory file (docs/second-funnel-billionaire-brain-wave-plan.md) before any second-funnel work.

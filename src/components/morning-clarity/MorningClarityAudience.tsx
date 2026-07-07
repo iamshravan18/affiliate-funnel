@@ -30,7 +30,7 @@ export function MorningClarityAudience() {
   return (
     <section className="bg-warm-sand/40">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-[4.5rem]">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-16">
           <Reveal className="order-2 lg:order-1">
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
               {AUDIENCE.eyebrow}
@@ -56,19 +56,23 @@ export function MorningClarityAudience() {
             </p>
           </Reveal>
 
-          <RevealMedia delay={0.1} className="relative order-1 lg:order-2">
+          <RevealMedia delay={0.1} className="relative order-1 lg:order-2 lg:self-center">
             <div
               aria-hidden="true"
               className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-sage/20 blur-3xl"
             />
-            <div className="overflow-hidden rounded-2xl border border-warm-sand bg-ivory shadow-xl shadow-deep-green/10 ring-1 ring-deep-green/5">
+            {/* Desktop uses a taller fixed-height frame so the scene matches the
+                height of the checklist copy; on mobile it keeps natural height.
+                object-cover with a centre-38% focal point preserves the woman's
+                face, writing hand, workbook and table without distortion. */}
+            <div className="overflow-hidden rounded-2xl border border-warm-sand bg-ivory shadow-xl shadow-deep-green/10 ring-1 ring-deep-green/5 lg:h-[460px]">
               <Image
                 src={scene.webp}
                 alt={scene.alt}
                 width={scene.width}
                 height={scene.height}
-                sizes="(min-width: 1024px) 520px, 100vw"
-                className="h-auto w-full"
+                sizes="(min-width: 1024px) 460px, 100vw"
+                className="h-auto w-full lg:h-full lg:object-cover lg:object-[center_38%]"
               />
             </div>
           </RevealMedia>

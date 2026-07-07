@@ -29,7 +29,7 @@ export function MorningClarityHero() {
             "linear-gradient(180deg, #f7f3e9 0%, #f7f3e9 55%, #f1ead9 100%)",
         }}
       />
-      <div className="mx-auto grid max-w-6xl items-start gap-10 px-6 pt-10 pb-12 sm:pt-12 sm:pb-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:pt-16 lg:pb-16">
+      <div className="mx-auto grid max-w-6xl items-start gap-10 px-6 pt-10 pb-12 sm:pt-12 sm:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:pt-16 lg:pb-16">
         <div className="max-w-xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-deep-green/80">
             <GrowthCircleMark className="h-4 w-4 text-deep-green" />
@@ -96,16 +96,20 @@ export function MorningClarityHero() {
             />
           </div>
 
-          {/* Desktop: landscape composition. */}
-          <div className={`${FRAME} hidden lg:block`}>
+          {/* Desktop: landscape composition in a taller fixed-height frame so
+              the visual spans the full hero (headline + form) rather than
+              leaving dead space beneath a short thumbnail. object-cover fills
+              the frame; object-center keeps the woman's face, hands, notebook,
+              tea and headphones in view without distortion. */}
+          <div className={`${FRAME} hidden lg:block lg:h-[460px]`}>
             <Image
               src={heroDesktop.webp}
               alt={heroDesktop.alt}
               width={heroDesktop.width}
               height={heroDesktop.height}
               priority
-              sizes="(min-width: 1024px) 47vw, 1px"
-              className="h-auto w-full"
+              sizes="(min-width: 1024px) 540px, 1px"
+              className="h-full w-full object-cover object-center"
             />
           </div>
         </div>

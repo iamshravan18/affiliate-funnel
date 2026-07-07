@@ -9,20 +9,24 @@ export function MorningClaritySevenMinute() {
   return (
     <section className="bg-ivory">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-[4.5rem]">
-        <div className="grid items-start gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+        <div className="grid items-start gap-12 lg:grid-cols-[0.44fr_0.56fr] lg:items-center lg:gap-16">
           <RevealMedia className="relative order-1 lg:order-1">
             <div
               aria-hidden="true"
               className="absolute -inset-5 -z-10 rounded-[2.25rem] bg-sage/20 blur-3xl"
             />
-            <div className="overflow-hidden rounded-2xl border border-warm-sand bg-ivory shadow-xl shadow-deep-green/10 ring-1 ring-deep-green/5">
+            {/* Desktop uses a tall fixed-height frame so the flat-lay visually
+                matches the seven-step list beside it; on mobile the image keeps
+                its natural height above the text. object-cover keeps the guide,
+                timer, tea and headphones centred without distortion. */}
+            <div className="overflow-hidden rounded-2xl border border-warm-sand bg-ivory shadow-xl shadow-deep-green/10 ring-1 ring-deep-green/5 lg:h-[560px]">
               <Image
                 src={flatLay.webp}
                 alt={flatLay.alt}
                 width={flatLay.width}
                 height={flatLay.height}
-                sizes="(min-width: 1024px) 520px, 100vw"
-                className="h-auto w-full"
+                sizes="(min-width: 1024px) 480px, 100vw"
+                className="h-auto w-full lg:h-full lg:object-cover lg:object-center"
               />
             </div>
           </RevealMedia>

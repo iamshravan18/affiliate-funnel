@@ -29,7 +29,7 @@ export function MorningClarityHero() {
             "linear-gradient(180deg, #f7f3e9 0%, #f7f3e9 55%, #f1ead9 100%)",
         }}
       />
-      <div className="mx-auto grid max-w-6xl items-start gap-10 px-6 pt-10 pb-12 sm:pt-12 sm:pb-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:pt-16 lg:pb-20">
+      <div className="mx-auto grid max-w-6xl items-start gap-10 px-6 pt-10 pb-12 sm:pt-12 sm:pb-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:pt-16 lg:pb-16">
         <div className="max-w-xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-deep-green/80">
             <GrowthCircleMark className="h-4 w-4 text-deep-green" />

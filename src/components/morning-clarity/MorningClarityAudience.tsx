@@ -29,7 +29,7 @@ function AudienceCheck() {
 export function MorningClarityAudience() {
   return (
     <section className="bg-warm-sand/40">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-[4.5rem]">
         <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
           <Reveal className="order-2 lg:order-1">
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">

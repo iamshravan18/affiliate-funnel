@@ -30,7 +30,7 @@ function IncludedCheck() {
 export function MorningClarityInclusions() {
   return (
     <section id="inside" className="scroll-mt-24 bg-warm-sand/40">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-[4.5rem]">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal
             as="h2"

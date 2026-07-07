@@ -6,7 +6,7 @@ import { PREVIEWS } from "./morning-clarity-content";
 export function MorningClarityPreviews() {
   return (
     <section className="bg-ivory">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-[4.5rem]">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">

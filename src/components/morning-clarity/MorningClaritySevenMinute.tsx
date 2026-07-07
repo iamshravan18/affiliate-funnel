@@ -8,7 +8,7 @@ const flatLay = morningClarityImages.sevenMinuteFlatLay;
 export function MorningClaritySevenMinute() {
   return (
     <section className="bg-ivory">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-[4.5rem]">
         <div className="grid items-start gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <RevealMedia className="relative order-1 lg:order-1">
             <div

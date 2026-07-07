@@ -4,7 +4,7 @@ import { PROBLEM } from "./morning-clarity-content";
 export function MorningClarityProblem() {
   return (
     <section className="bg-warm-sand/40">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-[4.5rem]">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal
             as="h2"

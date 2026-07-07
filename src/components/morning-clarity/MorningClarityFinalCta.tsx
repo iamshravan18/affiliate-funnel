@@ -9,7 +9,7 @@ const bundle = morningClarityImages.guideBundle;
 export function MorningClarityFinalCta() {
   return (
     <section id="get-the-guide" className="scroll-mt-24 bg-warm-sand/40">
-      <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-5xl px-6 py-16 sm:py-[4.5rem]">
         <Reveal className="overflow-hidden rounded-3xl border border-warm-sand bg-ivory shadow-xl shadow-deep-green/10">
           <div className="grid lg:grid-cols-2">
             {/* Guide visual on a deep panel for perceived value. */}

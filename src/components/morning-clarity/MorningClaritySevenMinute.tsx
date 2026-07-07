@@ -8,8 +8,8 @@ const flatLay = morningClarityImages.sevenMinuteFlatLay;
 export function MorningClaritySevenMinute() {
   return (
     <section className="bg-ivory">
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+        <div className="grid items-start gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <RevealMedia className="relative order-1 lg:order-1">
             <div
               aria-hidden="true"
@@ -49,7 +49,7 @@ export function MorningClaritySevenMinute() {
             </Reveal>
 
             <Reveal delay={0.12}>
-              <ol className="mt-8 grid gap-4">
+              <ol className="mt-6 grid gap-3">
                 {SEVEN_MINUTE.steps.map((step) => (
                   <li key={step.minute} className="flex items-start gap-4">
                     <span
@@ -76,7 +76,7 @@ export function MorningClaritySevenMinute() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="mt-8 rounded-2xl border-l-4 border-gold bg-sage/20 px-6 py-4 leading-relaxed text-evergreen/85">
+              <p className="mt-6 rounded-2xl border-l-4 border-gold bg-sage/20 px-6 py-4 leading-relaxed text-evergreen/85">
                 {SEVEN_MINUTE.note}
               </p>
             </Reveal>

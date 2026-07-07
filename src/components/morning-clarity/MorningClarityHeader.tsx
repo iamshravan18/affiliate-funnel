@@ -12,7 +12,7 @@ import { HEADER_CTA, NAV_LINKS } from "./morning-clarity-content";
 export function MorningClarityHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-warm-sand/70 bg-ivory/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-6">
         <a
           href="#top"
           aria-label="Micro Saving Daily home"
@@ -34,7 +34,7 @@ export function MorningClarityHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-deep-green/80 decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-deep-green hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              className="text-[0.9375rem] font-medium text-deep-green/80 decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-deep-green hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
             >
               {link.label}
             </a>

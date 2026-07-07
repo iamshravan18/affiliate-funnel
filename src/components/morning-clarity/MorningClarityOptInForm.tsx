@@ -57,7 +57,7 @@ export function MorningClarityOptInForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
       <div className="flex flex-col gap-2">
         <label
           htmlFor={firstNameId}

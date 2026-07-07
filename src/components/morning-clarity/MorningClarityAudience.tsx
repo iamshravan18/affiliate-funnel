@@ -29,13 +29,13 @@ function AudienceCheck() {
 export function MorningClarityAudience() {
   return (
     <section className="bg-warm-sand/40">
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
           <Reveal className="order-2 lg:order-1">
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
               {AUDIENCE.eyebrow}
             </span>
-            <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight tracking-[-0.01em] text-deep-green sm:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight tracking-[-0.01em] text-balance text-deep-green sm:text-4xl">
               {AUDIENCE.h2}
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-evergreen/75">

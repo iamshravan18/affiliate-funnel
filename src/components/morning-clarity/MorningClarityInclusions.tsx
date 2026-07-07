@@ -30,7 +30,7 @@ function IncludedCheck() {
 export function MorningClarityInclusions() {
   return (
     <section id="inside" className="scroll-mt-24 bg-warm-sand/40">
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal
             as="h2"
@@ -47,7 +47,7 @@ export function MorningClarityInclusions() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="mt-12 grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <RevealMedia className="relative order-1">
             <div
               aria-hidden="true"
@@ -79,8 +79,8 @@ export function MorningClarityInclusions() {
           </Reveal>
         </div>
 
-        <Reveal className="mt-16">
-          <div className="mx-auto flex max-w-[42.5rem] flex-col items-center gap-5 rounded-3xl border border-taupe/60 bg-ivory px-8 py-12 text-center shadow-md shadow-deep-green/10 sm:px-12 sm:py-14">
+        <Reveal className="mt-12">
+          <div className="mx-auto flex max-w-[42.5rem] flex-col items-center gap-4 rounded-3xl border border-taupe/60 bg-ivory px-8 py-10 text-center shadow-md shadow-deep-green/10 sm:px-12 sm:py-12">
             <GrowthCircleMark className="h-9 w-9 text-deep-green" />
             <p className="font-serif text-2xl font-semibold leading-snug text-deep-green sm:text-3xl">
               {INSIDE.ctaHeading}

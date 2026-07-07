@@ -29,32 +29,32 @@ export function MorningClarityHero() {
             "linear-gradient(180deg, #f7f3e9 0%, #f7f3e9 55%, #f1ead9 100%)",
         }}
       />
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:py-24">
+      <div className="mx-auto grid max-w-6xl items-start gap-10 px-6 pt-10 pb-12 sm:pt-12 sm:pb-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:pt-16 lg:pb-20">
         <div className="max-w-xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-deep-green/80">
             <GrowthCircleMark className="h-4 w-4 text-deep-green" />
             {HERO.eyebrow}
           </span>
 
-          <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.08] tracking-[-0.01em] text-deep-green sm:text-5xl lg:text-[3.35rem]">
+          <h1 className="mt-5 font-serif text-4xl font-semibold leading-[1.08] tracking-[-0.01em] text-deep-green sm:text-5xl lg:text-[3.35rem]">
             {HERO.h1}
           </h1>
 
-          <p className="mt-6 text-lg leading-relaxed text-evergreen/90">
+          <p className="mt-4 text-lg leading-relaxed text-evergreen/90">
             {HERO.subcopy}
           </p>
 
           {/* Opt-in form: the hero's primary conversion action. */}
-          <div className="mt-8 rounded-2xl border border-taupe/60 bg-ivory/90 p-6 shadow-md shadow-deep-green/10 sm:p-7">
+          <div className="mt-6 rounded-2xl border border-taupe/60 bg-ivory/90 p-5 shadow-md shadow-deep-green/10 sm:p-6">
             <p className="font-serif text-xl font-semibold text-deep-green">
               {HERO.formHeading}
             </p>
-            <div className="mt-4">
+            <div className="mt-3">
               <MorningClarityOptInForm />
             </div>
           </div>
 
-          <div className="mt-6 flex flex-col gap-3">
+          <div className="mt-5 flex flex-col gap-2.5">
             <span className="text-sm font-medium text-evergreen/70">
               {HERO.trustLine}
             </span>
@@ -70,11 +70,10 @@ export function MorningClarityHero() {
                 →
               </span>
             </a>
+            <p className="text-sm italic leading-relaxed text-evergreen/60">
+              {HERO.reassurance}
+            </p>
           </div>
-
-          <p className="mt-6 text-sm italic leading-relaxed text-evergreen/60">
-            {HERO.reassurance}
-          </p>
         </div>
 
         <div className="relative">

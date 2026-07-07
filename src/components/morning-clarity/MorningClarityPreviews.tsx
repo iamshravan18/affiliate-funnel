@@ -6,7 +6,7 @@ import { PREVIEWS } from "./morning-clarity-content";
 export function MorningClarityPreviews() {
   return (
     <section className="bg-ivory">
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
@@ -29,7 +29,7 @@ export function MorningClarityPreviews() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {PREVIEWS.cards.map((card, i) => {
             const img = morningClarityImages[card.key];
             return (

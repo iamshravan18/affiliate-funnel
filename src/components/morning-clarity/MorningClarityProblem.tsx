@@ -4,7 +4,7 @@ import { PROBLEM } from "./morning-clarity-content";
 export function MorningClarityProblem() {
   return (
     <section className="bg-warm-sand/40">
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal
             as="h2"
@@ -21,7 +21,7 @@ export function MorningClarityProblem() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
           {PROBLEM.cards.map((card, i) => (
             <Reveal
               as="article"

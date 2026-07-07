@@ -10,7 +10,7 @@ import { TRUST } from "./morning-clarity-content";
 export function MorningClarityTrust() {
   return (
     <section className="bg-warm-sand/40">
-      <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+      <div className="mx-auto max-w-5xl px-6 py-14 sm:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
@@ -26,10 +26,10 @@ export function MorningClarityTrust() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
           <Reveal
             as="article"
-            className="rounded-2xl border border-sage/60 bg-sage/20 p-7"
+            className="rounded-2xl border border-sage/60 bg-sage/20 p-6"
           >
             <h3 className="font-serif text-xl font-semibold text-deep-green">
               {TRUST.isTitle}
@@ -49,7 +49,7 @@ export function MorningClarityTrust() {
           <Reveal
             as="article"
             delay={0.06}
-            className="rounded-2xl border border-taupe/70 bg-ivory p-7"
+            className="rounded-2xl border border-taupe/70 bg-ivory p-6"
           >
             <h3 className="font-serif text-xl font-semibold text-deep-green">
               {TRUST.isNotTitle}
@@ -70,7 +70,7 @@ export function MorningClarityTrust() {
         <Reveal
           as="p"
           delay={0.1}
-          className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-evergreen/60"
+          className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-evergreen/60"
         >
           {TRUST.note}
         </Reveal>

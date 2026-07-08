@@ -181,20 +181,20 @@ export const morningClarityImages = {
   },
   billionaireBrainWaveProduct: {
     key: "billionaireBrainWaveProduct",
-    webp: `${BASE}/thank-you/billionaire-brain-wave-product.webp`,
-    jpg: `${BASE}/thank-you/billionaire-brain-wave-product.jpg`,
+    webp: `${BASE}/thank-you/billionaire-brain-wave-product-portrait.webp`,
+    jpg: `${BASE}/thank-you/billionaire-brain-wave-product-portrait.jpg`,
     // Neutral, factual alt text describing only the physical product mockup
     // (box, disc, smartphone, headphones). Deliberately does NOT repeat the
     // vendor's promotional wording that appears within the source artwork.
-    alt: "The Billionaire Brain Wave audio program shown as a product box with a disc and a smartphone playing the program through headphones.",
-    width: 1448,
-    height: 890,
-    aspectRatio: "8:5",
-    orientation: "landscape",
+    alt: "The Billionaire Brain Wave audio program shown as a product box with an audio disc, a smartphone and headphones on a warm cream background.",
+    width: 1122,
+    height: 1402,
+    aspectRatio: "4:5",
+    orientation: "portrait",
     recommendedSection: "Funnel 2 thank-you page — optional affiliate offer section only",
     homepage: false,
     notes:
-      "Third-party Billionaire Brain Wave product image (affiliate offer). Source: image-brain-2 in the approved Downloads set, top-cropped ~18% to de-emphasize the lower benefit-claim strip while preserving the box/disc/phone/headphones mockup. WebP is used on the page; JPG is the fallback. Only rendered inside the thank-you offer section — never on the homepage or Funnel 1.",
+      "Third-party Billionaire Brain Wave product image (affiliate offer). Portrait mockup (1122x1402) featuring the product box, audio disc, smartphone and headphones on a warm cream background with navy/electric-blue branding and restrained gold accents. Vertical composition sized to fill the tall product card without cropping. Source: bbw-image.png from the approved Downloads set; JPG q90 (archival), WebP q88 (delivery, used on the page). Only rendered inside the thank-you offer section — never on the homepage or Funnel 1.",
   },
 } satisfies Record<string, MorningClarityImage>;
 

@@ -45,9 +45,9 @@ export function MorningClarityOfferFinalCta() {
             <CtaButton
               href={BILLIONAIRE_BRAIN_WAVE_AFFILIATE_URL}
               {...AFFILIATE_LINK_ATTRS}
+              tone="invert"
               data-event="affiliate_offer_click"
               data-tracking-label={OFFER_TRACKING.final}
-              className="bg-ivory text-deep-green shadow-md shadow-black/20 hover:bg-warm-sand hover:text-deep-green hover:shadow-lg hover:ring-1 hover:ring-gold/60"
             >
               {FINAL.primaryLabel}
               <span aria-hidden="true" className="ml-1">

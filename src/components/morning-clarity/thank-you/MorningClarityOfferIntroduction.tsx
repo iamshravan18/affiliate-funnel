@@ -38,9 +38,13 @@ export function MorningClarityOfferIntroduction() {
         <div className="grid items-center gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-12">
           {/* Product image — first on desktop, second on mobile is avoided:
               on mobile the product must appear before the offer copy, so it is
-              rendered first in the DOM and sits above the copy at small widths. */}
+              rendered first in the DOM and sits above the copy at small widths.
+              The card uses a portrait frame: on mobile it grows with the image's
+              natural aspect ratio (no fixed height that would leave empty bands);
+              on desktop it is a fixed tall frame so it visually matches the
+              height of the copy column and the portrait mockup fills it. */}
           <RevealMedia className="order-1">
-            <div className="mx-auto flex h-[300px] w-full max-w-[560px] items-center justify-center overflow-hidden rounded-2xl border border-warm-sand bg-warm-sand/25 p-3 shadow-lg shadow-deep-green/10 ring-1 ring-deep-green/5 sm:h-[440px] sm:p-4 lg:h-[480px]">
+            <div className="mx-auto flex aspect-[4/5] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-2xl border border-warm-sand bg-warm-sand/25 p-4 shadow-lg shadow-deep-green/10 ring-1 ring-deep-green/5 sm:max-w-[460px] sm:p-6 md:aspect-auto md:h-[600px] md:max-w-[540px] lg:h-[640px]">
               <Image
                 src={productVisual.webp}
                 alt={productVisual.alt}

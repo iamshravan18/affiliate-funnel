@@ -110,7 +110,7 @@ export function RevealMedia({
 type CtaButtonProps = HTMLMotionProps<"a"> & {
   children: ReactNode;
   /** Visual variant. */
-  tone?: "solid" | "outline";
+  tone?: "solid" | "outline" | "invert";
   /** Padding/size scale. */
   size?: "sm" | "md";
 };
@@ -140,6 +140,13 @@ export function CtaButton({
       "bg-deep-green text-ivory shadow-md shadow-deep-green/15 hover:bg-evergreen hover:shadow-lg hover:shadow-deep-green/25 hover:ring-1 hover:ring-gold/50",
     outline:
       "border border-deep-green/30 bg-transparent text-deep-green hover:border-gold/50 hover:bg-deep-green/5",
+    // Inverted brand button for use on the dark evergreen panel: ivory pill
+    // with clearly visible deep-green label. Kept as its own tone so no
+    // conflicting `text-*`/`bg-*` utility is inherited from `solid` (which
+    // previously rendered the final CTA as a blank ivory pill with invisible
+    // ivory text once both classes landed in the DOM).
+    invert:
+      "bg-ivory text-deep-green shadow-md shadow-black/20 hover:bg-warm-sand hover:text-deep-green hover:shadow-lg hover:ring-1 hover:ring-gold/60",
   } as const;
 
   const interaction = reduced

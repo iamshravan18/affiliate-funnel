@@ -22,8 +22,8 @@ export function MorningClarityThankYouHero() {
       aria-labelledby="guide-heading"
       className="scroll-mt-8 bg-ivory"
     >
-      <div className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+      <div className="mx-auto max-w-5xl px-5 py-8 sm:px-6 sm:py-10">
+        <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
           {/* Copy — first on mobile, left on desktop */}
           <Reveal className="order-1">
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
@@ -40,7 +40,7 @@ export function MorningClarityThankYouHero() {
             </p>
 
             {/* Honest confirmation — the guide is ready below (no inbox claim). */}
-            <p className="mt-4 inline-flex items-center gap-2 rounded-xl border border-sage/60 bg-sage/20 px-4 py-3 text-sm font-medium leading-relaxed text-evergreen/85">
+            <p className="mt-4 inline-flex items-center gap-2 rounded-xl border border-sage/60 bg-sage/20 px-4 py-2.5 text-sm font-medium leading-relaxed text-evergreen/85">
               <svg
                 viewBox="0 0 20 20"
                 aria-hidden="true"
@@ -65,7 +65,7 @@ export function MorningClarityThankYouHero() {
               {HERO.confirmation}
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
               {/*
                 Guide download. The real PDF is not connected yet, so this is an
                 accessibly-disabled placeholder button — it must not pretend the
@@ -113,7 +113,7 @@ export function MorningClarityThankYouHero() {
               </p>
             )}
 
-            <p className="mt-6 text-sm font-medium text-evergreen/70">
+            <p className="mt-4 text-sm font-medium text-evergreen/70">
               {HERO.trustMicrocopy}
             </p>
           </Reveal>

@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { MorningClarityThankYouHeader } from "@/components/morning-clarity/thank-you/MorningClarityThankYouHeader";
 import { MorningClarityThankYouHero } from "@/components/morning-clarity/thank-you/MorningClarityThankYouHero";
-import { MorningClarityOfferBridge } from "@/components/morning-clarity/thank-you/MorningClarityOfferBridge";
 import { MorningClarityOfferIntroduction } from "@/components/morning-clarity/thank-you/MorningClarityOfferIntroduction";
-import { MorningClarityOfferConnection } from "@/components/morning-clarity/thank-you/MorningClarityOfferConnection";
 import { MorningClarityOfferFit } from "@/components/morning-clarity/thank-you/MorningClarityOfferFit";
-import { MorningClarityOfferSteps } from "@/components/morning-clarity/thank-you/MorningClarityOfferSteps";
-import { MorningClarityAffiliateDisclosure } from "@/components/morning-clarity/thank-you/MorningClarityAffiliateDisclosure";
-import { MorningClarityOfferTrust } from "@/components/morning-clarity/thank-you/MorningClarityOfferTrust";
+import { MorningClarityDecision } from "@/components/morning-clarity/thank-you/MorningClarityDecision";
 import { MorningClarityOfferFinalCta } from "@/components/morning-clarity/thank-you/MorningClarityOfferFinalCta";
 import { ThankYouFooter } from "@/components/wealth-confidence/thank-you/ThankYouFooter";
 
@@ -16,16 +12,19 @@ const ROUTE = "/7-minute-morning-clarity-reset/thank-you";
 /**
  * /7-minute-morning-clarity-reset/thank-you
  *
- * Funnel 2 post-opt-in bridge page. Strategic order (approved — see CLAUDE.md
- * and docs/second-funnel-billionaire-brain-wave-plan.md):
- *   1. Confirm the free guide is ready and give clear access to it FIRST.
- *   2. Only then introduce the OPTIONAL third-party Billionaire Brain Wave
- *      audio program, with attributed (never asserted) claims, an inline +
- *      standalone affiliate disclosure, and a genuine path back to the guide.
+ * Funnel 2 post-opt-in bridge page — refined to a compact five-section flow so
+ * the OPTIONAL Billionaire Brain Wave offer is visible and understandable
+ * within the first 1–1.5 desktop screens, without feeling aggressive:
+ *   1. Compact confirmation hero — confirm the free guide and give access FIRST.
+ *   2. Primary offer + product image — the optional third-party audio program.
+ *   3. Short "why this fits" (three cards).
+ *   4. Brief decision / trust (two columns).
+ *   5. Final CTA + full affiliate disclosure.
  *
  * The free Micro Saving Daily guide is always distinguished from the separate
  * paid third-party offer. No wealth/income/brain/neuroscience/medical/
- * manifestation claims and no guarantees appear anywhere on this page.
+ * manifestation claims and no guarantees appear anywhere on this page, and the
+ * vendor's own promotional wording is never repeated or endorsed.
  *
  * SEO: this is a transactional post-opt-in bridge page, so it is
  * `noindex, nofollow` and the affiliate product is kept out of the SEO
@@ -64,29 +63,21 @@ export const metadata: Metadata = {
 export default function MorningClarityThankYouPage() {
   return (
     <div className="flex min-h-screen flex-col bg-ivory text-evergreen">
-      {/* 1. Compact confirmation header */}
+      {/* Compact confirmation header */}
       <MorningClarityThankYouHeader />
       <main data-event="thank_you_page_view" className="flex-1">
-        {/* 2. Success hero with guide access (free guide, before any offer) */}
+        {/* 1. Compact confirmation hero (free guide first) */}
         <MorningClarityThankYouHero />
-        {/* 3. Natural "before you go" bridge */}
-        <MorningClarityOfferBridge />
-        {/* 4. Billionaire Brain Wave introduction */}
+        {/* 2. Primary offer + product image */}
         <MorningClarityOfferIntroduction />
-        {/* 5. Why it connects to the free guide */}
-        <MorningClarityOfferConnection />
-        {/* 6. "This may be for you if..." */}
+        {/* 3. Short "why this fits" */}
         <MorningClarityOfferFit />
-        {/* 7. "What happens next" */}
-        <MorningClarityOfferSteps />
-        {/* 8. Affiliate disclosure */}
-        <MorningClarityAffiliateDisclosure />
-        {/* 9. Trust and expectations */}
-        <MorningClarityOfferTrust />
-        {/* 10. Final CTA */}
+        {/* 4. Brief decision / trust */}
+        <MorningClarityDecision />
+        {/* 5. Final CTA + full affiliate disclosure */}
         <MorningClarityOfferFinalCta />
       </main>
-      {/* 11. Footer (reused Micro Saving Daily thank-you footer, unchanged) */}
+      {/* Footer (reused Micro Saving Daily thank-you footer, unchanged) */}
       <ThankYouFooter />
     </div>
   );

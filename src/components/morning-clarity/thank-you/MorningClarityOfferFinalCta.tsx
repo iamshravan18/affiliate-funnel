@@ -65,6 +65,14 @@ export function MorningClarityOfferFinalCta() {
           </div>
 
           <p className="mt-6 text-sm text-ivory/60">{FINAL.microcopy}</p>
+
+          {/* Full affiliate disclosure directly below the final CTA area. */}
+          <p className="mt-6 max-w-[44rem] border-t border-ivory/20 pt-5 text-sm leading-relaxed text-ivory/70">
+            <span className="font-semibold text-ivory/90">
+              {FINAL.disclosureLabel}
+            </span>{" "}
+            {FINAL.disclosureBody}
+          </p>
         </Reveal>
       </div>
     </section>

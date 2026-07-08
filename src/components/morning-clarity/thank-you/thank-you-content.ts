@@ -26,19 +26,17 @@
 /* -------------------------------------------------------------------------- */
 
 /**
- * VERIFIED affiliate URL. Reused verbatim from the existing, approved Funnel 1
- * thank-you affiliate card (src/components/wealth-confidence/thank-you/
- * AffiliateResourceCard.tsx). This is the vendor's custom-domain hoplink.
+ * VERIFIED affiliate URL. This is the official ClickBank VSL hoplink for the
+ * Billionaire Brain Wave offer (vendor `attractbr`, affiliate `microsave`).
  *
- * TODO(tracking): This is a custom vendor-domain hoplink (not hop.clickbank.net),
- * so appending ClickBank's `tid` parameter is NOT guaranteed to be honoured and
- * the URL format does not clearly support per-CTA query tracking. We therefore
- * do NOT invent query parameters. Per-CTA intent is expressed with
+ * TODO(tracking): This is a standard ClickBank hoplink. ClickBank's `tid`
+ * tracking parameter could be appended for per-CTA attribution, but we do NOT
+ * invent query parameters here. Per-CTA intent is expressed with
  * `data-tracking-label` attributes (see OFFER_TRACKING) until the correct
  * tracking syntax is confirmed with the affiliate program.
  */
 export const BILLIONAIRE_BRAIN_WAVE_AFFILIATE_URL =
-  "https://thebillionairebrainwave.com/?hopId=080bdea2-fa9d-4f5c-affd-4a654bd6a762";
+  "https://hop.clickbank.net/?affiliate=microsave&vendor=attractbr&pid=vsl";
 
 /** rel + target applied to every outbound affiliate CTA. */
 export const AFFILIATE_LINK_ATTRS = {

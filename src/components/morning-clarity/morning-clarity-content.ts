@@ -283,7 +283,10 @@ export const FORM = {
   firstNameLabel: "First name",
   emailLabel: "Email",
   submitLabel: "Send Me the Guide",
+  loadingLabel: "Sending your guide…",
   microcopy: "Free guide • No spam • Unsubscribe anytime",
+  errorMessage:
+    "Something went wrong sending your guide. Please check your email and try again.",
   successHeading: "Thank you — your request is in.",
   successBody:
     "We'll email your copy of The 7-Minute Morning Clarity Reset to the address you shared.",

@@ -54,15 +54,12 @@ export const OFFER_TRACKING = {
 /**
  * Guide download status.
  *
- * The completed Funnel 2 PDF (`the-7-minute-morning-clarity-reset.pdf`) does NOT
- * yet exist in `public/downloads/`. So the download control is rendered as an
- * accessibly-disabled placeholder — it must never pretend the download works.
- *
- * TODO(guide-delivery): once the approved PDF ships at
- * `public/downloads/the-7-minute-morning-clarity-reset.pdf`, set
- * GUIDE_PDF_READY = true and GUIDE_PDF_PATH will be wired to the real file.
+ * The completed Funnel 2 PDF now ships at
+ * `public/downloads/the-7-minute-morning-clarity-reset.pdf`, so the download
+ * control renders as a real download anchor pointing at GUIDE_PDF_PATH and the
+ * pending / "delivery not connected" placeholder note is no longer shown.
  */
-export const GUIDE_PDF_READY = false;
+export const GUIDE_PDF_READY = true;
 export const GUIDE_PDF_PATH = "/downloads/the-7-minute-morning-clarity-reset.pdf";
 
 /** Shared anchor id for the primary offer section (used by hero anchor link). */

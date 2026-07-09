@@ -1,0 +1,34 @@
+project:
+  type: default
+  output-dir: output
+  render:
+    - index.qmd
+
+title: "The 7-Minute Morning Clarity Reset"
+subtitle: "A simple morning practice for creating mental space, clearer intentions, and a calmer start to your day."
+author: "Micro Saving Daily"
+date: "2026"
+lang: en-US
+
+# Citations are not used in this guide; disable citeproc.
+citeproc: false
+
+format:
+  typst:
+    output-file: the-7-minute-morning-clarity-reset.pdf
+    papersize: us-letter
+    margin:
+      x: 1.0in
+      y: 0.85in
+    mainfont: Manrope
+    fontsize: 12pt
+    section-numbering: none
+    number-sections: false
+    fig-align: center
+    keep-typ: true
+    font-paths:
+      - assets/fonts
+    template-partials:
+      - styles/typst-show.typ
+    include-in-header:
+      - styles/ebook-template.typ

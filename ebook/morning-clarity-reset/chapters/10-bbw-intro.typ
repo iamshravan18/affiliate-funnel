@@ -10,9 +10,10 @@
 #grid(columns: (1.35fr, 1fr), column-gutter: 18pt, align: (left + top, center + top),
   {
     text(size: 12pt, fill: c-body)[
-      #emph[Billionaire Brain Wave] is a guided audio-based program for people
-      interested in exploring mindset, focus, and intentional daily routines in a
-      listening format.
+      You have now experienced the written version of a short morning pause.
+      #emph[Billionaire Brain Wave] is a separate guided audio-based program for
+      readers who prefer exploring mindset, focus, and intentional daily routines
+      in a listening format.
 
       It is a separate, third-party program — not part of this free guide, and
       not required to use it. It may simply suit readers who prefer to be guided
@@ -25,7 +26,7 @@
         "Guided audio format",
         "Accessible from home",
         "Designed to fit into a quiet daily routine",
-        "Official presentation explains the program, creator, pricing and guarantee",
+        "Official presentation explains the program, creator, pricing and refund policy",
       ) {
         grid(columns: (auto, 1fr), column-gutter: 9pt, align: (left + top, left + top),
           text(fill: c-gold, size: 12pt, weight: 700)[•],
@@ -47,7 +48,7 @@
   text(font: ("Manrope",), size: 13pt, weight: 700, fill: c-ivory)[Watch the Free Presentation  #text(fill: c-gold)[#sym.arrow.r]]
 }))]
 #v(3pt)
-#align(center, text(font: ("Manrope",), size: 9.5pt, style: "italic", fill: c-num)[Opens the official presentation in a new tab.])
+#align(center, text(font: ("Manrope",), size: 9.5pt, style: "italic", fill: c-num)[Opens the official presentation.])
 
 #v(6pt)
 #block(width: 100%, fill: c-aside, stroke: (left: 3pt + c-gold), radius: (right: 4pt), inset: (x: 14pt, y: 10pt),

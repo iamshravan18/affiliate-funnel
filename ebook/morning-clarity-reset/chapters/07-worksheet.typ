@@ -1,5 +1,10 @@
 #import "/styles/ebook-template.typ": *
 // ---- PAGE 8: Full Printable Worksheet ----
+// Stable internal destination for the page-12 secondary CTA ("Continue With
+// My Free 7-Minute Reset"). Placed at the top of the worksheet page so the
+// jump lands on page 8.
+#metadata("worksheet")<worksheet>
+
 #mcr-ws-open(
   kicker: "Seven Quiet Minutes",
   num: "01",

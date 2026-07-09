@@ -43,8 +43,8 @@
 #link(vsl)[#block(width: 100%, fill: c-deep, radius: 5pt, inset: (x: 16pt, y: 12pt), align(center,
   text(font: ("Manrope",), size: 12.5pt, weight: 700, fill: c-ivory)[Explore the Billionaire Brain Wave Presentation  #text(fill: c-gold)[#sym.arrow.r]]))]
 #v(4pt)
-#align(center, block(width: 100%, stroke: 1pt + c-sage, radius: 5pt, inset: (x: 16pt, y: 10pt),
-  text(font: ("Manrope",), size: 11.5pt, weight: 600, fill: c-deep)[Continue With My Free 7-Minute Reset]))
+#link(<worksheet>)[#align(center, block(width: 100%, stroke: 1pt + c-sage, radius: 5pt, inset: (x: 16pt, y: 10pt),
+  text(font: ("Manrope",), size: 11.5pt, weight: 600, fill: c-deep)[Continue With My Free 7-Minute Reset]))]
 
 #v(8pt)
 #quote(block: true)[
@@ -58,4 +58,7 @@
   guaranteed. This guide does not provide financial, investment, medical, or
   psychological advice.
 ])
+
+#v(9pt)
+#align(center, text(font: ("Manrope",), size: 8.5pt, weight: 600, tracking: 1pt, fill: c-num)[microsavingdaily.com])
 #pagebreak(weak: true)

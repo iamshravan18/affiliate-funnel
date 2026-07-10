@@ -17,9 +17,9 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://microsavingdaily.com"),
-  title: "The Wealth Confidence Guide | Micro Saving Daily",
+  title: "Micro Saving Daily | Free Guides for Money Confidence and Morning Clarity",
   description:
-    "Build stronger money confidence one small choice at a time with a free guide from Micro Saving Daily.",
+    "Explore free practical guides from Micro Saving Daily to build stronger money confidence, clearer mornings and more intentional everyday habits.",
   applicationName: "Micro Saving Daily",
   icons: {
     icon: [
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "The Wealth Confidence Guide | Micro Saving Daily",
+    title: "Micro Saving Daily | Free Guides for Money Confidence and Morning Clarity",
     description:
-      "Simple daily money-awareness shifts for calmer financial decisions. Small habits. Stronger money confidence.",
+      "Explore free practical guides from Micro Saving Daily to build stronger money confidence, clearer mornings and more intentional everyday habits.",
     url: "/",
     siteName: "Micro Saving Daily",
     locale: "en_US",

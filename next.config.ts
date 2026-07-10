@@ -7,6 +7,17 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(),
   },
+
+  // Clean public PDF URLs — map short paths to the actual files under
+  // /downloads/ without duplicating assets.
+  async rewrites() {
+    return [
+      {
+        source: "/7-minute-morning-clarity-reset.pdf",
+        destination: "/downloads/the-7-minute-morning-clarity-reset.pdf",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/motion";
-import { ImagePlaceholder } from "./ImagePlaceholder";
+import { homepageImages } from "@/content/homepage-assets";
 
 /**
  * Section 4: Guide-Selection — two equal cards letting visitors choose
@@ -8,6 +9,9 @@ import { ImagePlaceholder } from "./ImagePlaceholder";
  */
 
 export function GuideSelection() {
+  const wealthCard = homepageImages.wealthConfidenceCard;
+  const clarityCard = homepageImages.morningClarityCard;
+
   return (
     <section
       id="free-guides"
@@ -44,14 +48,17 @@ export function GuideSelection() {
           {/* CARD 1 — Funnel 1 */}
           <Reveal>
             <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-taupe/50 bg-white shadow-sm transition-shadow hover:shadow-md">
-              {/* HOMEPAGE IMAGE PLACEHOLDER — Funnel 1 guide mockup */}
-              <ImagePlaceholder
-                label="Wealth Confidence Guide Mockup"
-                description="Final Funnel 1 guide bundle image will be added here"
-                aspectRatio="aspect-[16/10]"
-                bg="warm-sand"
-                className="rounded-none rounded-t-2xl border-0 border-b border-taupe/30"
-              />
+              {/* Wealth Confidence Guide card image */}
+              <div className="relative aspect-[16/10] overflow-hidden border-b border-taupe/30">
+                <Image
+                  src={wealthCard.webp}
+                  alt={wealthCard.alt}
+                  width={wealthCard.width}
+                  height={wealthCard.height}
+                  sizes="(min-width: 1024px) 520px, (min-width: 640px) 90vw, 94vw"
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
               <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
                   For stronger money confidence
@@ -103,14 +110,17 @@ export function GuideSelection() {
           {/* CARD 2 — Funnel 2 */}
           <Reveal delay={0.1}>
             <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-taupe/50 bg-white shadow-sm transition-shadow hover:shadow-md">
-              {/* HOMEPAGE IMAGE PLACEHOLDER — Funnel 2 guide mockup */}
-              <ImagePlaceholder
-                label="Morning Clarity Reset Mockup"
-                description="Final Funnel 2 guide bundle image will be added here"
-                aspectRatio="aspect-[16/10]"
-                bg="sage"
-                className="rounded-none rounded-t-2xl border-0 border-b border-taupe/30"
-              />
+              {/* Morning Clarity Reset card image */}
+              <div className="relative aspect-[16/10] overflow-hidden border-b border-taupe/30">
+                <Image
+                  src={clarityCard.webp}
+                  alt={clarityCard.alt}
+                  width={clarityCard.width}
+                  height={clarityCard.height}
+                  sizes="(min-width: 1024px) 520px, (min-width: 640px) 90vw, 94vw"
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
               <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
                   For clearer, calmer mornings

@@ -1,11 +1,14 @@
+import Image from "next/image";
 import { Reveal, RevealMedia } from "@/components/motion";
-import { ImagePlaceholder } from "./ImagePlaceholder";
+import { homepageImages } from "@/content/homepage-assets";
 
 /**
  * Section 2: Hero — introduces Micro Saving Daily as the parent brand.
  * Balanced introduction, does not favor Funnel 1 or Funnel 2.
  */
 export function HomepageHero() {
+  const hero = homepageImages.hero;
+
   return (
     <section
       id="top"
@@ -59,15 +62,20 @@ export function HomepageHero() {
             </Reveal>
           </div>
 
-          {/* HOMEPAGE IMAGE PLACEHOLDER — Hero image */}
+          {/* Homepage hero image */}
           <RevealMedia delay={0.2}>
-            <ImagePlaceholder
-              label="Homepage Hero Image"
-              description="Two Micro Saving Daily guides arranged in a premium editorial flat-lay"
-              aspectRatio="aspect-[4/3]"
-              bg="warm-sand"
-              className="w-full"
-            />
+            <div className="overflow-hidden rounded-2xl border border-taupe/50 shadow-sm">
+              <Image
+                src={hero.webp}
+                alt={hero.alt}
+                width={hero.width}
+                height={hero.height}
+                loading="eager"
+                fetchPriority="high"
+                sizes="(min-width: 1280px) 560px, (min-width: 1024px) 46vw, (min-width: 768px) 50vw, 92vw"
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
           </RevealMedia>
         </div>
       </div>

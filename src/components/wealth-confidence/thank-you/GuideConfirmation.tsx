@@ -8,7 +8,7 @@ const guideVisual = wealthConfidenceImages.guide3dMockup;
  * Section 1 — Confirmation hero.
  *
  * Delivery model (email-first):
- *   The guide is delivered by email via the connected MailerLite flow (see
+ *   The guide is delivered by email via the connected Resend flow (see
  *   /api/wealth-confidence/subscribe). This page intentionally does NOT offer a
  *   direct PDF download anymore — we want the visitor to open their inbox and
  *   engage with the email sequence. The approved PDF still ships at

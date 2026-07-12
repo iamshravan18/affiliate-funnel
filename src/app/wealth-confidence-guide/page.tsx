@@ -17,7 +17,7 @@ import { SiteFooter } from "@/components/wealth-confidence/SiteFooter";
  * serve as the Micro Saving Daily brand homepage.
  *
  * IMPORTANT: Do not modify the content, styling, components, opt-in form,
- * MailerLite integration, or tracking of this page. It must remain visually
+ * Resend integration, or tracking of this page. It must remain visually
  * and functionally identical to the original.
  */
 

@@ -10,10 +10,10 @@ import { FORM } from "./morning-clarity-content";
  *
  * On submit it POSTs `{ email, firstName }` to the secure server route
  * `/api/morning-clarity/subscribe`, which adds/updates the subscriber in
- * MailerLite and assigns them to the lead-magnet group (the MailerLite token
- * never touches the client). On success the visitor is redirected to this
- * guide's thank-you page. On failure we keep the visitor here, preserve their
- * entered values, show a friendly inline error, and re-enable the button.
+ * Resend and sends the guide email (the Resend API key never touches the
+ * client). On success the visitor is redirected to this guide's thank-you page.
+ * On failure we keep the visitor here, preserve their entered values, show a
+ * friendly inline error, and re-enable the button.
  *
  * The component renders more than once on the page (hero + final CTA), so input
  * ids are made unique via React's useId.

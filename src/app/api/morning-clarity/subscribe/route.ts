@@ -1,24 +1,26 @@
 import { NextResponse, type NextRequest } from "next/server";
+import {
+  subscribeWithResend,
+  type LeadMagnetConfig,
+} from "@/app/api/_lib/resendLeadMagnet";
 
 /**
- * Funnel 2 (The 7-Minute Morning Clarity Reset) opt-in → MailerLite.
+ * Funnel 2 (The 7-Minute Morning Clarity Reset) opt-in → Resend.
  *
  * Funnel-2-specific endpoint (kept separate from Funnel 1's earmarked generic
  * `/api/subscribe` route so the two funnels never collide).
  *
- * Secure, server-only route handler. It reads the MailerLite secret token and
- * group id from environment variables that only ever exist on the server
- * (configured in Vercel):
- *   - MAILERLITE_API_TOKEN  (secret Bearer token — NEVER sent to the client)
- *   - MAILERLITE_GROUP_ID   (the group this lead magnet's subscribers join)
+ * Secure, server-only route handler. It reads Resend credentials from
+ * environment variables that only ever exist on the server (configured in
+ * Vercel):
+ *   - RESEND_API_KEY       (secret Bearer token — NEVER sent to the client)
+ *   - RESEND_FROM_EMAIL    (verified Resend sender, e.g. Micro Saving Daily <hello@...>)
+ *   - RESEND_REPLY_TO_EMAIL (optional)
  *
  * The client posts JSON `{ email, firstName }`; we validate + trim, then
- * create/update the subscriber in MailerLite and assign them to the group.
- * MailerLite's POST /subscribers is a non-destructive upsert: 201 = created,
- * 200 = already existed — both are treated as success so a returning visitor
- * never sees an error.
+ * create/update the contact in Resend and send the guide email.
  *
- * We never log the token and never forward raw MailerLite response bodies to
+ * We never log the token and never forward raw Resend response bodies to
  * the client (they can contain account detail); the client only receives a
  * friendly, generic message.
  */
@@ -27,18 +29,22 @@ import { NextResponse, type NextRequest } from "next/server";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const MAILERLITE_SUBSCRIBERS_URL =
-  "https://connect.mailerlite.com/api/subscribers";
-
-// Pragmatic RFC 2821-ish email check (MailerLite does the authoritative check).
+// Pragmatic RFC 2821-ish email check (Resend does the authoritative check).
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-// Abort the upstream call if MailerLite is slow, so the user isn't left hanging.
-const REQUEST_TIMEOUT_MS = 10_000;
 
 type SubscribePayload = {
   email?: unknown;
   firstName?: unknown;
+};
+
+const MORNING_CLARITY_CONFIG: LeadMagnetConfig = {
+  routeLabel: "morning-clarity/subscribe",
+  funnel: "morning-clarity",
+  leadMagnet: "The 7-Minute Morning Clarity Reset",
+  subject: "Your 7-Minute Morning Clarity Reset",
+  guidePath: "/downloads/the-7-minute-morning-clarity-reset.pdf",
+  guideLabel: "Open The 7-Minute Morning Clarity Reset",
+  thankYouPath: "/7-minute-morning-clarity-reset/thank-you",
 };
 
 function jsonError(message: string, status: number) {
@@ -46,21 +52,6 @@ function jsonError(message: string, status: number) {
 }
 
 export async function POST(request: NextRequest) {
-  const token = process.env.MAILERLITE_API_TOKEN;
-  const groupId = process.env.MAILERLITE_GROUP_ID;
-
-  // Misconfiguration: fail closed with a generic message (no secret detail).
-  if (!token || !groupId) {
-    // Log the *fact* of misconfiguration, never the token value.
-    console.error(
-      "[morning-clarity/subscribe] Missing MailerLite configuration (token or group id).",
-    );
-    return jsonError(
-      "We couldn't process your request right now. Please try again shortly.",
-      500,
-    );
-  }
-
   let body: SubscribePayload;
   try {
     body = (await request.json()) as SubscribePayload;
@@ -83,54 +74,14 @@ export async function POST(request: NextRequest) {
 
   // Cap length defensively before sending upstream.
   const name = firstName.slice(0, 100);
+  const result = await subscribeWithResend(MORNING_CLARITY_CONFIG, {
+    email,
+    firstName: name,
+  });
 
-  const timeout = AbortSignal.timeout(REQUEST_TIMEOUT_MS);
-
-  try {
-    const mlResponse = await fetch(MAILERLITE_SUBSCRIBERS_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        fields: { name },
-        groups: [groupId],
-      }),
-      // Never cache a subscription write.
-      cache: "no-store",
-      signal: timeout,
-    });
-
-    // 201 created, 200 already-existed → both success (non-destructive upsert).
-    if (mlResponse.status === 200 || mlResponse.status === 201) {
-      return NextResponse.json({ ok: true }, { status: 200 });
-    }
-
-    // Validation error from MailerLite (e.g. malformed email that slipped past).
-    if (mlResponse.status === 422) {
-      return jsonError("Please enter a valid email address.", 422);
-    }
-
-    // Any other status: log status only (not body/token), return generic error.
-    console.error(
-      `[morning-clarity/subscribe] MailerLite responded with status ${mlResponse.status}.`,
-    );
-    return jsonError(
-      "We couldn't add you just now. Please try again in a moment.",
-      502,
-    );
-  } catch (error) {
-    // Network/timeout etc. Log a redacted message — no token, no response body.
-    console.error(
-      "[morning-clarity/subscribe] Error contacting MailerLite:",
-      error instanceof Error ? error.message : "unknown error",
-    );
-    return jsonError(
-      "We couldn't add you just now. Please try again in a moment.",
-      502,
-    );
+  if (result.ok) {
+    return NextResponse.json({ ok: true }, { status: 200 });
   }
+
+  return jsonError(result.message, result.status);
 }

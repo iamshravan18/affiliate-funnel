@@ -74,12 +74,14 @@ Route: `/wealth-confidence-guide/thank-you`
   Phase 3 (homepage build), Phase 4 (browser/responsive QA polish),
   Phase 4.1 (CTA conversion polish), Phase 5A (thank-you page + affiliate
   bridge, honest placeholders).
-- Not yet built (future phases): MailerLite integration (`OptInForm` is UI-only,
-  see its `MailerLite` TODO — must not imply real email delivery, and should
-  redirect to the thank-you page on success once wired). Real guide **PDF does
-  not exist yet** — the thank-you "Download the Guide" button is accessibly
-  disabled with a documented TODO until the asset ships. Affiliate link tracking
-  param is not applied (custom vendor-domain hoplink; confirm syntax first).
+- Built: Resend integration for the opt-in routes. Server routes create/update
+  Resend contacts and send the guide email using `RESEND_API_KEY`,
+  `RESEND_FROM_EMAIL`, optional `RESEND_REPLY_TO_EMAIL`, and Funnel 1 segment
+  env `RESEND_FUNNEL1_SEGMENT_ID`.
+  Real guide PDF is shipped at `public/downloads/the-wealth-confidence-guide.pdf`
+  and delivered by email; the thank-you page intentionally does not expose a
+  direct guide download button. Affiliate link tracking param is not applied
+  (custom vendor-domain hoplink; confirm syntax first).
 
 
 ## Ebook: The Wealth Confidence Guide (Phase 5A research/authoring)

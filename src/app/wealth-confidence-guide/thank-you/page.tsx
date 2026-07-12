@@ -9,7 +9,7 @@ import { ThankYouFooter } from "@/components/wealth-confidence/thank-you/ThankYo
  * /wealth-confidence-guide/thank-you
  *
  * Post-subscription page for The Wealth Confidence Guide. Email-first flow:
- * the guide is delivered by email (MailerLite), so this page confirms the guide
+ * the guide is delivered by email (Resend), so this page confirms the guide
  * is on its way and tells the visitor to check their inbox — it no longer offers
  * a direct PDF download. Directly beneath the confirmation it presents The Money
  * Script presentation as the recommended next step.

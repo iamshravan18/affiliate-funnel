@@ -9,14 +9,13 @@ import { useId, useState, type FormEvent } from "react";
  *
  * On submit it POSTs `{ email, firstName }` to the secure server route
  * `/api/wealth-confidence/subscribe`, which adds/updates the subscriber in
- * MailerLite and assigns them to Funnel 1's group (via
- * MAILERLITE_FUNNEL1_GROUP_ID — the MailerLite token never touches the
+ * Resend and sends the guide email (the Resend API key never touches the
  * client). On success the visitor is redirected to this funnel's thank-you
  * page. On failure we keep the visitor here, preserve their entered values,
  * show a friendly inline error, and re-enable the button.
  *
  * This is fully isolated from Funnel 2 (which posts to
- * `/api/morning-clarity/subscribe` and uses MAILERLITE_GROUP_ID).
+ * `/api/morning-clarity/subscribe`).
  */
 
 const THANK_YOU_ROUTE = "/wealth-confidence-guide/thank-you";

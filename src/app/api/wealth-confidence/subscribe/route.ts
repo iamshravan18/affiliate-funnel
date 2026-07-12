@@ -1,28 +1,30 @@
 import { NextResponse, type NextRequest } from "next/server";
+import {
+  subscribeWithResend,
+  type LeadMagnetConfig,
+} from "@/app/api/_lib/resendLeadMagnet";
 
 /**
- * Funnel 1 (The Wealth Confidence Guide) opt-in → MailerLite.
+ * Funnel 1 (The Wealth Confidence Guide) opt-in → Resend.
  *
  * Funnel-1-specific endpoint, fully isolated from Funnel 2's
  * `/api/morning-clarity/subscribe` route so the two funnels never collide.
  *
- * Secure, server-only route handler. It reads the shared MailerLite secret
- * token and a Funnel-1-specific group id from environment variables that only
- * ever exist on the server (configured in Vercel):
- *   - MAILERLITE_API_TOKEN         (shared secret Bearer token — NEVER sent to the client)
- *   - MAILERLITE_FUNNEL1_GROUP_ID  (the group THIS funnel's subscribers join)
+ * Secure, server-only route handler. It reads Resend credentials from
+ * environment variables that only ever exist on the server (configured in
+ * Vercel):
+ *   - RESEND_API_KEY       (secret Bearer token — NEVER sent to the client)
+ *   - RESEND_FROM_EMAIL    (verified Resend sender, e.g. Micro Saving Daily <hello@...>)
+ *   - RESEND_REPLY_TO_EMAIL (optional)
+ *   - RESEND_FUNNEL1_SEGMENT_ID (Money-Funnel-1 segment id)
  *
- * Isolation guarantee: this route only ever references
- * MAILERLITE_FUNNEL1_GROUP_ID, so a Funnel 1 subscriber can never land in the
- * Funnel 2 group (MAILERLITE_GROUP_ID) — that variable is not read here.
+ * Isolation guarantee: this route stores Funnel 1 metadata on the Resend
+ * contact and sends only The Wealth Confidence Guide email.
  *
  * The client posts JSON `{ email, firstName }`; we validate + trim, then
- * create/update the subscriber in MailerLite and assign them to the group.
- * MailerLite's POST /subscribers is a non-destructive upsert: 201 = created,
- * 200 = already existed — both are treated as success so a returning visitor
- * never sees an error.
+ * create/update the contact in Resend and send the guide email.
  *
- * We never log the token and never forward raw MailerLite response bodies to
+ * We never log the token and never forward raw Resend response bodies to
  * the client (they can contain account detail); the client only receives a
  * friendly, generic message.
  */
@@ -31,18 +33,24 @@ import { NextResponse, type NextRequest } from "next/server";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const MAILERLITE_SUBSCRIBERS_URL =
-  "https://connect.mailerlite.com/api/subscribers";
-
-// Pragmatic RFC 2821-ish email check (MailerLite does the authoritative check).
+// Pragmatic RFC 2821-ish email check (Resend does the authoritative check).
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-// Abort the upstream call if MailerLite is slow, so the user isn't left hanging.
-const REQUEST_TIMEOUT_MS = 10_000;
 
 type SubscribePayload = {
   email?: unknown;
   firstName?: unknown;
+};
+
+const WEALTH_CONFIDENCE_CONFIG: LeadMagnetConfig = {
+  routeLabel: "wealth-confidence/subscribe",
+  funnel: "wealth-confidence",
+  leadMagnet: "The Wealth Confidence Guide",
+  subject: "Your Wealth Confidence Guide",
+  guidePath: "/downloads/the-wealth-confidence-guide.pdf",
+  guideLabel: "Open The Wealth Confidence Guide",
+  thankYouPath: "/wealth-confidence-guide/thank-you",
+  segmentIdEnvVar: "RESEND_FUNNEL1_SEGMENT_ID",
+  segmentId: "84c70457-5924-4cbf-87b8-9048528a8838",
 };
 
 function jsonError(message: string, status: number) {
@@ -50,21 +58,6 @@ function jsonError(message: string, status: number) {
 }
 
 export async function POST(request: NextRequest) {
-  const token = process.env.MAILERLITE_API_TOKEN;
-  const groupId = process.env.MAILERLITE_FUNNEL1_GROUP_ID;
-
-  // Misconfiguration: fail closed with a generic message (no secret detail).
-  if (!token || !groupId) {
-    // Log the *fact* of misconfiguration, never the token value.
-    console.error(
-      "[wealth-confidence/subscribe] Missing MailerLite configuration (token or Funnel 1 group id).",
-    );
-    return jsonError(
-      "We couldn't process your request right now. Please try again shortly.",
-      500,
-    );
-  }
-
   let body: SubscribePayload;
   try {
     body = (await request.json()) as SubscribePayload;
@@ -87,54 +80,14 @@ export async function POST(request: NextRequest) {
 
   // Cap length defensively before sending upstream.
   const name = firstName.slice(0, 100);
+  const result = await subscribeWithResend(WEALTH_CONFIDENCE_CONFIG, {
+    email,
+    firstName: name,
+  });
 
-  const timeout = AbortSignal.timeout(REQUEST_TIMEOUT_MS);
-
-  try {
-    const mlResponse = await fetch(MAILERLITE_SUBSCRIBERS_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        fields: { name },
-        groups: [groupId],
-      }),
-      // Never cache a subscription write.
-      cache: "no-store",
-      signal: timeout,
-    });
-
-    // 201 created, 200 already-existed → both success (non-destructive upsert).
-    if (mlResponse.status === 200 || mlResponse.status === 201) {
-      return NextResponse.json({ ok: true }, { status: 200 });
-    }
-
-    // Validation error from MailerLite (e.g. malformed email that slipped past).
-    if (mlResponse.status === 422) {
-      return jsonError("Please enter a valid email address.", 422);
-    }
-
-    // Any other status: log status only (not body/token), return generic error.
-    console.error(
-      `[wealth-confidence/subscribe] MailerLite responded with status ${mlResponse.status}.`,
-    );
-    return jsonError(
-      "We couldn't add you just now. Please try again in a moment.",
-      502,
-    );
-  } catch (error) {
-    // Network/timeout etc. Log a redacted message — no token, no response body.
-    console.error(
-      "[wealth-confidence/subscribe] Error contacting MailerLite:",
-      error instanceof Error ? error.message : "unknown error",
-    );
-    return jsonError(
-      "We couldn't add you just now. Please try again in a moment.",
-      502,
-    );
+  if (result.ok) {
+    return NextResponse.json({ ok: true }, { status: 200 });
   }
+
+  return jsonError(result.message, result.status);
 }

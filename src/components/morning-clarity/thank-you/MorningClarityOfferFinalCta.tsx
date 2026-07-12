@@ -13,10 +13,8 @@ import {
  * available path back to the free guide. Footer microcopy restates that this
  * is an optional third-party offer with no guaranteed outcome.
  *
- * The affiliate CTA is the solid brand button (this section contains no
- * competing guide-download control, so it is unambiguous); the "download my
- * guide instead" path is an outline button of equal prominence, keeping the
- * free guide a genuine, non-subordinate choice.
+ * The affiliate CTA is the solid brand button. The secondary path returns to
+ * the email confirmation, keeping the guide handoff clear and non-subordinate.
  */
 export function MorningClarityOfferFinalCta() {
   return (

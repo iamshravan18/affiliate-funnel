@@ -6,11 +6,11 @@
  * components.
  *
  * Positioning (approved — see docs/second-funnel-billionaire-brain-wave-plan.md
- * and CLAUDE.md): the FREE Micro Saving Daily guide is confirmed and made
- * accessible FIRST; the Billionaire Brain Wave offer is then introduced
- * immediately as a clearly-disclosed, OPTIONAL third-party audio program. No
- * wealth, income, brain/neuroscience, medical, or manifestation claims; no
- * guarantees; no fake urgency. Vendor claims are never repeated or endorsed.
+ * and CLAUDE.md): the FREE Micro Saving Daily guide is confirmed as emailed
+ * FIRST; the Billionaire Brain Wave offer is then introduced immediately as a
+ * clearly-disclosed, OPTIONAL third-party audio program. No wealth, income,
+ * brain/neuroscience, medical, or manifestation claims; no guarantees; no fake
+ * urgency. Vendor claims are never repeated or endorsed.
  *
  * This page was refined to a compact five-section structure so the offer is
  * understandable within the first 1–1.5 desktop screens:
@@ -22,7 +22,7 @@
  */
 
 /* -------------------------------------------------------------------------- */
-/* Affiliate link + guide download — implementation-honest constants          */
+/* Affiliate link constants                                                     */
 /* -------------------------------------------------------------------------- */
 
 /**
@@ -51,18 +51,7 @@ export const OFFER_TRACKING = {
   final: "bbw_offer_final_cta",
 } as const;
 
-/**
- * Guide download status.
- *
- * The completed Funnel 2 PDF now ships at
- * `public/downloads/the-7-minute-morning-clarity-reset.pdf`, so the download
- * control renders as a real download anchor pointing at GUIDE_PDF_PATH and the
- * pending / "delivery not connected" placeholder note is no longer shown.
- */
-export const GUIDE_PDF_READY = true;
-export const GUIDE_PDF_PATH = "/downloads/the-7-minute-morning-clarity-reset.pdf";
-
-/** Shared anchor id for the primary offer section (used by hero anchor link). */
+/** Shared anchor id for the primary optional offer section. */
 export const OFFER_ANCHOR = "optional-next-step";
 
 /* -------------------------------------------------------------------------- */
@@ -70,18 +59,11 @@ export const OFFER_ANCHOR = "optional-next-step";
 /* -------------------------------------------------------------------------- */
 
 export const HERO = {
-  eyebrow: "Your guide is ready",
-  h1: "Your 7-Minute Morning Clarity Reset Is Ready",
-  body: "Access your guide below, then take a look at one optional next step that may complement the quiet morning routine you\u2019ve just started.",
-  primaryLabel: "Download the Free Guide",
-  // Honest confirmation copy — no email/inbox promise (delivery not wired).
-  confirmation: "Your guide is ready below.",
-  // Shown while the real PDF is not yet connected.
-  pendingNote:
-    "Your downloadable guide will appear here once delivery is connected.",
-  secondaryLabel: "See the Optional Next Step",
-  secondaryHref: `#${OFFER_ANCHOR}`,
-  trustMicrocopy: "Free guide \u00B7 No purchase required",
+  eyebrow: "You\u2019re in",
+  h1: "Your 7-Minute Morning Clarity Reset is on its way!",
+  body: "Please check your inbox in the next few minutes. We\u2019ve sent your guide to the email address you entered.",
+  confirmation: "If you don\u2019t see it soon, check your Promotions or Spam folder.",
+  trustMicrocopy: "One quiet morning reset. One clearer next step.",
 } as const;
 
 /* -------------------------------------------------------------------------- */
@@ -147,7 +129,7 @@ export const DECISION = {
   rightBody:
     "Visit the official presentation, review the format, creator, pricing and guarantee, then decide whether it feels appropriate for you.",
   ctaLabel: "See the Official Presentation",
-  secondaryLabel: "No thanks \u2014 return to my guide",
+  secondaryLabel: "No thanks \u2014 return to my confirmation",
   secondaryHref: "#guide",
   note: "This is not a guaranteed-income program or financial advice.",
 } as const;
@@ -161,7 +143,7 @@ export const FINAL = {
   h2: "Ready to Explore the Audio Presentation?",
   body: "Watch the official presentation and decide whether this optional audio routine fits the kind of morning practice you want to build.",
   primaryLabel: "Watch the Billionaire Brain Wave Presentation",
-  secondaryLabel: "Download My Morning Clarity Guide Instead",
+  secondaryLabel: "Return to My Confirmation",
   secondaryHref: "#guide",
   microcopy:
     "Optional third-party offer \u00B7 Results vary \u00B7 No guaranteed financial outcome",

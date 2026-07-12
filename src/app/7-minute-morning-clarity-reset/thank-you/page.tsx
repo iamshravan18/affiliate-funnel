@@ -15,7 +15,7 @@ const ROUTE = "/7-minute-morning-clarity-reset/thank-you";
  * Funnel 2 post-opt-in bridge page — refined to a compact five-section flow so
  * the OPTIONAL Billionaire Brain Wave offer is visible and understandable
  * within the first 1–1.5 desktop screens, without feeling aggressive:
- *   1. Compact confirmation hero — confirm the free guide and give access FIRST.
+ *   1. Compact email-first confirmation hero — confirm the free guide is on its way.
  *   2. Primary offer + product image — the optional third-party audio program.
  *   3. Short "why this fits" (three cards).
  *   4. Brief decision / trust (two columns).
@@ -30,14 +30,11 @@ const ROUTE = "/7-minute-morning-clarity-reset/thank-you";
  * `noindex, nofollow` and the affiliate product is kept out of the SEO
  * title/description. Canonical points at the route itself.
  *
- * TODO(guide-delivery): the completed Funnel 2 PDF is not yet connected, so the
- * download control is an accessibly-disabled placeholder (see
- * MorningClarityThankYouHero / thank-you-content GUIDE_PDF_READY).
  */
 export const metadata: Metadata = {
-  title: "Your Morning Clarity Guide Is Ready | Micro Saving Daily",
+  title: "Your Morning Clarity Guide Is on Its Way | Micro Saving Daily",
   description:
-    "Access your free 7-Minute Morning Clarity Reset and explore an optional guided audio program.",
+    "Your free 7-Minute Morning Clarity Reset is on its way. Check your email and explore an optional guided audio program.",
   alternates: {
     canonical: ROUTE,
   },
@@ -50,9 +47,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Your Morning Clarity Guide Is Ready | Micro Saving Daily",
+    title: "Your Morning Clarity Guide Is on Its Way | Micro Saving Daily",
     description:
-      "Access your free 7-Minute Morning Clarity Reset and explore an optional guided audio program.",
+      "Your free 7-Minute Morning Clarity Reset is on its way. Check your email and explore an optional guided audio program.",
     url: ROUTE,
     siteName: "Micro Saving Daily",
     locale: "en_US",
@@ -66,7 +63,7 @@ export default function MorningClarityThankYouPage() {
       {/* Compact confirmation header */}
       <MorningClarityThankYouHeader />
       <main data-event="thank_you_page_view" className="flex-1">
-        {/* 1. Compact confirmation hero (free guide first) */}
+        {/* 1. Email-first confirmation hero */}
         <MorningClarityThankYouHero />
         {/* 2. Primary offer + product image */}
         <MorningClarityOfferIntroduction />

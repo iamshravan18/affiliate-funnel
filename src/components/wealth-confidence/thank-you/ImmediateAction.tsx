@@ -24,9 +24,9 @@ const STEPS = [
 ];
 
 /**
- * Immediate practical value BEFORE any affiliate mention. This keeps the page
- * grounded in the Micro Saving Daily method (Notice · Pause · Repeat) and gives
- * the visitor a real first action they can take on this page.
+ * Immediate practical value after the recommended next step. This keeps the
+ * page grounded in the Micro Saving Daily method (Notice · Pause · Repeat) and
+ * gives the visitor a real first action they can take on this page.
  */
 export function ImmediateAction() {
   return (
@@ -103,7 +103,7 @@ export function ImmediateAction() {
           </RevealMedia>
         </div>
 
-        {/* Secondary CTA — kept subordinate to the guide download above. */}
+        {/* Secondary CTA — kept calm and subordinate to the main page actions. */}
         <div className="mt-12 text-center">
           <a
             href={wealthConfidenceImages.worksheetDay1.webp}

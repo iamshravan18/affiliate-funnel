@@ -2,11 +2,11 @@ import Image from "next/image";
 import { CtaButton, Reveal, RevealMedia } from "@/components/motion";
 
 /**
- * Section 3 + 4 — The Money Script offer card (the ONLY affiliate offer on this
+ * Section 2 — The Money Script offer card (the ONLY affiliate offer on this
  * page) plus its trust/disclaimer line.
  *
  * Compliance + design rules baked in here (do not relax without approval):
- * - Framed as an OPTIONAL, third-party, educational presentation. No
+ * - Framed as a recommended, third-party, educational presentation. No
  *   wealth/income/manifestation/medical claims and no repetition of the
  *   vendor's aggressive sales-page wording.
  * - Premium calm card: image INSIDE the card (not a full-width banner).
@@ -67,7 +67,7 @@ export function AffiliateResourceCard() {
 
               {/* Content */}
               <div className="px-5 pb-6 pt-2 md:px-7 md:py-8">
-                {/* Optional / third-party badge — icon + text, not colour alone */}
+                {/* Recommended badge — icon + text, not colour alone */}
                 <p className="inline-flex items-center gap-1.5 rounded-full border border-taupe bg-warm-sand/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-evergreen/75">
                   <svg
                     viewBox="0 0 16 16"
@@ -89,7 +89,7 @@ export function AffiliateResourceCard() {
                       strokeLinecap="round"
                     />
                   </svg>
-                  Optional third-party resource
+                  Recommended Next Step
                 </p>
 
                 <h2

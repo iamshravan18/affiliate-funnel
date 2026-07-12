@@ -53,13 +53,13 @@ export function AffiliateResourceCard() {
                   left on desktop. Sits on a soft beige panel so it reads as a
                   tasteful product still, not a loud banner. */}
               <RevealMedia className="flex items-center justify-center bg-warm-sand/30 p-6 sm:p-8">
-                <div className="w-full max-w-[240px] overflow-hidden rounded-2xl border border-warm-sand bg-ivory shadow-md shadow-deep-green/10">
+                <div className="w-full max-w-[280px] overflow-hidden rounded-2xl border border-warm-sand bg-ivory shadow-md shadow-deep-green/10">
                   <Image
                     src={MOCKUP.src}
                     alt={MOCKUP.alt}
                     width={MOCKUP.width}
                     height={MOCKUP.height}
-                    sizes="(min-width: 768px) 240px, 60vw"
+                    sizes="(min-width: 768px) 280px, 70vw"
                     className="h-auto w-full"
                   />
                 </div>

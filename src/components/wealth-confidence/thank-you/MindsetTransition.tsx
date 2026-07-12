@@ -1,22 +1,23 @@
 import { Reveal } from "@/components/motion";
 
 /**
- * Soft transition into the optional affiliate resource. Deliberately calm and
- * factual — it explains *why* the mental side of money habits can matter
- * without endorsing the third-party product or using its vendor claims as
- * facts. This is the "bridge" that stops the affiliate card from feeling like
- * a bait-and-switch.
+ * Section 2 — Bridge into the optional affiliate offer.
+ *
+ * Deliberately calm and educational: it acknowledges what the free guide does,
+ * then frames the optional third-party presentation as a "go deeper" next step
+ * while the visitor waits for their guide email to arrive. No hype, no vendor
+ * claims presented as facts.
  */
 export function MindsetTransition() {
   return (
     <section
-      aria-label="An optional next step"
+      aria-label="While you wait"
       className="border-t border-warm-sand/60 bg-ivory"
     >
       <div className="mx-auto max-w-3xl px-5 py-16 text-center sm:px-6 sm:py-20">
         <Reveal>
           <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
-            An optional next step
+            While You Wait&hellip;
           </span>
         </Reveal>
         <Reveal
@@ -24,25 +25,18 @@ export function MindsetTransition() {
           delay={0.05}
           className="mt-4 font-serif text-3xl font-semibold leading-tight tracking-[-0.01em] text-deep-green sm:text-4xl"
         >
-          Sometimes money habits begin before the purchase does.
+          Want to go deeper into your money patterns?
         </Reveal>
         <Reveal
           as="p"
           delay={0.1}
           className="mt-5 text-lg leading-relaxed text-evergreen/80"
         >
-          The practical side of money confidence is learning to notice and
-          pause. The mental side is understanding the thoughts, stress, and
-          automatic patterns that can influence everyday choices.
-        </Reveal>
-        <Reveal
-          as="p"
-          delay={0.15}
-          className="mt-4 text-lg leading-relaxed text-evergreen/80"
-        >
-          Some readers also explore audio-based mindset tools as part of a quiet
-          daily reflection routine. One third-party resource you may want to
-          review is The Billionaire Brain Wave.
+          The Wealth Confidence Guide helps you start noticing the habits and
+          emotions behind your financial decisions. But if you want to
+          understand the deeper &ldquo;money scripts&rdquo; that may be
+          influencing your confidence, choices, and income patterns, this short
+          presentation may be worth watching next.
         </Reveal>
       </div>
     </section>

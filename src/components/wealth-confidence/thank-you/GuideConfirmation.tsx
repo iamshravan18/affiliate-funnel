@@ -1,31 +1,19 @@
 import Image from "next/image";
-import { CtaButton, Reveal, RevealMedia } from "@/components/motion";
+import { Reveal, RevealMedia } from "@/components/motion";
 import { wealthConfidenceImages } from "@/content/wealth-confidence-assets";
 
 const guideVisual = wealthConfidenceImages.guide3dMockup;
-const day1 = wealthConfidenceImages.worksheetDay1;
 
 /**
- * Confirmation hero — the first visible section and the fulfilment of the
- * homepage promise. Must feel calm and honest.
+ * Section 1 — Confirmation hero.
  *
- * Delivery honesty:
- *   MailerLite is NOT connected in this phase (OptInForm is UI-only). So we do
- *   NOT claim the guide was emailed / is in the inbox. Instead we use
- *   placeholder-ready "access is being prepared" wording.
- *
- * Download button:
- *   The approved final PDF ships at
- *   public/downloads/the-wealth-confidence-guide.pdf and is served at
- *   /downloads/the-wealth-confidence-guide.pdf. The primary CTA is a real
- *   anchor (CtaButton renders motion.a) with the native `download` attribute,
- *   so the browser downloads (or opens) the file directly — no fake URL, no
- *   Next.js Link, and no client-side blob.
- *
- * Day 1 link:
- *   The only real Day-1 asset is an IMAGE (printable worksheet), not an
- *   interactive page, so the secondary link opens that image in a new tab and
- *   is labelled as a printable worksheet.
+ * Delivery model (email-first):
+ *   The guide is delivered by email via the connected MailerLite flow (see
+ *   /api/wealth-confidence/subscribe). This page intentionally does NOT offer a
+ *   direct PDF download anymore — we want the visitor to open their inbox and
+ *   engage with the email sequence. The approved PDF still ships at
+ *   public/downloads/the-wealth-confidence-guide.pdf (used by the email), so it
+ *   is deliberately not linked here.
  */
 export function GuideConfirmation() {
   return (
@@ -45,57 +33,22 @@ export function GuideConfirmation() {
               id="guide-heading"
               className="mt-4 font-serif text-4xl font-semibold leading-[1.08] tracking-[-0.01em] text-deep-green sm:text-5xl"
             >
-              Your Wealth Confidence Guide is ready.
+              Your Wealth Confidence Guide is on its way!
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-evergreen/80">
-              We&apos;ve saved your place. Start with Day 1 and focus on noticing
-              just one spending pattern before trying to change anything.
+              Please check your inbox in the next few minutes. We&apos;ve sent
+              your guide to the email address you entered.
             </p>
 
-            {/* Honest, placeholder-ready delivery note (no MailerLite yet). */}
+            {/* Helper note — where to look if it hasn't arrived yet. */}
             <p className="mt-4 rounded-xl border border-warm-sand bg-warm-sand/25 px-4 py-3 text-sm leading-relaxed text-evergreen/75">
-              Your guide access is being prepared. Once email delivery is
-              connected, you&apos;ll also receive a copy in your inbox.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              {/*
-                Primary CTA — direct download of the approved public PDF at
-                /downloads/the-wealth-confidence-guide.pdf. CtaButton renders a
-                real anchor (motion.a) with the native `download` attribute; no
-                Next.js Link and no client-side blob, so the user stays on the
-                thank-you page while the browser downloads (or opens) the file.
-              */}
-              <CtaButton
-                href="/downloads/the-wealth-confidence-guide.pdf"
-                download
-                data-event="guide_download_click"
-                aria-describedby="download-status"
-              >
-                Download The Wealth Confidence Guide
-              </CtaButton>
-
-              <a
-                href={day1.webp}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-event="day_one_open_click"
-                className="inline-flex items-center justify-center gap-1 text-base font-medium text-deep-green underline decoration-gold decoration-2 underline-offset-4 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-              >
-                Open Day 1: Notice One Spending Pattern
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-
-            {/* Not-color-alone status tied to the download CTA. */}
-            <p id="download-status" className="mt-3 text-sm text-evergreen/60">
-              Your 25-page guide (PDF) is ready. Day 1 opens a printable
-              worksheet you can start with right now.
+              If you don&apos;t see it soon, check your Promotions or Spam
+              folder.
             </p>
 
             <p className="mt-6 text-base leading-relaxed text-evergreen/70">
               No complicated budget. No pressure to be perfect. Just one small
-              step.
+              step at a time.
             </p>
           </Reveal>
 

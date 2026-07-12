@@ -9,21 +9,17 @@ import { ThankYouFooter } from "@/components/wealth-confidence/thank-you/ThankYo
 /**
  * /wealth-confidence-guide/thank-you
  *
- * Post-subscription page for The Wealth Confidence Guide. Strategic order
- * (approved Phase 5A): fulfil the guide promise first, deliver an immediate
- * practical money-awareness action, then softly bridge into ONE optional
- * third-party resource (The Billionaire Brain Wave) below the fold.
+ * Post-subscription page for The Wealth Confidence Guide. Email-first flow:
+ * the guide is delivered by email (MailerLite), so this page confirms the guide
+ * is on its way and tells the visitor to check their inbox — it no longer offers
+ * a direct PDF download. It then bridges into ONE optional third-party resource
+ * (The Money Script presentation) as the recommended next step.
  *
- * ~70% Micro Saving Daily brand experience / ~30% affiliate bridge. The guide
- * always appears before the affiliate resource, and the affiliate CTA never
- * visually overpowers the brand guide CTA.
+ * The Micro Saving Daily brand confirmation always appears before the affiliate
+ * resource, and the affiliate offer is framed as optional and educational.
  *
  * Not indexed (transactional confirmation page). Affiliate product is
  * deliberately absent from the SEO title/description.
- *
- * TODO(MailerLite): once subscription delivery exists, the OptInForm should
- * redirect here on success (and real email/PDF delivery should replace the
- * "access is being prepared" placeholder wording in GuideConfirmation).
  */
 export const metadata: Metadata = {
   title: "Your Wealth Confidence Guide | Micro Saving Daily",
@@ -53,13 +49,13 @@ export default function ThankYouPage() {
     <div className="flex min-h-screen flex-col bg-ivory text-evergreen">
       <ThankYouHeader />
       <main data-event="thank_you_page_view" className="flex-1">
-        {/* 1. Guide fulfilment first */}
+        {/* 1. Confirmation — guide is on its way by email */}
         <GuideConfirmation />
-        {/* 2. Immediate practical value */}
+        {/* 2. Immediate practical value (Notice · Pause · Repeat) */}
         <ImmediateAction />
-        {/* 3. Soft mindset transition */}
+        {/* 3. Bridge into the optional next step */}
         <MindsetTransition />
-        {/* 4. Single optional affiliate resource (below the fold) */}
+        {/* 4. The Money Script offer card (optional, below the fold) */}
         <AffiliateResourceCard />
       </main>
       <ThankYouFooter />

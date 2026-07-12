@@ -1,107 +1,44 @@
-import { CtaButton, Reveal } from "@/components/motion";
+import Image from "next/image";
+import { CtaButton, Reveal, RevealMedia } from "@/components/motion";
 
 /**
- * Affiliate resource card — the ONLY affiliate offer on this page.
+ * Section 3 + 4 — The Money Script offer card (the ONLY affiliate offer on this
+ * page) plus its trust/disclaimer line.
  *
- * Compliance rules baked in here (do not relax without approval):
- * - Framed strictly as an OPTIONAL, third-party, audio-based mindset/focus
- *   resource. No wealth/income/manifestation/medical/neurological claims and
- *   no repetition of the vendor's aggressive sales-page claims.
- * - The card must NOT visually overpower the guide download. The guide CTA is
- *   the solid brand button; this affiliate CTA uses the lighter OUTLINE tone so
- *   the brand promise stays dominant.
- * - Inline affiliate disclosure sits directly under the CTA (not only in the
- *   footer) and is rendered at a readable size/contrast — never tiny gold text.
- * - "Optional / third-party" status is communicated with text + an icon, not
- *   colour alone.
- * - The visual is a tasteful CSS/SVG panel (calm wave motif + headphone /
- *   notebook iconography). We do NOT fabricate product cover art.
- *   TODO(asset): a dedicated, brand-safe affiliate bridge lifestyle image
- *   (calm reflection / audio listening) would improve this section later.
+ * Compliance + design rules baked in here (do not relax without approval):
+ * - Framed as an OPTIONAL, third-party, educational presentation. No
+ *   wealth/income/manifestation/medical claims and no repetition of the
+ *   vendor's aggressive sales-page wording.
+ * - Premium calm card: image INSIDE the card (not a full-width banner).
+ *   Responsive — image left / copy right on desktop, stacked (image above copy)
+ *   on mobile.
+ * - "Optional / third-party" status is communicated with text + icon, not
+ *   colour alone. A short independent-recommendation disclaimer sits directly
+ *   under the CTA (Section 4).
  *
  * Affiliate link:
- *   Opens in a new tab with rel="sponsored noopener noreferrer".
- *   TODO(tracking): This is a custom vendor-domain hoplink (not
- *   hop.clickbank.net), so appending ClickBank's `tid` tracking parameter is
- *   NOT guaranteed to be honoured. The intended tracking label is
- *   "thank_you_page" (see TRACKING_LABEL). Confirm the correct tracking-param
- *   syntax with the affiliate program before adding it; until then the provided
- *   URL is preserved verbatim.
+ *   No Money Script affiliate URL is configured yet, so MONEY_SCRIPT_AFFILIATE_URL
+ *   is a clearly-named placeholder. Replace the placeholder string with the real
+ *   affiliate link before launch. The CTA opens in a new tab with
+ *   rel="sponsored noopener noreferrer" and reuses the existing affiliate CTA
+ *   tracking attributes (data-event / data-tracking-label).
+ *
+ * Mockup image:
+ *   public/images/the-money-script-mockup.jpg is currently a PLACEHOLDER graphic.
+ *   Replace that exact file with the official Money Script mockup (keep the same
+ *   path/filename) — no code change needed.
  */
-const AFFILIATE_URL =
-  "https://thebillionairebrainwave.com/?hopId=080bdea2-fa9d-4f5c-affd-4a654bd6a762";
+const MONEY_SCRIPT_AFFILIATE_URL = "REPLACE_WITH_MONEY_SCRIPT_AFFILIATE_LINK";
 
-/** Intended tracking label for the affiliate link (see TODO above). */
+/** Intended tracking label for the affiliate link. */
 const TRACKING_LABEL = "thank_you_page";
 
-const SUPPORTING_POINTS = [
-  "Digital audio-based program",
-  "Designed for short daily listening",
-  "Review the vendor\u2019s full claims and terms before purchasing",
-  "Separate from The Wealth Confidence Guide",
-];
-
-/** Calm, brand-safe CSS/SVG visual: soft wave lines + headphone motif. */
-function ReflectionVisual() {
-  return (
-    <div
-      aria-hidden="true"
-      className="relative flex h-full min-h-[220px] items-center justify-center overflow-hidden rounded-2xl bg-deep-green"
-    >
-      {/* Subtle wave lines suggesting audio / calm reflection. */}
-      <svg
-        viewBox="0 0 400 240"
-        fill="none"
-        preserveAspectRatio="xMidYMid slice"
-        className="absolute inset-0 h-full w-full opacity-30"
-      >
-        {[0, 1, 2, 3, 4].map((i) => (
-          <path
-            key={i}
-            d={`M0 ${70 + i * 26} C 80 ${50 + i * 26}, 140 ${90 + i * 26}, 200 ${
-              70 + i * 26
-            } S 340 ${50 + i * 26}, 400 ${70 + i * 26}`}
-            stroke="var(--color-sage)"
-            strokeWidth="1.5"
-          />
-        ))}
-      </svg>
-
-      {/* Headphone mark = audio listening (not a product image). */}
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        className="relative h-16 w-16 text-ivory"
-      >
-        <path
-          d="M14 34v-2a18 18 0 0 1 36 0v2"
-          stroke="currentColor"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-        <rect
-          x="10"
-          y="34"
-          width="10"
-          height="18"
-          rx="4"
-          stroke="currentColor"
-          strokeWidth="3"
-        />
-        <rect
-          x="44"
-          y="34"
-          width="10"
-          height="18"
-          rx="4"
-          stroke="currentColor"
-          strokeWidth="3"
-        />
-        <circle cx="49" cy="43" r="2" className="fill-gold" />
-      </svg>
-    </div>
-  );
-}
+const MOCKUP = {
+  src: "/images/the-money-script-mockup.jpg",
+  alt: "The Money Script free presentation mockup.",
+  width: 1000,
+  height: 1250,
+};
 
 export function AffiliateResourceCard() {
   return (
@@ -114,14 +51,25 @@ export function AffiliateResourceCard() {
       <div className="mx-auto max-w-4xl px-5 py-16 sm:px-6 sm:py-20">
         <Reveal>
           <article className="overflow-hidden rounded-3xl border border-warm-sand bg-ivory shadow-lg shadow-deep-green/10 ring-1 ring-deep-green/5">
-            <div className="grid gap-0 md:grid-cols-[0.9fr_1.1fr]">
-              {/* Calm CSS visual panel */}
-              <div className="p-5 md:p-6">
-                <ReflectionVisual />
-              </div>
+            <div className="grid gap-0 md:grid-cols-[0.85fr_1.15fr]">
+              {/* Mockup image — inside the card. Stacked on top on mobile,
+                  left on desktop. Sits on a soft beige panel so it reads as a
+                  tasteful product still, not a loud banner. */}
+              <RevealMedia className="flex items-center justify-center bg-warm-sand/30 p-6 sm:p-8">
+                <div className="w-full max-w-[240px] overflow-hidden rounded-2xl border border-warm-sand bg-ivory shadow-md shadow-deep-green/10">
+                  <Image
+                    src={MOCKUP.src}
+                    alt={MOCKUP.alt}
+                    width={MOCKUP.width}
+                    height={MOCKUP.height}
+                    sizes="(min-width: 768px) 240px, 60vw"
+                    className="h-auto w-full"
+                  />
+                </div>
+              </RevealMedia>
 
               {/* Content */}
-              <div className="px-5 pb-6 md:px-6 md:py-6">
+              <div className="px-5 pb-6 pt-2 md:px-7 md:py-8">
                 {/* Optional / third-party badge — icon + text, not colour alone */}
                 <p className="inline-flex items-center gap-1.5 rounded-full border border-taupe bg-warm-sand/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-evergreen/75">
                   <svg
@@ -151,76 +99,36 @@ export function AffiliateResourceCard() {
                   id="affiliate-heading"
                   className="mt-4 font-serif text-2xl font-semibold leading-tight text-deep-green sm:text-3xl"
                 >
-                  The Billionaire Brain Wave
+                  Watch This Free Money Script Presentation
                 </h2>
 
                 <p className="mt-3 leading-relaxed text-evergreen/80">
-                  A short audio-based program marketed as a daily mindset and
-                  focus ritual. You can review the program, its contents, the
-                  vendor&apos;s claims, price, and refund terms before deciding
-                  whether it is relevant to you.
+                  This presentation explains how hidden beliefs and repeated
+                  financial patterns can shape the way people think, save,
+                  spend, and pursue income opportunities.
                 </p>
 
-                <ul className="mt-4 grid gap-2">
-                  {SUPPORTING_POINTS.map((point) => (
-                    <li
-                      key={point}
-                      className="flex items-start gap-2 text-sm leading-relaxed text-evergreen/75"
-                    >
-                      <svg
-                        viewBox="0 0 16 16"
-                        aria-hidden="true"
-                        className="mt-0.5 h-4 w-4 flex-shrink-0 text-sage"
-                        fill="none"
-                      >
-                        <path
-                          d="M3.5 8.5l3 3 6-7"
-                          stroke="currentColor"
-                          strokeWidth="1.8"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Primary affiliate CTA — OUTLINE tone keeps it subordinate to
-                    the solid brand guide CTA above. Opens in a new tab. */}
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                {/* CTA — reuses the existing affiliate CTA tracking. Opens in a
+                    new tab. Placeholder URL until the real link is configured. */}
+                <div className="mt-6">
                   <CtaButton
-                    href={AFFILIATE_URL}
-                    tone="outline"
+                    href={MONEY_SCRIPT_AFFILIATE_URL}
                     target="_blank"
                     rel="sponsored noopener noreferrer"
                     data-event="affiliate_offer_click"
                     data-tracking-label={TRACKING_LABEL}
                   >
-                    Explore the Optional Resource
+                    Watch The Free Presentation
                     <span aria-hidden="true" className="ml-1">
                       &rarr;
                     </span>
                   </CtaButton>
-
-                  <a
-                    href="#guide"
-                    data-event="affiliate_offer_decline"
-                    className="text-sm font-medium text-evergreen/70 underline-offset-4 transition-colors hover:text-deep-green hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-                  >
-                    No thanks, I&apos;ll start with the guide
-                  </a>
                 </div>
 
-                {/* Inline affiliate disclosure — readable, not footer-only. */}
-                <p className="mt-5 border-t border-warm-sand pt-4 text-sm leading-relaxed text-evergreen/70">
-                  <span className="font-semibold text-deep-green">
-                    Disclosure:
-                  </span>{" "}
-                  This is an optional third-party resource and is not part of The
-                  Wealth Confidence Guide. If you purchase through this link,
-                  Micro Saving Daily may earn a commission at no additional cost
-                  to you. No financial result is guaranteed.
+                {/* Section 4 — small trust / disclaimer line under the CTA. */}
+                <p className="mt-4 text-sm leading-relaxed text-evergreen/65">
+                  This is an independent recommendation and may include an
+                  affiliate link.
                 </p>
               </div>
             </div>

@@ -16,9 +16,11 @@ import {
  *   - RESEND_API_KEY       (secret Bearer token — NEVER sent to the client)
  *   - RESEND_FROM_EMAIL    (verified Resend sender, e.g. Micro Saving Daily <hello@...>)
  *   - RESEND_REPLY_TO_EMAIL (optional)
+ *   - RESEND_FUNNEL2_SEGMENT_ID (Wealth-Routine-Funnel-2 segment id)
  *
  * The client posts JSON `{ email, firstName }`; we validate + trim, then
- * create/update the contact in Resend and send the guide email.
+ * create/update the contact in Resend, add it to Funnel 2's segment, and
+ * trigger the guide automation.
  *
  * We never log the token and never forward raw Resend response bodies to
  * the client (they can contain account detail); the client only receives a
@@ -45,6 +47,12 @@ const MORNING_CLARITY_CONFIG: LeadMagnetConfig = {
   guidePath: "/downloads/the-7-minute-morning-clarity-reset.pdf",
   guideLabel: "Open The 7-Minute Morning Clarity Reset",
   thankYouPath: "/7-minute-morning-clarity-reset/thank-you",
+  segmentIdEnvVar: "RESEND_FUNNEL2_SEGMENT_ID",
+  segmentId: "179d90f8-0660-4d5a-b3b4-9a2aecc8ed94",
+  delivery: {
+    type: "automation",
+    eventName: "morning_clarity_reset_signup",
+  },
 };
 
 function jsonError(message: string, status: number) {

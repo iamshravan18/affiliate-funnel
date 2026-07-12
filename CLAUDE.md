@@ -77,11 +77,11 @@ Route: `/wealth-confidence-guide/thank-you`
 - Built: Resend integration for the opt-in routes. Funnel 1 creates/updates
   Resend contacts, adds them to `RESEND_FUNNEL1_SEGMENT_ID`, and sends the
   `wealth_confidence_guide_signup` event so the Resend Automation owns guide
-  delivery. Funnel 2 continues to send its guide email directly using
-  `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and optional `RESEND_REPLY_TO_EMAIL`.
-  The thank-you page intentionally does not expose a direct guide download
-  button. Affiliate link tracking param is not applied (custom vendor-domain
-  hoplink; confirm syntax first).
+  delivery. Funnel 2 creates/updates Resend contacts, adds them to
+  `RESEND_FUNNEL2_SEGMENT_ID`, and sends the `morning_clarity_reset_signup`
+  event so its Resend Automation owns delivery. The thank-you page intentionally
+  does not expose a direct guide download button. Affiliate link tracking param
+  is not applied (custom vendor-domain hoplink; confirm syntax first).
 
 
 ## Ebook: The Wealth Confidence Guide (Phase 5A research/authoring)

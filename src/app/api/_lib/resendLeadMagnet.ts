@@ -89,13 +89,6 @@ function buildContactBody(
     first_name: lead.firstName,
     unsubscribed: false,
     ...(segmentId ? { segments: [{ id: segmentId }] } : {}),
-    properties: {
-      first_name: lead.firstName,
-      funnel: config.funnel,
-      lead_magnet: config.leadMagnet,
-      source_route: config.thankYouPath,
-      subscribed_at: new Date().toISOString(),
-    },
   };
 }
 
@@ -127,8 +120,8 @@ async function createOrUpdateContact(
         method: "PATCH",
         headers: resendHeaders(apiKey),
         body: JSON.stringify({
+          first_name: lead.firstName,
           unsubscribed: false,
-          properties: contactBody.properties,
         }),
         cache: "no-store",
         signal,

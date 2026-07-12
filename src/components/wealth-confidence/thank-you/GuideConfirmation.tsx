@@ -22,7 +22,7 @@ export function GuideConfirmation() {
       aria-labelledby="guide-heading"
       className="scroll-mt-8 bg-ivory"
     >
-      <div className="mx-auto max-w-5xl px-5 py-14 sm:px-6 sm:py-20">
+      <div className="mx-auto max-w-5xl px-5 pt-14 pb-8 sm:px-6 sm:pt-20 sm:pb-10">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* Copy — first on mobile, left on desktop */}
           <Reveal className="order-1">

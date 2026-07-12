@@ -45,7 +45,7 @@ export function AffiliateResourceCard() {
       data-event="affiliate_bridge_view"
       className="border-t border-warm-sand/60 bg-sage/10"
     >
-      <div className="mx-auto max-w-4xl px-5 py-16 sm:px-6 sm:py-20">
+      <div className="mx-auto max-w-4xl px-5 pt-4 pb-16 sm:px-6 sm:pt-6 sm:pb-20">
         <Reveal>
           <article className="overflow-hidden rounded-3xl border border-warm-sand bg-ivory shadow-lg shadow-deep-green/10 ring-1 ring-deep-green/5">
             <div className="grid gap-0 md:grid-cols-[0.85fr_1.15fr]">

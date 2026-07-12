@@ -14,7 +14,7 @@ export function MindsetTransition() {
       aria-label="While you wait"
       className="border-t border-warm-sand/60 bg-ivory"
     >
-      <div className="mx-auto max-w-3xl px-5 py-16 text-center sm:px-6 sm:py-20">
+      <div className="mx-auto max-w-3xl px-5 pt-10 pb-4 text-center sm:px-6 sm:pt-14 sm:pb-6">
         <Reveal>
           <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
             While You Wait&hellip;

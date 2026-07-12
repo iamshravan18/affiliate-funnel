@@ -51,12 +51,12 @@ export default function ThankYouPage() {
       <main data-event="thank_you_page_view" className="flex-1">
         {/* 1. Confirmation — guide is on its way by email */}
         <GuideConfirmation />
-        {/* 2. Immediate practical value (Notice · Pause · Repeat) */}
-        <ImmediateAction />
-        {/* 3. Bridge into the optional next step */}
+        {/* 2. Bridge into the optional next step */}
         <MindsetTransition />
-        {/* 4. The Money Script offer card (optional, below the fold) */}
+        {/* 3. The Money Script offer card (optional next step) */}
         <AffiliateResourceCard />
+        {/* 4. Immediate practical value (Notice · Pause · Repeat) */}
+        <ImmediateAction />
       </main>
       <ThankYouFooter />
     </div>

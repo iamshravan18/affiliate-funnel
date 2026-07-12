@@ -9,10 +9,10 @@ import { useId, useState, type FormEvent } from "react";
  *
  * On submit it POSTs `{ email, firstName }` to the secure server route
  * `/api/wealth-confidence/subscribe`, which adds/updates the subscriber in
- * Resend and sends the guide email (the Resend API key never touches the
- * client). On success the visitor is redirected to this funnel's thank-you
- * page. On failure we keep the visitor here, preserve their entered values,
- * show a friendly inline error, and re-enable the button.
+ * Resend and triggers the Funnel 1 guide automation (the Resend API key never
+ * touches the client). On success the visitor is redirected to this funnel's
+ * thank-you page. On failure we keep the visitor here, preserve their entered
+ * values, show a friendly inline error, and re-enable the button.
  *
  * This is fully isolated from Funnel 2 (which posts to
  * `/api/morning-clarity/subscribe`).

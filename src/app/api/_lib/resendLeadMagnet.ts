@@ -1,5 +1,6 @@
 const RESEND_CONTACTS_URL = "https://api.resend.com/contacts";
 const RESEND_EMAILS_URL = "https://api.resend.com/emails";
+const RESEND_EVENTS_SEND_URL = "https://api.resend.com/events/send";
 
 const BRAND_NAME = "Micro Saving Daily";
 const SITE_URL = "https://www.microsavingdaily.com";
@@ -16,6 +17,9 @@ export type LeadMagnetConfig = {
   thankYouPath: string;
   segmentIdEnvVar?: string;
   segmentId?: string;
+  delivery?:
+    | { type: "direct-email" }
+    | { type: "automation"; eventName: string };
 };
 
 type Lead = {
@@ -231,6 +235,37 @@ async function sendGuideEmail(
   );
 }
 
+async function triggerAutomationEvent(
+  apiKey: string,
+  config: LeadMagnetConfig,
+  lead: Lead,
+  eventName: string,
+  signal: AbortSignal,
+): Promise<ResendResult> {
+  const eventResponse = await fetch(RESEND_EVENTS_SEND_URL, {
+    method: "POST",
+    headers: resendHeaders(apiKey),
+    body: JSON.stringify({
+      event: eventName,
+      email: lead.email,
+    }),
+    cache: "no-store",
+    signal,
+  });
+
+  if (eventResponse.ok) {
+    return { ok: true };
+  }
+
+  console.error(
+    `[${config.routeLabel}] Resend automation event responded with status ${eventResponse.status}.`,
+  );
+  return friendlyError(
+    "We couldn't start your guide delivery just now. Please try again in a moment.",
+    502,
+  );
+}
+
 export async function subscribeWithResend(
   config: LeadMagnetConfig,
   lead: Lead,
@@ -283,6 +318,16 @@ export async function subscribeWithResend(
     );
     if (!segmentResult.ok) {
       return segmentResult;
+    }
+
+    if (config.delivery?.type === "automation") {
+      return triggerAutomationEvent(
+        apiKey,
+        config,
+        lead,
+        config.delivery.eventName,
+        AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+      );
     }
 
     return sendGuideEmail(

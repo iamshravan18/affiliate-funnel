@@ -19,10 +19,10 @@ import {
  *   - RESEND_FUNNEL1_SEGMENT_ID (Money-Funnel-1 segment id)
  *
  * Isolation guarantee: this route stores Funnel 1 metadata on the Resend
- * contact and sends only The Wealth Confidence Guide email.
+ * contact, adds it to the Funnel 1 segment, and triggers its automation.
  *
  * The client posts JSON `{ email, firstName }`; we validate + trim, then
- * create/update the contact in Resend and send the guide email.
+ * create/update the contact in Resend, then trigger the guide automation.
  *
  * We never log the token and never forward raw Resend response bodies to
  * the client (they can contain account detail); the client only receives a
@@ -51,6 +51,10 @@ const WEALTH_CONFIDENCE_CONFIG: LeadMagnetConfig = {
   thankYouPath: "/wealth-confidence-guide/thank-you",
   segmentIdEnvVar: "RESEND_FUNNEL1_SEGMENT_ID",
   segmentId: "84c70457-5924-4cbf-87b8-9048528a8838",
+  delivery: {
+    type: "automation",
+    eventName: "wealth_confidence_guide_signup",
+  },
 };
 
 function jsonError(message: string, status: number) {

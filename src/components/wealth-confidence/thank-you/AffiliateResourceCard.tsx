@@ -17,18 +17,15 @@ import { CtaButton, Reveal, RevealMedia } from "@/components/motion";
  *   under the CTA (Section 4).
  *
  * Affiliate link:
- *   No Money Script affiliate URL is configured yet, so MONEY_SCRIPT_AFFILIATE_URL
- *   is a clearly-named placeholder. Replace the placeholder string with the real
- *   affiliate link before launch. The CTA opens in a new tab with
+ *   The Money Script ClickBank hoplink. The CTA opens in a new tab with
  *   rel="sponsored noopener noreferrer" and reuses the existing affiliate CTA
  *   tracking attributes (data-event / data-tracking-label).
  *
  * Mockup image:
- *   public/images/the-money-script-mockup.jpg is currently a PLACEHOLDER graphic.
- *   Replace that exact file with the official Money Script mockup (keep the same
- *   path/filename) — no code change needed.
+ *   Served from public/images/the-money-script-mockup.jpg.
  */
-const MONEY_SCRIPT_AFFILIATE_URL = "REPLACE_WITH_MONEY_SCRIPT_AFFILIATE_LINK";
+const MONEY_SCRIPT_AFFILIATE_URL =
+  "https://399ebep0yf69650bpihrv-vewe.hop.clickbank.net";
 
 /** Intended tracking label for the affiliate link. */
 const TRACKING_LABEL = "thank_you_page";
@@ -36,8 +33,8 @@ const TRACKING_LABEL = "thank_you_page";
 const MOCKUP = {
   src: "/images/the-money-script-mockup.jpg",
   alt: "The Money Script free presentation mockup.",
-  width: 1000,
-  height: 1250,
+  width: 1122,
+  height: 1402,
 };
 
 export function AffiliateResourceCard() {

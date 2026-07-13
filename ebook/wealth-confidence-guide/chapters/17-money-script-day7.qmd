@@ -1,0 +1,74 @@
+```{=typst}
+// ---------------------------------------------------------------------------
+// CONTEXTUAL RECOMMENDATION 2 — after Day 7 (Personal Awareness Plan worksheet)
+// Mindset: the reader has completed the core seven-day method and is ready to be
+// guided toward the next level. Positioned as a natural continuation: they now
+// have a way to NOTICE the habit in the present; the recommended next step is to
+// explore WHY the pattern may have formed. Layout is deliberately different from
+// Recommendation 1: IMAGE ON THE LEFT as a hero, editorial COPY ON THE RIGHT,
+// with premium spacing. Same brand system (ivory ground, gold keyline,
+// deep-green type, gold accents). Strong-but-not-flashy CTA.
+//
+// UNNUMBERED editorial insert — scoped `page(footer: none)` hides the page number
+// on THIS page only (the shared `wcg-nums` state is untouched, so the reflection
+// and later pages keep their footer numbers), and the page is not counted toward
+// the visible numbering so the lesson sequence stays continuous.
+// ---------------------------------------------------------------------------
+#page(footer: none, numbering: none)[
+  #counter(page).update(n => n - 1)
+  #place(top + left, dx: -(mg-x - 0.55in), dy: -(mg-y - 0.5in),
+    rect(width: 7.4in, height: 10in, stroke: 0.75pt + c-gold, radius: 3pt))
+  #v(1fr)
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 30pt,
+    align: (center + horizon, left + horizon),
+    // ---- LEFT: the Money Script visual (hero), uncropped ----
+    [
+      #image("assets/images/money-script-mockup.jpg", width: 100%)
+    ],
+    // ---- RIGHT: editorial recommendation ----
+    [
+      #set par(justify: false, leading: 0.72em, spacing: 10pt)
+      #text(font: ("Manrope",), size: 11pt, weight: 600, tracking: 3pt, fill: c-gold)[YOUR RECOMMENDED NEXT STEP]
+      #v(12pt)
+      #text(font: ("Cormorant Garamond",), size: 24pt, weight: 700, fill: c-deep)[
+        You've Identified\
+        the Habit.\
+        Now Explore the\
+        Belief Behind It.
+      ]
+      #v(10pt)
+      #line(length: 24%, stroke: 1pt + c-gold)
+      #v(14pt)
+      #set text(font: ("Manrope",), size: 10.5pt, fill: c-body)
+
+      You've now created a personal awareness plan built around the habits,
+      situations, and choices that matter most to you.
+
+      That gives you a practical way to notice what is happening in the present.
+
+      The next step is exploring why certain financial patterns may have formed in
+      the first place.
+
+      That's why I recommend the free Money Script presentation. It complements the
+      exercises you've completed and offers a deeper perspective on the beliefs and
+      repeated experiences that can quietly shape financial decisions.
+
+      #v(16pt)
+      #link("https://399ebep0yf69650bpihrv-vewe.hop.clickbank.net")[
+        #box(width: 100%, fill: c-deep, radius: 6pt, inset: (x: 22pt, y: 15pt))[
+          #align(center, text(font: ("Manrope",), size: 11.5pt, weight: 700, fill: c-ivory)[
+            Watch the Free Money Script Presentation #sym.arrow.r
+          ])
+        ]
+      ]
+      #v(10pt)
+      #text(font: ("Manrope",), style: "italic", size: 9pt, fill: c-num)[
+        This recommended third-party resource contains an affiliate link.
+      ]
+    ],
+  )
+  #v(1fr)
+]
+```

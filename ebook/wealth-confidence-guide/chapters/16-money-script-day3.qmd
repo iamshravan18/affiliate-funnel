@@ -1,0 +1,72 @@
+```{=typst}
+// ---------------------------------------------------------------------------
+// CONTEXTUAL RECOMMENDATION 1 — after Day 3 (Trigger Map worksheet)
+// Mindset: the reader has just mapped the situation around one purchase and is
+// curious about what sits beneath it. This page connects everyday triggers to
+// the possibility of deeper, learned money beliefs, and invites a calm, optional
+// deeper exploration. Distinct CENTERED / STACKED editorial composition (image
+// as a centred hero above a centred headline and a single reading column) so it
+// reads as part of the lesson, not a sales interruption. Same brand system
+// (ivory ground, gold keyline, deep-green type, gold accents).
+//
+// This is an UNNUMBERED editorial insert. We render it inside a scoped `page(..)`
+// with `footer: none` so the page number is hidden ON THIS PAGE ONLY — the shared
+// `wcg-nums` state is left untouched so every following lesson keeps its footer
+// number. We also do not count this page toward the visible numbering, so the
+// numbered sequence of the lessons stays continuous.
+// ---------------------------------------------------------------------------
+#page(footer: none, numbering: none)[
+  #counter(page).update(n => n - 1)
+  #place(top + left, dx: -(mg-x - 0.55in), dy: -(mg-y - 0.5in),
+    rect(width: 7.4in, height: 10in, stroke: 0.75pt + c-gold, radius: 3pt))
+  #v(1fr)
+  #align(center)[
+    // ---- hero: the Money Script visual, centred, uncropped ----
+    #image("assets/images/money-script-mockup.jpg", height: 2.15in)
+    #v(20pt)
+    #text(font: ("Manrope",), size: 11pt, weight: 600, tracking: 3pt, fill: c-gold)[RECOMMENDED DEEPER EXPLORATION]
+    #v(12pt)
+    #text(font: ("Cormorant Garamond",), size: 26pt, weight: 700, fill: c-deep)[
+      What May Be Shaping These\
+      Patterns Beneath the Surface?
+    ]
+    #v(10pt)
+    #line(length: 12%, stroke: 1pt + c-gold)
+  ]
+  #v(18pt)
+  // ---- single centred reading column ----
+  #align(center, block(width: 84%, {
+    set par(justify: false, leading: 0.72em, spacing: 10pt)
+    set text(font: ("Manrope",), size: 10.5pt, fill: c-body)
+    align(left)[
+      You've just mapped the situations, feelings, and cues surrounding one of your
+      repeated financial choices.
+
+      Sometimes these patterns are shaped not only by the moment itself, but also by
+      beliefs and expectations that developed much earlier.
+
+      The free Money Script presentation explores how repeated experiences and
+      underlying beliefs may influence the way people think about earning, saving,
+      spending, and financial opportunities.
+
+      If today's Trigger Map helped you recognize a pattern, this presentation is the
+      recommended next place to explore it more deeply.
+    ]
+  }))
+  #v(18pt)
+  // ---- calm, prominent CTA ----
+  #align(center, block(width: 66%,
+    link("https://399ebep0yf69650bpihrv-vewe.hop.clickbank.net")[
+      #box(width: 100%, fill: c-deep, radius: 6pt, inset: (x: 22pt, y: 15pt))[
+        #align(center, text(font: ("Manrope",), size: 11.5pt, weight: 700, fill: c-ivory)[
+          Explore the Free Money Script Presentation #sym.arrow.r
+        ])
+      ]
+    ]))
+  #v(9pt)
+  #align(center, text(font: ("Manrope",), style: "italic", size: 9pt, fill: c-num)[
+    This recommended third-party resource contains an affiliate link.
+  ])
+  #v(1fr)
+]
+```

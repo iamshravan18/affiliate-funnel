@@ -8,6 +8,8 @@
 
 {{< include chapters/04-day3.qmd >}}
 
+{{< include chapters/16-money-script-day3.qmd >}}
+
 {{< include chapters/05-day4.qmd >}}
 
 {{< include chapters/06-day5.qmd >}}
@@ -15,6 +17,8 @@
 {{< include chapters/07-day6.qmd >}}
 
 {{< include chapters/08-day7.qmd >}}
+
+{{< include chapters/17-money-script-day7.qmd >}}
 
 {{< include chapters/09-reflection.qmd >}}
 

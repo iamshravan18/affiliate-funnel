@@ -54,7 +54,7 @@ BOOKMARKS = [
     [2, "Your Next 30 Days", 23],
     [2, "Sources & References", 24],
     [2, "One Last Thing", 25],
-    [2, "Optional Next Step", 26],
+    [2, "Recommended Next Step", 26],
 ]
 
 LANG = "en-US"

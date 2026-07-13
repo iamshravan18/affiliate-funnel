@@ -63,7 +63,7 @@ export function MorningClarityThankYouHero() {
               {HERO.confirmation}
             </p>
 
-            <p className="mt-6 text-base leading-relaxed text-evergreen/70">
+            <p className="mt-8 mb-2 text-center text-lg font-bold leading-relaxed text-deep-green sm:text-xl">
               {HERO.trustMicrocopy}
             </p>
           </Reveal>

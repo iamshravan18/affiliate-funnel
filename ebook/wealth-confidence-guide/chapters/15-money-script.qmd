@@ -1,0 +1,58 @@
+```{=typst}
+#pagebreak()
+// ---------------------------------------------------------------------------
+// FINAL PAGE — OPTIONAL NEXT STEP (The Money Script)
+// A calm, editorial, optional third-party recommendation. Ivory ground with a
+// restrained gold keyline (matching the cover/close frames), deep-green display
+// type, gold eyebrow, and a single clickable deep-green CTA. No page number, no
+// urgency, no exaggerated claims — framed strictly as an optional next step.
+// ---------------------------------------------------------------------------
+#wcg-nums.update(false)
+#set page(numbering: none)
+#place(top + left, dx: -(mg-x - 0.55in), dy: -(mg-y - 0.5in),
+  rect(width: 7.4in, height: 10in, stroke: 0.75pt + c-gold, radius: 3pt))
+#v(1.05in)
+#align(center)[
+  #wcg-logo(size: 0.8in, ink: c-deep, dot: c-gold)
+  #v(0.34in)
+  #text(font: ("Manrope",), size: 12pt, weight: 600, tracking: 4pt, fill: c-gold)[OPTIONAL NEXT STEP]
+  #v(0.3in)
+  #block(width: 5.0in)[
+    #text(font: ("Cormorant Garamond",), size: 29pt, weight: 700, fill: c-deep)[
+      Explore the deeper patterns behind your financial decisions
+    ]
+  ]
+  #v(0.24in)
+  #line(length: 14%, stroke: 1pt + c-gold)
+  #v(0.3in)
+  #block(width: 4.9in)[
+    #set par(leading: 0.95em, justify: false)
+    #text(font: ("Manrope",), size: 12.5pt, fill: c-body)[
+      The Wealth Confidence Guide helps you begin noticing the habits, emotions,
+      and repeated choices connected to money.
+    ]
+    #v(0.16in)
+    #text(font: ("Manrope",), size: 12.5pt, fill: c-body)[
+      If you would like to explore how deeper "money scripts" may influence the
+      way you think, save, spend, and pursue income opportunities, this free
+      presentation may be worth watching next.
+    ]
+  ]
+  #v(0.42in)
+  #link("https://399ebep0yf69650bpihrv-vewe.hop.clickbank.net")[
+    #box(fill: c-deep, radius: 6pt, inset: (x: 26pt, y: 15pt))[
+      #text(font: ("Manrope",), size: 13pt, weight: 700, fill: c-ivory)[
+        Watch the free Money Script presentation #sym.arrow.r
+      ]
+    ]
+  ]
+  #v(0.24in)
+  #block(width: 4.4in)[
+    #text(font: ("Manrope",), style: "italic", size: 10pt, fill: c-num)[
+      This is an independent third-party recommendation and may include an
+      affiliate link.
+    ]
+  ]
+]
+#v(1fr)
+```

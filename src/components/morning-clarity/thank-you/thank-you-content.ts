@@ -63,7 +63,8 @@ export const HERO = {
   h1: "Your 7-Minute Morning Clarity Reset is on its way!",
   body: "Please check your inbox in the next few minutes. We\u2019ve sent your guide to the email address you entered.",
   confirmation: "If you don\u2019t see it soon, check your Promotions or Spam folder.",
-  trustMicrocopy: "One quiet morning reset. One clearer next step.",
+  trustMicrocopy:
+    "Before you go, there\u2019s one more resource you may want to explore below \u2193",
 } as const;
 
 /* -------------------------------------------------------------------------- */

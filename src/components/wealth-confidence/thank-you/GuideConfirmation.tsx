@@ -46,9 +46,9 @@ export function GuideConfirmation() {
               folder.
             </p>
 
-            <p className="mt-6 text-base leading-relaxed text-evergreen/70">
-              No complicated budget. No pressure to be perfect. Just one small
-              step at a time.
+            <p className="mt-8 mb-2 text-center text-lg font-bold leading-relaxed text-deep-green sm:text-xl">
+              Before you go, there&apos;s one more resource you may want to
+              explore below ↓
             </p>
           </Reveal>
 

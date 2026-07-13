@@ -24,8 +24,8 @@
 
 {{< include chapters/12-resources.qmd >}}
 
+{{< include chapters/15-money-script.qmd >}}
+
 {{< include chapters/13-references.qmd >}}
 
 {{< include chapters/14-close.qmd >}}
-
-{{< include chapters/15-money-script.qmd >}}

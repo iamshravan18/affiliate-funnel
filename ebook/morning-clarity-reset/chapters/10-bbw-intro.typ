@@ -1,58 +1,45 @@
 #import "/styles/ebook-template.typ": *
-// ---- PAGE 11: Billionaire Brain Wave Introduction ----
+// ---- PAGE 12: Editorial Guided-Audio Recommendation ----
 #let vsl = "https://hop.clickbank.net/?affiliate=microsave&vendor=attractbr&pid=vsl"
 
-#mcr-eyebrow("Optional Next Step")
+#mcr-eyebrow("A Recommendation for the Road Ahead")
 #v(4pt)
-= Prefer a Guided Audio Routine?
+= Continue Your Morning Clarity Journey
+
+#mcr-lead[The method is complete. The next step is simply finding the version you can return to.]
 
 #v(2pt)
-#grid(columns: (1.35fr, 1fr), column-gutter: 18pt, align: (left + top, center + top),
+#grid(columns: (1.22fr, 0.92fr), column-gutter: 20pt, align: (left + top, center + top),
   {
-    text(size: 12pt, fill: c-body)[
-      You have now experienced the written version of a short morning pause.
-      #emph[Billionaire Brain Wave] is a separate guided audio-based program for
-      readers who prefer exploring mindset, focus, and intentional daily routines
-      in a listening format.
+    let para(body) = block(width: 100%, below: 5pt,
+      text(size: 11.2pt, fill: c-body, body))
 
-      It is a separate, third-party program — not part of this free guide, and
-      not required to use it. It may simply suit readers who prefer to be guided
-      by audio rather than by writing. As with anything you consider, it is worth
-      reviewing the official presentation yourself before deciding.
-    ]
-    v(6pt)
-    block(width: 100%, fill: c-sage.lighten(60%), stroke: 0.6pt + c-sage, radius: 4pt, inset: (x: 14pt, y: 11pt), {
-      for b in (
-        "Guided audio format",
-        "Accessible from home",
-        "Designed to fit into a quiet daily routine",
-        "Official presentation explains the program, creator, pricing and refund policy",
-      ) {
-        grid(columns: (auto, 1fr), column-gutter: 9pt, align: (left + top, left + top),
-          text(fill: c-gold, size: 12pt, weight: 700)[•],
-          text(font: ("Manrope",), size: 11pt, fill: c-body)[#b])
-        v(4pt)
-      }
-    })
+    para[You have now completed the full seven-minute reset. You have a practical way to settle, notice what is present, and choose one clear next step. Nothing else is required for this practice to be useful.]
+    para[The part that often makes the greatest difference is consistency. Some mornings, writing a few lines will feel grounding. On busier or more distracted mornings, opening a journal can feel like one more decision.]
+    para[That is why I recommend exploring #emph[Billionaire Brain Wave]. Its guided audio format can offer support when you would rather listen than write, allowing someone else to hold the pace while you make space for a more intentional start.]
+    para[It is a separate third-party resource, not a replacement for this guide. Your worksheet and tracker are complete tools you can continue using on their own. But if guided support would make it easier to maintain the habit, I think it is worth watching the free presentation and deciding whether it fits your mornings.]
   },
   {
     block(width: 100%, fill: c-ivory, stroke: 0.9pt + c-sand, radius: 8pt, inset: 6pt,
-      box(clip: true, radius: 5pt, image("/assets/images/img-bbw-portrait-opt.jpg", width: 100%)))
-    v(4pt)
-    align(center, text(font: ("Manrope",), size: 8.5pt, style: "italic", fill: c-num)[Third-party product. Shown for reference.])
+      box(clip: true, radius: 5pt,
+        image("/assets/images/img-bbw-portrait-opt.jpg", width: 100%)))
+    v(5pt)
+    align(center, text(font: ("Manrope",), size: 8.5pt, style: "italic", fill: c-num)[
+      An optional guided audio resource for quieter mornings.
+    ])
   },
 )
 
-#v(6pt)
-#link(vsl)[#block(width: 100%, fill: c-deep, radius: 5pt, inset: (x: 16pt, y: 13pt), align(center, {
-  text(font: ("Manrope",), size: 13pt, weight: 700, fill: c-ivory)[Watch the Free Presentation  #text(fill: c-gold)[#sym.arrow.r]]
+#v(7pt)
+#link(vsl)[#block(width: 100%, fill: c-deep, radius: 5pt, inset: (x: 16pt, y: 11pt), align(center, {
+  text(font: ("Manrope",), size: 11.5pt, weight: 700, fill: c-ivory)[Watch the Free Presentation  #text(fill: c-gold)[#sym.arrow.r]]
 }))]
 #v(3pt)
-#align(center, text(font: ("Manrope",), size: 9.5pt, style: "italic", fill: c-num)[Opens the official presentation.])
+#align(center, text(font: ("Manrope",), size: 9pt, style: "italic", fill: c-num)[Opens the official presentation.])
 
 #v(6pt)
-#block(width: 100%, fill: c-aside, stroke: (left: 3pt + c-gold), radius: (right: 4pt), inset: (x: 14pt, y: 10pt),
-  text(font: ("Manrope",), size: 9.5pt, fill: c-body)[
+#block(width: 100%, fill: c-aside, stroke: (left: 3pt + c-gold), radius: (right: 4pt), inset: (x: 14pt, y: 9pt),
+  text(font: ("Manrope",), size: 9pt, fill: c-body)[
     #strong[Affiliate disclosure.] If you purchase through this link, Micro
     Saving Daily may receive a commission at no additional cost to you.
   ])

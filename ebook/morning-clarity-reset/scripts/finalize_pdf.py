@@ -44,11 +44,12 @@ BOOKMARKS = [
     [1, "Minutes 1-2: Arrive and Notice", 5],
     [1, "Minutes 3-4: Name and Separate", 6],
     [1, "Minutes 5-7: Choose, Picture and Continue", 7],
-    [1, "Your 7-Minute Morning Reset (Worksheet)", 8],
-    [1, "Seven-Day Tracker", 9],
-    [1, "Guided Audio Bridge", 10],
-    [1, "Optional Next Step: Guided Audio", 11],
-    [1, "Review It Calmly and Decide for Yourself", 12],
+    [1, "You've Just Experienced How Powerful 7 Quiet Minutes Can Be", 8],
+    [1, "Your 7-Minute Morning Reset (Worksheet)", 9],
+    [1, "Seven-Day Tracker", 10],
+    [1, "Guided Audio Bridge", 11],
+    [1, "Continue Your Morning Clarity Journey", 12],
+    [1, "Review It Calmly and Decide for Yourself", 13],
 ]
 
 LANG = "en-US"

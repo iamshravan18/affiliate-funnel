@@ -1,5 +1,5 @@
 #import "/styles/ebook-template.typ": *
-// ---- PAGE 10: Guided Audio Bridge ----
+// ---- PAGE 11: Guided Audio Bridge ----
 #mcr-eyebrow("A Note on Format")
 #v(4pt)
 = Some Mornings Are Easier When You Don't Have to Guide Yourself

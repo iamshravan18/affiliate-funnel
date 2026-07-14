@@ -1,5 +1,5 @@
 #import "/styles/ebook-template.typ": *
-// ---- PAGE 9: Seven-Day Tracker ----
+// ---- PAGE 10: Seven-Day Tracker ----
 #mcr-eyebrow("Seven Mornings")
 #v(4pt)
 = Repeat the Reset for Seven Mornings

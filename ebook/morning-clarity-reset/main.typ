@@ -25,17 +25,20 @@
 // ---- PAGE 7: Minutes 5-7 ----
 #include "chapters/06-min567.typ"
 
-// ---- PAGE 8: Full Printable Worksheet ----
+// ---- PAGE 8: Contextual Guided-Audio Recommendation ----
+#include "chapters/07-contextual-recommendation.typ"
+
+// ---- PAGE 9: Full Printable Worksheet ----
 #include "chapters/07-worksheet.typ"
 
-// ---- PAGE 9: Seven-Day Tracker ----
+// ---- PAGE 10: Seven-Day Tracker ----
 #include "chapters/08-tracker.typ"
 
-// ---- PAGE 10: Guided Audio Bridge ----
+// ---- PAGE 11: Guided Audio Bridge ----
 #include "chapters/09-audio-bridge.typ"
 
-// ---- PAGE 11: Billionaire Brain Wave Introduction ----
+// ---- PAGE 12: Editorial Guided-Audio Recommendation ----
 #include "chapters/10-bbw-intro.typ"
 
-// ---- PAGE 12: Final Decision Page ----
+// ---- PAGE 13: Final Decision Page ----
 #include "chapters/11-decision.typ"

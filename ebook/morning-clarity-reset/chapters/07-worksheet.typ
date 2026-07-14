@@ -1,8 +1,8 @@
 #import "/styles/ebook-template.typ": *
-// ---- PAGE 8: Full Printable Worksheet ----
-// Stable internal destination for the page-12 secondary CTA ("Continue With
+// ---- PAGE 9: Full Printable Worksheet ----
+// Stable internal destination for the page-13 secondary CTA ("Continue With
 // My Free 7-Minute Reset"). Placed at the top of the worksheet page so the
-// jump lands on page 8.
+// jump lands on page 9.
 #metadata("worksheet")<worksheet>
 
 #mcr-ws-open(

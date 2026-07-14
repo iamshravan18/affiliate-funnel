@@ -1,5 +1,5 @@
 #import "/styles/ebook-template.typ": *
-// ---- PAGE 12: Final Decision Page ----
+// ---- PAGE 13: Final Decision Page ----
 #let vsl = "https://hop.clickbank.net/?affiliate=microsave&vendor=attractbr&pid=vsl"
 
 #mcr-eyebrow("Optional Next Step")

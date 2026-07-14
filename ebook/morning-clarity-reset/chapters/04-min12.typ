@@ -1,7 +1,6 @@
 #import "/styles/ebook-template.typ": *
 // ---- PAGE 5: Minutes 1-2 ----
 #mcr-eyebrow("Settle · Notice")
-#v(4pt)
 = Minutes 1–2: Arrive and Notice
 
 #mcr-lead[Begin by landing in the day, then let one thought step forward.]

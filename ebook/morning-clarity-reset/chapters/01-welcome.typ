@@ -3,7 +3,6 @@
 #mcr-nums.update(true)
 
 #mcr-eyebrow("From Micro Saving Daily")
-#v(4pt)
 = You Don't Need a Perfect Morning to Begin Clearly
 
 #mcr-lead[Most mornings begin already full — before you have decided how you want to enter them.]
@@ -27,10 +26,11 @@ You do not need to do it perfectly. Some mornings you may fill the page; other
 mornings a single line is plenty. Both count. Keep what helps you, and leave the
 rest.
 
-#mcr-figure("/assets/images/img-real-morning.jpg", width: 62%, caption: [A quiet, ordinary morning is a good place to begin.])
+#v(s-3)
+#mcr-figure("/assets/images/img-real-morning.jpg", width: 42%, caption: [A quiet, ordinary morning is a good place to begin.])
 
-#v(6pt)
-#block(above: 6pt, below: 2pt, text(font: ("Manrope",), size: 9.5pt, fill: c-num, style: "italic")[
+#v(s-3)
+#block(above: 0pt, below: 2pt, text(font: ("Manrope",), size: 9.5pt, fill: c-num, style: "italic")[
   A note on how to use this guide: it is for educational and reflective purposes
   only. It does not provide financial, investment, medical, or psychological
   advice. The steps support personal awareness and reflection, and individual

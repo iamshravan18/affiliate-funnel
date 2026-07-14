@@ -28,20 +28,35 @@
 #let mg-x        = 1.0in
 #let mg-y        = 0.85in
 
-#let sp-lead     = 0.88em
-#let sp-para     = 8pt
-#let sp-h1-below = 8pt
-#let sp-sub      = 13pt
-#let sp-h2-above = 15pt
-#let sp-h2-below = 6pt
-#let sp-callout  = 10pt
-#let sp-act-abv  = 13pt
-#let sp-act-blw  = 12pt
-#let sp-visual   = 12pt
-#let sp-ws-line  = 0.26in
-#let sp-ws-field = 9pt
-#let sp-ws-foot  = 11pt
-#let sp-card     = 9pt
+// ---------------------------------------------------------------------------
+// UNIFIED SPACING SCALE — every deliberate vertical gap in the book resolves
+// to one of these seven steps. Nothing else invents an arbitrary value.
+// ---------------------------------------------------------------------------
+#let s-1 = 8pt
+#let s-2 = 12pt
+#let s-3 = 16pt
+#let s-4 = 24pt
+#let s-5 = 32pt
+#let s-6 = 48pt
+#let s-7 = 64pt
+
+// Semantic rhythm tokens — each maps onto the scale so the same editorial
+// relationship keeps the same gap on every page.
+#let sp-lead     = 0.88em   // line spacing (leading) inside paragraphs
+#let sp-para     = s-2      // paragraph -> paragraph              (12)
+#let sp-eyebrow  = s-2      // eyebrow -> heading                  (12)
+#let sp-h1-below = s-2      // heading -> lead                     (12)
+#let sp-sub      = s-3      // lead -> body                        (16)
+#let sp-h2-above = s-4      // sub-heading (minute) block, above   (24)
+#let sp-h2-below = s-1      // sub-heading -> its description      (8)
+#let sp-callout  = s-3      // callout / quote breathing           (16)
+#let sp-act-abv  = s-3      // action panel, above                 (16)
+#let sp-act-blw  = s-2      // action panel, below                 (12)
+#let sp-visual   = s-3      // figures / visuals                   (16)
+#let sp-ws-line  = 0.26in   // handwriting line height
+#let sp-ws-field = s-2      // space above each worksheet field    (12)
+#let sp-ws-foot  = s-3      // worksheet footer                    (16)
+#let sp-card     = s-2      // card gutter / rows                  (12)
 
 // ---------------------------------------------------------------------------
 // PAGE: ivory ground; footer page number appears once mcr-nums is turned on.
@@ -79,9 +94,9 @@
   show strong: set text(fill: c-deep)
 
   show heading: set text(font: ("Cormorant Garamond",), fill: c-deep)
-  show heading.where(level: 1): it => block(above: 0.5em, below: sp-h1-below, {
+  show heading.where(level: 1): it => block(above: 0pt, below: sp-h1-below, {
     set text(size: 27pt, weight: 700)
-    block(spacing: 7pt, line(length: 8%, stroke: 1.4pt + c-gold))
+    block(spacing: s-1, line(length: 8%, stroke: 1.4pt + c-gold))
     it.body
   })
   show heading.where(level: 2): it => block(above: sp-h2-above, below: sp-h2-below, {
@@ -104,7 +119,7 @@
   )
 
   // TABLES — lined, roomy.
-  set table(inset: (x: 8pt, y: 9pt), stroke: (y: 0.6pt + c-taupe), align: left + horizon)
+  set table(inset: (x: 8pt, y: sp-card), stroke: (y: 0.6pt + c-taupe), align: left + horizon)
   show table.cell.where(y: 0): set text(weight: "semibold", fill: c-deep)
   show line: set line(stroke: 0.6pt + c-taupe)
 
@@ -160,6 +175,9 @@
 // ===========================================================================
 #let mcr-cover(cover-img: none) = {
   set page(numbering: none)
+  // Cover keeps its own tight paragraph rhythm so the document-wide paragraph
+  // spacing (tuned for body pages) never reflows the fixed cover layout.
+  set par(spacing: 8pt)
   mcr-fullbleed(c-deep)
   place(top + left, dx: -(mg-x - 0.5in), dy: -(mg-y - 0.42in),
     rect(width: 7.5in, height: 10.16in, stroke: 0.75pt + c-gold, radius: 3pt))
@@ -227,9 +245,12 @@
   text(fill: c-ivory, size: 12pt, body)
 })
 
-// Eyebrow / kicker line.
-#let mcr-eyebrow(body) = text(font: ("Manrope",), size: 10pt, weight: 700,
-  tracking: 3pt, fill: c-gold)[#upper(body)]
+// Eyebrow / kicker line — owns the consistent eyebrow -> heading gap so no
+// chapter has to add an arbitrary spacer.
+#let mcr-eyebrow(body) = {
+  text(font: ("Manrope",), size: 10pt, weight: 700, tracking: 3pt, fill: c-gold)[#upper(body)]
+  v(sp-eyebrow, weak: false)
+}
 
 // ===========================================================================
 // WORKSHEET CHROME (native vector fields + checkboxes)
@@ -296,7 +317,7 @@
 })
 
 // grouped-prompt heading
-#let mcr-group(label) = block(above: 12pt, below: 3pt,
+#let mcr-group(label) = block(above: sp-h2-above, below: sp-h2-below,
   text(font: ("Manrope",), size: 12pt, weight: 700, fill: c-deep)[#label])
 
 // worksheet footer: logo + framework indicator
@@ -314,16 +335,16 @@
 // ===========================================================================
 // CARDS / PRINCIPLES
 // ===========================================================================
-#let mcr-cards(items, cols: 1) = {
+#let mcr-cards(items, cols: 1, gutter: sp-card) = {
   let cell(it) = block(width: 100%, fill: c-sage.lighten(60%), stroke: 0.6pt + c-sage,
-    radius: 4pt, inset: (x: 14pt, y: 11pt), breakable: false,
+    radius: 4pt, inset: (x: 14pt, y: 9pt), breakable: false,
     {
       text(font: ("Manrope",), size: 12pt, weight: 700, fill: c-deep)[#it.at(0)]
       linebreak()
       v(2pt)
       text(font: ("Manrope",), size: 11pt, fill: c-body)[#it.at(1)]
     })
-  grid(columns: (1fr,) * cols, column-gutter: sp-card, row-gutter: sp-card,
+  grid(columns: (1fr,) * cols, column-gutter: gutter, row-gutter: gutter,
     ..items.map(cell))
 }
 

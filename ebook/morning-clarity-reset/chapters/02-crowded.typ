@@ -1,7 +1,6 @@
 #import "/styles/ebook-template.typ": *
 // ---- PAGE 3: Why Mornings Feel Mentally Crowded ----
 #mcr-eyebrow("Before You Start")
-#v(4pt)
 = Your Day Often Begins Before You Choose How to Enter It
 
 #mcr-lead[The first minutes are frequently spoken for — before you decide how you want to enter them.]
@@ -9,7 +8,7 @@
 For a lot of people, the morning follows the same quiet pattern without anyone
 choosing it. It tends to look something like this:
 
-#block(above: 12pt, below: 12pt, mcr-cards(cols: 1, (
+#block(above: s-1, below: s-1, mcr-cards(cols: 1, gutter: s-1, (
   ("Wake up", "The day begins — often still half-asleep."),
   ("Check notifications", "A phone reaches for your attention first."),
   ("Remember unfinished tasks", "Yesterday's list quietly returns."),
@@ -22,6 +21,7 @@ started talking before you had a chance to answer. The reset in this guide adds
 one small pause near the front of that pattern — a place to hear yourself think
 before the day fills in the rest.
 
+#v(s-2)
 #mcr-panel(title: "A few questions to sit with")[
   Take a moment with these before you read on. There are no right answers.
 

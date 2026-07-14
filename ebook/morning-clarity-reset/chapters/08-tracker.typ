@@ -1,7 +1,6 @@
 #import "/styles/ebook-template.typ": *
 // ---- PAGE 10: Seven-Day Tracker ----
 #mcr-eyebrow("Seven Mornings")
-#v(4pt)
 = Repeat the Reset for Seven Mornings
 
 #mcr-lead[One row a morning. There is no score to keep and nothing to measure.]
@@ -20,6 +19,7 @@ intention you chose, and one word for the direction of your day.
   )).flatten()
 )
 
+#v(s-3)
 #mcr-panel(title: "A gentle reminder")[
   Missing one day does not mean restarting. Nothing is broken and there is no
   streak to protect — simply begin again on the next line.

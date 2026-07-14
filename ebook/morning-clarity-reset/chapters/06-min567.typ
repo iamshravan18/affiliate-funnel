@@ -1,7 +1,6 @@
 #import "/styles/ebook-template.typ": *
 // ---- PAGE 7: Minutes 5-7 ----
 #mcr-eyebrow("Choose")
-#v(4pt)
 = Minutes 5–7: Choose, Picture and Continue
 
 #mcr-lead[Turn everything you noticed into one small, honest step — and one word to keep.]
@@ -22,11 +21,12 @@ specific: the action, the place, and a rough time.
 Choose one word to return to when the morning gets loud again. Then let the page
 go — one word is enough.
 
-#v(4pt)
-#grid(columns: (auto, auto, auto, auto, auto), column-gutter: 10pt, row-gutter: 8pt, align: horizon,
+#v(s-3)
+#grid(columns: (auto, auto, auto, auto, auto), column-gutter: s-2, row-gutter: s-2, align: horizon,
   ..("steady", "clear", "patient", "focused", "intentional").map(w =>
     box(fill: c-sage.lighten(55%), stroke: 0.6pt + c-sage, radius: 20pt, inset: (x: 14pt, y: 7pt),
       text(font: ("Manrope",), size: 11pt, weight: 600, fill: c-deep)[#w])))
 
+#v(s-3)
 #mcr-field("The word I will carry forward:", lines: 1)
 #pagebreak(weak: true)
